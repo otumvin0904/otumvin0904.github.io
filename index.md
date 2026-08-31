@@ -1,7 +1,8 @@
 ---
-permalink: /about/
+layout: single
 title: ""
 author_profile: false
+classes: wide
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/lab-home.css' | relative_url }}">
@@ -18,11 +19,13 @@ author_profile: false
   <div class="hero-content">
 
     <h1>
-      <span class="hero-accent">Welcome to the NanoSpectroscopy Lab</span>
+      <span class="hero-accent">빛과 물질</span>의 상호작용을 이해하고<br>
+      <span class="hero-accent">나노 스케일</span>의 새로운 현상을 탐구합니다
     </h1>
 
     <p class="hero-description">
-      We explore the interaction between light and matter at the nanoscale.
+      나노 분광학 및 플라즈모닉스 연구를 통해<br>
+      미래를 바꿀 혁신적인 기술을 만들어 갑니다.
     </p>
 
     <a href="/research/" class="hero-button">

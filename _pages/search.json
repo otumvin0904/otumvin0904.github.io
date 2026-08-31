@@ -1,0 +1,47 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign ns_first = true %}
+
+{% for item in site.pages %}
+  {% unless ns_first %},{% endunless %}
+  {
+    "title": {{ item.title | default: item.name | default: "Page" | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "content": {{ item.content | strip_html | strip_newlines | jsonify }}
+  }
+  {% assign ns_first = false %}
+{% endfor %}
+
+{% for item in site.posts %}
+  {% unless ns_first %},{% endunless %}
+  {
+    "title": {{ item.title | default: "Post" | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "content": {{ item.content | strip_html | strip_newlines | jsonify }}
+  }
+  {% assign ns_first = false %}
+{% endfor %}
+
+{% for item in site.publications %}
+  {% unless ns_first %},{% endunless %}
+  {
+    "title": {{ item.title | default: "Publication" | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "content": {{ item.content | strip_html | strip_newlines | jsonify }}
+  }
+  {% assign ns_first = false %}
+{% endfor %}
+
+{% for item in site.talks %}
+  {% unless ns_first %},{% endunless %}
+  {
+    "title": {{ item.title | default: "Talk" | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "content": {{ item.content | strip_html | strip_newlines | jsonify }}
+  }
+  {% assign ns_first = false %}
+{% endfor %}
+]

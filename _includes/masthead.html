@@ -1,29 +1,102 @@
 {% include base_path %}
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
+
+        <button class="greedy-nav__toggle" type="button" aria-label="Menu">
+          <span class="navicon"></span>
+        </button>
+
         <ul class="visible-links">
+
+          <!-- LOGO -->
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
+            <a class="site-logo-link" href="{{ '/' | relative_url }}">
+              <img
+                src="{{ '/images/logo.jpg' | relative_url }}"
+                alt="NanoSpectroscopy Lab"
+                class="site-logo">
+            </a>
           </li>
+
+          <!-- MAIN NAVIGATION -->
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
+
+            <li class="masthead__menu-item{% if page.url contains link.url and link.url != '/' %} selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+
+          <!-- SEARCH BUTTON -->
+          <li class="masthead__menu-item persist search-menu-item">
+            <button
+              id="site-search-open"
+              class="site-search-button"
+              type="button"
+              aria-label="사이트 검색"
+              aria-expanded="false"
+              aria-controls="site-search-panel">
+              <svg class="site-search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.4"></circle>
+                <line x1="15.6" y1="15.6" x2="21" y2="21"></line>
+              </svg>
+            </button>
           </li>
+
         </ul>
+
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
+
+<!-- SAME-PAGE SEARCH -->
+<div id="site-search-panel" class="site-search-panel" aria-hidden="true">
+  <div class="site-search-panel__inner">
+
+    <button
+      id="site-search-close"
+      class="site-search-close"
+      type="button"
+      aria-label="검색 닫기">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="20" y1="12" x2="4" y2="12"></line>
+        <polyline points="10 6 4 12 10 18"></polyline>
+      </svg>
+    </button>
+
+    <div class="site-search-main">
+
+      <div class="site-search-box">
+        <svg class="site-search-box__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.4"></circle>
+          <line x1="15.6" y1="15.6" x2="21" y2="21"></line>
+        </svg>
+
+        <input
+          id="site-search-input"
+          type="search"
+          placeholder="이 사이트 검색"
+          autocomplete="off"
+          aria-label="이 사이트 검색">
+      </div>
+
+      <div id="site-search-results-wrap" class="site-search-results-wrap" hidden>
+        <div id="site-search-count" class="site-search-count"></div>
+        <div id="site-search-results" class="site-search-results"></div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="{{ '/assets/js/site-search.js' | relative_url }}" defer></script>
