@@ -1,0 +1,202 @@
+---
+permalink: /
+title: ""
+author_profile: false
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/lab-home.css' | relative_url }}">
+
+<div class="lab-home">
+
+  <!-- ======================================================
+       HERO
+       ====================================================== -->
+
+  <section class="lab-shell hero">
+
+<div class="hero-overlay">
+  <div class="hero-content">
+    <h1>
+      <span class="hero-accent">Welcome to the NanoSpectroscopy Lab</span>
+    </h1>
+
+<p class="hero-description">
+  We explore the interaction between light and matter at the nanoscale.
+</p>
+
+<a href="/research/" class="hero-button">
+  연구실 소개 보기
+  <span aria-hidden="true">→</span>
+</a>
+
+  </div>
+</div>
+
+<!-- 장식용 슬라이더 점 -->
+
+<div class="hero-dots" aria-hidden="true">
+  <span class="hero-dot is-active"></span>
+  <span class="hero-dot"></span>
+  <span class="hero-dot"></span>
+  <span class="hero-dot"></span>
+  <span class="hero-dot"></span>
+</div>
+
+  </section>
+
+  <!-- ======================================================
+       HOME INFORMATION
+       ====================================================== -->
+
+  <section class="lab-shell home-dashboard">
+
+<!-- NEWS -->
+<div class="dashboard-column news-column">
+
+  <div class="dashboard-heading">
+    <h2>News</h2>
+
+    <a href="{{ '/news/' | relative_url }}">
+      더보기 <span aria-hidden="true">→</span>
+    </a>
+  </div>
+
+
+  <div class="home-news-list">
+
+    {% for item in site.data.news limit:4 %}
+
+      <a href="{{ '/news/' | relative_url }}"
+         class="home-news-item">
+
+        <time datetime="{{ item.datetime }}">
+          {{ item.date }}
+        </time>
+
+        <span class="home-news-text">
+          {{ item.text | strip_html }}
+        </span>
+
+      </a>
+
+    {% endfor %}
+
+  </div>
+
+</div>
+
+
+
+<!-- RECENT PUBLICATIONS -->
+<div class="dashboard-column publication-column">
+
+  <div class="dashboard-heading">
+
+    <h2>Recent Publications</h2>
+
+    <a href="{{ '/publications/' | relative_url }}">
+      더보기 <span aria-hidden="true">→</span>
+    </a>
+
+  </div>
+
+
+  <div class="home-publication-list">
+
+    {% assign published_papers = site.data.publications
+       | where: "published", true %}
+
+    {% for paper in published_papers limit:3 %}
+
+      <a href="{{ '/publications/' | relative_url }}"
+         class="home-publication-item">
+
+        <span class="publication-bullet"
+              aria-hidden="true"></span>
+
+        <div class="home-publication-content">
+
+          <strong class="home-publication-title">
+            {{ paper.title }}
+          </strong>
+
+          <p class="home-publication-journal">
+            {{ paper.journal }}
+          </p>
+
+        </div>
+
+      </a>
+
+    {% endfor %}
+
+  </div>
+
+</div>
+
+<!-- PEOPLE -->
+
+<div class="dashboard-column people-column">
+
+  <div class="dashboard-heading">
+    <h2>People</h2>
+    <a href="/team/">더보기 <span aria-hidden="true">→</span></a>
+  </div>
+
+  <a href="/team/" class="professor-card">
+
+<!--
+  실제 사진 파일:
+  images/homepage/professor.jpg
+  파일이 없어도 회색 원형 배경으로 표시됩니다.
+-->
+<div class="professor-photo" aria-hidden="true"></div>
+
+<div class="professor-info">
+  <strong>강경원 교수</strong>
+  <span>연구실 지도교수</span>
+  <span>gkang@kangwon.ac.kr</span>
+  <span>033-250-8487</span>
+</div>
+
+  </a>
+</div>
+
+  </section>
+
+  <!-- ======================================================
+       CUSTOM FOOTER
+       ====================================================== -->
+
+  <footer class="lab-shell lab-footer">
+
+<div class="footer-brand">
+  <img
+    src="{{ '/images/homepage/KNU-logo.jpg' | relative_url }}"
+    alt="Kangwon National University"
+    class="footer-knu-logo"
+  >
+
+  <div class="footer-brand-text">
+    <strong>강원대학교 화학과</strong>
+    <span>Nano Spectroscopy Lab.</span>
+  </div>
+</div>
+
+<div class="footer-contact">
+  <p>
+    24341 강원특별자치도 춘천시 강원대학길 1<br>
+    강원대학교 자연과학대학 화학과
+  </p>
+  <p>
+    Tel. 033-250-8487
+    <span class="footer-divider">|</span>
+    E-mail. gkang@kangwon.ac.kr
+  </p>
+</div>
+
+<a href="#" class="footer-top" aria-label="맨 위로 이동">↑</a>
+
+  </footer>
+
+</div>

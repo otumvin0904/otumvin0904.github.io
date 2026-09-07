@@ -1,0 +1,199 @@
+/* =========================================
+   NanoSpectroscopy Lab - NEWS PAGE
+   ========================================= */
+
+.news-page {
+    width: min(1280px, calc(100% - 60px));
+    margin: 0 auto;
+
+    padding: 55px 0 90px;
+
+    color: #222;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.news-page__header {
+    margin-bottom: 72px;
+
+    text-align: center;
+}
+
+.news-page__header h1 {
+    margin: 0 !important;
+
+    color: #202020;
+
+    font-size: 58px;
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+}
+
+
+/* NEWS 아래 빨간 선 */
+
+.news-page__title-line {
+    width: 72%;
+    max-width: 900px;
+
+    height: 9px;
+
+    margin: 20px auto 0;
+
+    background: #ff545d;
+}
+
+
+/* =========================================
+   NEWS LIST
+   ========================================= */
+
+.news-page__list {
+    width: 100%;
+}
+
+
+/* 뉴스 한 줄 */
+
+.news-page__item {
+    display: grid;
+
+    grid-template-columns:
+        135px minmax(0, 1fr);
+
+    column-gap: 18px;
+
+    align-items: baseline;
+
+    margin-bottom: 24px;
+}
+
+
+/* 날짜 */
+
+.news-page__item time {
+    color: #071eea;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* 내용 */
+
+.news-page__item p {
+    margin: 0 !important;
+
+    color: #222;
+
+    font-size: 17px;
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+/* 강조 */
+
+.news-page__item strong {
+    color: #111;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .news-page {
+        width: calc(100% - 40px);
+    }
+
+    .news-page__header h1 {
+        font-size: 48px;
+    }
+
+    .news-page__item {
+        grid-template-columns:
+            120px minmax(0, 1fr);
+
+        column-gap: 15px;
+
+        margin-bottom: 21px;
+    }
+
+    .news-page__item time,
+    .news-page__item p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .news-page {
+        width: calc(100% - 30px);
+
+        padding-top: 38px;
+        padding-bottom: 60px;
+    }
+
+    .news-page__header {
+        margin-bottom: 48px;
+    }
+
+    .news-page__header h1 {
+        font-size: 38px;
+    }
+
+    .news-page__title-line {
+        width: 88%;
+
+        height: 6px;
+
+        margin-top: 15px;
+    }
+
+
+    /* 모바일에서는 날짜 위, 내용 아래 */
+
+    .news-page__item {
+        display: block;
+
+        margin-bottom: 25px;
+    }
+
+    .news-page__item time {
+        display: block;
+
+        margin-bottom: 3px;
+
+        font-size: 14px;
+    }
+
+    .news-page__item p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+}

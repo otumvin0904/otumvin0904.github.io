@@ -1,0 +1,326 @@
+/* =========================================
+   NanoSpectroscopy Lab - CONTACT PAGE
+   ========================================= */
+
+.contact-page {
+    width: 100%;
+    margin: 0;
+    padding: 50px 0 85px;
+
+    box-sizing: border-box;
+
+    color: #222;
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.contact-header {
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto 110px;
+
+    text-align: center;
+}
+
+
+.contact-header h1 {
+    margin: 0 !important;
+
+    color: #202020;
+
+    font-size: 52px;
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+}
+
+
+/* CONTACT 아래 빨간 선 */
+
+.contact-title-line {
+    width: 52%;
+    max-width: 620px;
+
+    height: 8px;
+
+    margin: 17px auto 0;
+
+    background: #3A6D8F;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact-section {
+    width: 100%;
+}
+
+
+/* 지도 + 정보 */
+
+.contact-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 0.95fr)
+        minmax(420px, 1.15fr);
+
+    gap: 55px;
+
+    align-items: center;
+
+    width: min(950px, calc(100% - 50px));
+
+    margin: 0 auto;
+
+    padding-top: 30px;
+
+    border-top: 2px solid #3A6D8F;
+}
+
+
+/* =========================================
+   MAP
+   ========================================= */
+
+.contact-map {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+
+.contact-map iframe {
+    display: block;
+
+    width: 100%;
+    height: 310px;
+
+    margin: 0;
+
+    border: 0;
+}
+
+
+/* =========================================
+   CONTACT INFO
+   ========================================= */
+
+.contact-info {
+    min-width: 0;
+}
+
+
+/* 각 정보 block */
+
+.contact-block {
+    width: 100%;
+}
+
+
+/* 교수님 이름 */
+
+.contact-block h2 {
+    margin: 0 0 22px !important;
+
+    color: #202020;
+
+    font-size: 21px;
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* Email / Phone */
+
+.contact-basic {
+    margin-bottom: 28px;
+}
+
+
+.contact-basic p,
+.contact-address p,
+.contact-lab p {
+    margin: 0 0 8px !important;
+
+    color: #333;
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    word-break: keep-all;
+}
+
+
+/* label */
+
+.contact-info strong {
+    color: #222;
+
+    font-weight: 700;
+}
+
+
+/* Email */
+
+.contact-info a {
+    color: #333 !important;
+
+    text-decoration: underline;
+
+    text-underline-offset: 2px;
+}
+
+
+.contact-info a:hover {
+    color: #0b55b5 !important;
+}
+
+
+/* 주소 */
+
+.contact-address {
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   LAB
+   ========================================= */
+
+.contact-lab {
+    margin-top: 26px;
+}
+
+
+.contact-lab h2 {
+    margin-bottom: 16px !important;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .contact-header {
+        margin-bottom: 75px;
+    }
+
+
+    .contact-header h1 {
+        font-size: 44px;
+    }
+
+
+    .contact-content {
+        grid-template-columns:
+            minmax(320px, 0.95fr)
+            minmax(340px, 1.05fr);
+
+        gap: 35px;
+
+        width: calc(100% - 40px);
+    }
+
+
+    .contact-map iframe {
+        height: 285px;
+    }
+
+
+    .contact-block h2 {
+        font-size: 19px;
+    }
+
+
+    .contact-basic p,
+    .contact-address p,
+    .contact-lab p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .contact-page {
+        padding-top: 36px;
+        padding-bottom: 60px;
+    }
+
+
+    .contact-header {
+        width: calc(100% - 30px);
+
+        margin-bottom: 50px;
+    }
+
+
+    .contact-header h1 {
+        font-size: 35px;
+    }
+
+
+    .contact-title-line {
+        width: 85%;
+
+        height: 6px;
+
+        margin-top: 14px;
+    }
+
+
+    /* 지도 위 / 정보 아래 */
+
+    .contact-content {
+        display: block;
+
+        width: calc(100% - 30px);
+
+        padding-top: 25px;
+    }
+
+
+    .contact-map {
+        margin-bottom: 35px;
+    }
+
+
+    .contact-map iframe {
+        height: 270px;
+    }
+
+
+    .contact-block h2 {
+        text-align: left;
+
+        font-size: 18px;
+    }
+
+
+    .contact-basic p,
+    .contact-address p,
+    .contact-lab p {
+        font-size: 12px;
+    }
+
+}

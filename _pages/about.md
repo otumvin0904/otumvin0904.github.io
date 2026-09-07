@@ -1,195 +1,323 @@
 ---
-permalink: /about/
-title: ""
+permalink: /
+title:
 author_profile: false
+classes: wide
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/lab-home.css' | relative_url }}">
 
-<div class="lab-home">
+<div class="ns-home">
 
-  <!-- ======================================================
-       HERO
-       ====================================================== -->
+  <section class="ns-hero">
 
-  <section class="lab-shell hero">
-
-<div class="hero-overlay">
-  <div class="hero-content">
-
-    <h1>
-      <span class="hero-accent">Welcome to the NanoSpectroscopy Lab</span>
-    </h1>
-
-    <p class="hero-description">
-      We explore the interaction between light and matter at the nanoscale.
-    </p>
-
-    <a href="/research/" class="hero-button">
-      연구실 소개 보기
-      <span aria-hidden="true">→</span>
-    </a>
-
-  </div>
-</div>
-
-<!-- 장식용 슬라이더 점 -->
-<div class="hero-dots" aria-hidden="true">
-  <span class="hero-dot is-active"></span>
-  <span class="hero-dot"></span>
-  <span class="hero-dot"></span>
-  <span class="hero-dot"></span>
-  <span class="hero-dot"></span>
-</div>
-
-  </section>
-
-  <!-- ======================================================
-       HOME INFORMATION
-       ====================================================== -->
-
-  <section class="lab-shell home-dashboard">
-
-<!-- NEWS -->
-<div class="dashboard-column news-column">
-
-  <div class="dashboard-heading">
-    <h2>News</h2>
-    <a href="/news/">더보기 <span aria-hidden="true">→</span></a>
-  </div>
-
-  <div class="home-news-list">
-
-    <a href="#" class="home-news-item">
-      <time datetime="2024-05-20">2024.05.20</time>
-      <span>[논문] ACS Nano 논문 게재</span>
-    </a>
-
-    <a href="#" class="home-news-item">
-      <time datetime="2024-04-10">2024.04.10</time>
-      <span>학부연구생 모집 공고</span>
-    </a>
-
-    <a href="#" class="home-news-item">
-      <time datetime="2024-03-15">2024.03.15</time>
-      <span>대한화학회 춘계 학술대회 발표</span>
-    </a>
-
-    <a href="#" class="home-news-item">
-      <time datetime="2024-02-28">2024.02.28</time>
-      <span>연구실 세미나 안내</span>
-    </a>
-
-  </div>
-</div>
+    <!-- =====================================================
+         16:9 RESPONSIVE STAGE
+    ====================================================== -->
+    <div class="ns-stage">
 
 
-<!-- PUBLICATIONS -->
-<div class="dashboard-column publication-column">
+      <!-- =====================================================
+           BACKGROUND / RAMAN IMAGE
+      ====================================================== -->
+      <img
+        class="ns-background-image"
+        src="{{ '/images/raman-main.png' | relative_url }}"
+        alt="Raman spectroscopy research"
+      >
 
-  <div class="dashboard-heading">
-    <h2>Recent Publications</h2>
-    <a href="/publications/">더보기 <span aria-hidden="true">→</span></a>
-  </div>
 
-  <div class="home-publication-list">
 
-    <a href="/publications/" class="home-publication-item">
-      <span class="publication-bullet" aria-hidden="true"></span>
-      <div>
-        <strong>
-          Observation of Optical Picocavities in
-          Nanoparticle-on-Mirror Structures
-        </strong>
-        <p>ACS Nano, 2024, 18, 12345–12356</p>
+      <!-- =====================================================
+           HEADER
+      ====================================================== -->
+      <header class="ns-header">
+
+
+        <!-- LEFT MENU -->
+        <nav class="ns-nav ns-nav-left">
+
+          <a href="{{ '/research/' | relative_url }}">
+            Research
+          </a>
+
+          <span class="ns-divider">/</span>
+
+          <a href="{{ '/publications/' | relative_url }}">
+            Publications
+          </a>
+
+          <span class="ns-divider">/</span>
+
+          <a href="{{ '/instruments/' | relative_url }}">
+            Instruments
+          </a>
+
+          <span class="ns-divider">/</span>
+
+          <a href="{{ '/software/' | relative_url }}">
+            Software
+          </a>
+
+        </nav>
+
+
+
+        <!-- CENTER LOGO -->
+        <a
+          class="ns-logo"
+          href="{{ '/' | relative_url }}"
+          aria-label="NanoSpectroscopy Laboratory Home"
+        >
+
+          <img
+            src="{{ '/images/logo.jpg' | relative_url }}"
+            alt="NanoSpectroscopy Laboratory"
+          >
+
+        </a>
+
+
+
+        <!-- RIGHT MENU -->
+        <nav class="ns-nav ns-nav-right">
+
+          <a href="{{ '/team/' | relative_url }}">
+            Team
+          </a>
+
+          <span class="ns-divider">/</span>
+
+          <a href="{{ '/gallery/' | relative_url }}">
+            Gallery
+          </a>
+
+          <span class="ns-divider">/</span>
+
+          <a href="{{ '/news/' | relative_url }}">
+            News
+          </a>
+
+          <span class="ns-divider">/</span>
+
+          <a href="{{ '/contact/' | relative_url }}">
+            Contact
+          </a>
+
+
+          <!-- SEARCH -->
+          <button
+            class="ns-search"
+            id="ns-search-open"
+            type="button"
+            aria-label="Search"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="10.8"
+                cy="10.8"
+                r="6.4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              />
+
+              <line
+                x1="15.5"
+                y1="15.5"
+                x2="20.5"
+                y2="20.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+
+            </svg>
+
+          </button>
+
+        </nav>
+
+      </header>
+
+
+
+      <!-- =====================================================
+           LEFT MAIN TEXT
+           기존 이미지 속 글자를 흰색 영역으로 가리고
+           실제 HTML text로 다시 표현
+      ====================================================== -->
+      <div class="ns-copy ns-copy-main">
+
+        <div class="ns-main-title">
+          <span class="ns-title-light">Nano</span><span class="ns-title-bold">Spectroscopy</span>
+        </div>
+
+
+        <div class="ns-small-line"></div>
+
+
+        <div class="ns-main-subtitle">
+          Probing molecules and materials<br>
+          with light
+        </div>
+
+
+        <div class="ns-main-keywords">
+
+          <div>MOLECULES</div>
+          <div>MATERIALS</div>
+          <div>NANOSTRUCTURES</div>
+          <div>NEW POSSIBILITIES</div>
+
+        </div>
+
       </div>
-    </a>
 
-    <a href="/publications/" class="home-publication-item">
-      <span class="publication-bullet" aria-hidden="true"></span>
-      <div>
-        <strong>
-          Dimensionality-Dependent Plasmonic Hotspot Engineering
-        </strong>
-        <p>Nano Letters, 2023, 23, 5678–5686</p>
+
+
+      <!-- =====================================================
+           BOTTOM-LEFT LAB TEXT
+      ====================================================== -->
+      <div class="ns-copy ns-copy-lab">
+
+        <div class="ns-lab-vertical-line"></div>
+
+        <div class="ns-lab-text">
+
+          <div class="ns-lab-name">
+            NANOSPECTROSCOPY LAB
+          </div>
+
+          <div class="ns-lab-fields">
+            CHEMISTRY
+            <span>·</span>
+            SPECTROSCOPY
+            <span>·</span>
+            NANOSCIENCE
+          </div>
+
+        </div>
+
       </div>
-    </a>
 
-    <a href="/publications/" class="home-publication-item">
-      <span class="publication-bullet" aria-hidden="true"></span>
-      <div>
-        <strong>
-          Flare and Picocavity Phenomena in Plasmonic Nanogaps
-        </strong>
-        <p>J. Phys. Chem. C, 2023, 127, 9867–9885</p>
+
+
+      <!-- =====================================================
+           TOP-RIGHT MOTTO
+      ====================================================== -->
+      <div class="ns-copy ns-copy-motto">
+
+        <div>LIGHT</div>
+        <div>DRIVES</div>
+        <div>A DEEPER</div>
+        <div>UNDERSTANDING</div>
+
+        <div class="ns-motto-line"></div>
+
       </div>
-    </a>
-
-  </div>
-</div>
 
 
-<!-- PEOPLE -->
-<div class="dashboard-column people-column">
-
-  <div class="dashboard-heading">
-    <h2>People</h2>
-    <a href="/team/">더보기 <span aria-hidden="true">→</span></a>
-  </div>
-
-  <a href="/team/" class="professor-card">
-
-    <!--
-      실제 사진 파일:
-      images/homepage/professor.jpg
-      파일이 없어도 회색 원형 배경으로 표시됩니다.
-    -->
-    <div class="professor-photo" aria-hidden="true"></div>
-
-    <div class="professor-info">
-      <strong>강경원 교수</strong>
-      <span>연구실 지도교수</span>
-      <span>kwkang@kangwon.ac.kr</span>
-      <span>033-250-8517</span>
     </div>
 
-  </a>
-</div>
-
   </section>
 
-  <!-- ======================================================
-       CUSTOM FOOTER
-       ====================================================== -->
-
-  <footer class="lab-shell lab-footer">
-
-<div class="footer-brand">
-  <div class="footer-knu">KNU</div>
-  <div>
-    <strong>강원대학교 화학과</strong>
-    <span>Nano Spectroscopy Lab.</span>
-  </div>
 </div>
 
-<div class="footer-contact">
-  <p>24341 강원특별자치도 춘천시 강원대학길 1 강원대학교 자연과학대학 화학과</p>
-  <p>
-    Tel. 033-250-8517
-    <span class="footer-divider">|</span>
-    E-mail. kwkang@kangwon.ac.kr
-  </p>
-</div>
 
-<div class="footer-copy">
-  <p>Copyright © 2024 Nano Spectroscopy Lab.</p>
-  <p>All rights reserved.</p>
-</div>
 
-<a href="#" class="footer-top" aria-label="맨 위로 이동">
-  ↑
-</a>
+<!-- =========================================================
+     SEARCH PANEL CONTROL
+========================================================= -->
 
-  </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-</div>
+  const searchOpen =
+    document.getElementById("ns-search-open");
+
+  const searchPanel =
+    document.getElementById("site-search-panel");
+
+  const searchClose =
+    document.getElementById("site-search-close");
+
+  const searchInput =
+    document.getElementById("site-search-input");
+
+
+  if (searchOpen && searchPanel) {
+
+    searchOpen.addEventListener("click", function () {
+
+      searchPanel.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+
+      if (searchInput) {
+
+        setTimeout(function () {
+          searchInput.focus();
+        }, 50);
+
+      }
+
+    });
+
+  }
+
+
+  if (searchClose && searchPanel) {
+
+    searchClose.addEventListener("click", function () {
+
+      searchPanel.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+    });
+
+  }
+
+
+  if (searchPanel) {
+
+    searchPanel.addEventListener("click", function (event) {
+
+      if (event.target === searchPanel) {
+
+        searchPanel.setAttribute("aria-hidden", "true");
+
+        document.body.style.overflow = "";
+
+      }
+
+    });
+
+  }
+
+
+  document.addEventListener("keydown", function (event) {
+
+    if (
+      event.key === "Escape" &&
+      searchPanel &&
+      searchPanel.getAttribute("aria-hidden") === "false"
+    ) {
+
+      searchPanel.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+    }
+
+  });
+
+});
+</script>

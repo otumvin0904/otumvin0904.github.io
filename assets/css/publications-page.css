@@ -1,0 +1,1246 @@
+/* ==========================================================
+   NANOSPECTROSCOPY LAB
+   PUBLICATIONS PAGE
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================================
+   REMOVE DEFAULT ACADEMICPAGES
+   ========================================================== */
+
+.masthead {
+  display: none !important;
+}
+
+
+.page__footer {
+  display: none !important;
+}
+
+
+.page__title {
+  display: none !important;
+}
+
+
+#main,
+#main .page,
+#main .page__inner-wrap,
+#main .page__content {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#main .page {
+  float: none !important;
+}
+
+
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
+
+.publications-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #223650;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.publications-header {
+  position: relative;
+
+  width: 100%;
+  height: 80px;
+
+  background: transparent;
+
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.publications-nav {
+  position: absolute;
+
+  top: 27px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+
+.publications-nav-left {
+  left: clamp(30px, 3vw, 65px);
+}
+
+
+.publications-nav-right {
+  right: clamp(30px, 3vw, 65px);
+}
+
+
+.publications-nav a {
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.78) !important;
+
+  font-size: clamp(13px, 0.8vw, 16px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  transition: color 180ms ease;
+}
+
+
+.publications-nav a:hover {
+  color: #000000 !important;
+}
+
+
+.publications-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ef4444;
+}
+
+
+.publications-nav span {
+  color: rgba(0, 0, 0, 0.28);
+
+  font-size: 14px;
+}
+
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.publications-logo {
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 56px;
+
+  text-decoration: none !important;
+}
+
+
+.publications-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 56px;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.publications-search {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  margin-left: 5px;
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color: rgba(0, 0, 0, 0.70);
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+.publications-search svg {
+  display: block;
+
+  width: 18px !important;
+  height: 18px !important;
+
+  fill: none !important;
+}
+
+
+.publications-search svg circle,
+.publications-search svg line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.publications-main {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    clamp(55px, 5vw, 110px)
+    120px;
+}
+
+
+
+/* ==========================================================
+   SECTION LINE
+   ========================================================== */
+
+.section-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 17px auto 0;
+
+  background: #a3afbd;
+
+  border-radius: 2px;
+}
+
+
+
+/* ==========================================================
+   MAIN HEADING
+   ========================================================== */
+
+.publications-heading {
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+
+.publications-heading h1 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 3vw, 60px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+}
+
+
+.publications-heading p {
+  margin: 21px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.20em;
+}
+
+
+
+/* ==========================================================
+   PUBLICATION GROUP
+   ========================================================== */
+
+.publication-group {
+  width: 100%;
+
+  max-width: 1550px;
+
+  margin:
+    85px
+    auto
+    0;
+}
+
+
+.publication-group-prior {
+  margin-top: 120px;
+}
+
+
+
+/* ==========================================================
+   GROUP HEADING
+   Research의 번호 + 제목 디자인과 연결
+   ========================================================== */
+
+.publication-group-heading {
+  display: grid;
+
+  grid-template-columns:
+    68px
+    minmax(0, 1fr);
+
+  gap: 24px;
+
+  align-items: end;
+
+  margin-bottom: 26px;
+}
+
+
+.publication-group-index {
+  color: #657b97;
+
+  font-size: clamp(17px, 1vw, 22px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.publication-group-title {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 22px;
+
+  padding-bottom: 13px;
+
+  border-bottom:
+    1px solid #dce3ea;
+}
+
+
+.publication-group-title h2 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(28px, 1.8vw, 38px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+}
+
+
+.publication-group-title p {
+  margin: 0 !important;
+
+  color: #8491a1;
+
+  font-size: clamp(11px, 0.67vw, 14px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.17em;
+}
+
+
+
+/* ==========================================================
+   PUBLICATION LIST
+   ========================================================== */
+
+.publication-list {
+  width: 100%;
+}
+
+
+
+/* ==========================================================
+   PUBLICATION ITEM
+   ========================================================== */
+
+.publication-item {
+  display: grid;
+
+  grid-template-columns:
+    68px
+    minmax(0, 1fr);
+
+  gap: 24px;
+
+  width: 100%;
+
+  padding:
+    30px
+    0
+    34px;
+
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid #e1e6ec;
+}
+
+
+
+/* ==========================================================
+   NUMBER
+   ========================================================== */
+
+.publication-number {
+  padding-top: 7px;
+}
+
+
+.publication-number span {
+  display: block;
+
+  color: #657b97;
+
+  font-size: clamp(16px, 0.95vw, 20px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+}
+
+
+.publication-number-line {
+  width: 33px;
+  height: 2px;
+
+  margin-top: 13px;
+
+  background: #96a5b7;
+}
+
+
+
+/* ==========================================================
+   INFORMATION
+   ========================================================== */
+
+.publication-information {
+  min-width: 0;
+
+  max-width: 1250px;
+}
+
+
+
+/* ==========================================================
+   TITLE ROW
+   ========================================================== */
+
+.publication-title-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+
+  gap:
+    10px
+    18px;
+}
+
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.publication-title {
+  margin: 0;
+
+  color: #20344f;
+
+  font-size: clamp(20px, 1.25vw, 27px);
+  font-weight: 600;
+
+  line-height: 1.45;
+}
+
+
+.publication-title a {
+  color: #20344f !important;
+
+  text-decoration: none !important;
+
+  transition: color 180ms ease;
+}
+
+
+.publication-title a:hover {
+  color: #6a7d94 !important;
+}
+
+
+
+/* ==========================================================
+   STATUS
+   ========================================================== */
+
+.publication-status-pill {
+  display: inline-flex;
+
+  align-items: center;
+
+  flex: 0 0 auto;
+
+  margin-top: 3px;
+
+  padding:
+    6px
+    11px;
+
+  border:
+    1px solid #c5ced8;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  color: #738296;
+
+  font-size: clamp(10px, 0.63vw, 13px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+
+/* ==========================================================
+   AUTHORS
+   ========================================================== */
+
+.publication-authors {
+  margin-top: 12px;
+
+  color: #5f7187;
+
+  font-size: clamp(15px, 0.88vw, 18px);
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+
+/* Highlight lab PI name from existing authors_html */
+
+.publication-authors .my-name,
+.my-name {
+  color: #263c57;
+
+  font-weight: 700;
+}
+
+
+
+/* ==========================================================
+   JOURNAL
+   ========================================================== */
+
+.publication-journal {
+  margin-top: 7px;
+
+  color: #687a90;
+
+  font-size: clamp(15px, 0.86vw, 18px);
+  font-weight: 500;
+
+  font-style: italic;
+
+  line-height: 1.55;
+}
+
+
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+.publication-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 24px;
+
+  margin-top: 16px;
+}
+
+
+.publication-links a {
+  position: relative;
+
+  color: #526983 !important;
+
+  font-size: clamp(11px, 0.67vw, 14px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-decoration: none !important;
+}
+
+
+.publication-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #71859e;
+
+  transform: scaleX(0);
+
+  transform-origin: left center;
+
+  transition:
+    transform 180ms ease;
+}
+
+
+.publication-links a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+/* ==========================================================
+   UNPUBLISHED ITEM
+   ========================================================== */
+
+.publication-item-status .publication-title {
+  color: #314a68;
+}
+
+
+.publication-item-status {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(241, 245, 249, 0.55) 0%,
+      rgba(255, 255, 255, 0) 45%
+    );
+}
+
+
+
+/* ==========================================================
+   SEARCH PANEL CLOSED
+   ========================================================== */
+
+#site-search-panel[aria-hidden="true"] {
+  display: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH PANEL OPEN
+   ========================================================== */
+
+#site-search-panel[aria-hidden="false"] {
+  display: flex !important;
+
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 110px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.04) !important;
+
+  z-index: 9999 !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INNER
+   ========================================================== */
+
+#site-search-panel .site-search-panel__inner {
+  position: relative;
+
+  width: min(
+    760px,
+    calc(100vw - 60px)
+  );
+
+  max-height:
+    calc(100vh - 150px);
+
+  padding:
+    24px
+    30px
+    30px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  background:
+    rgba(255, 255, 255, 0.24) !important;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.06);
+}
+
+
+
+/* ==========================================================
+   SEARCH BOX
+   ========================================================== */
+
+#site-search-panel .site-search-box {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding:
+    4px
+    0
+    14px;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.28) !important;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH ICON
+   ========================================================== */
+
+#site-search-panel .site-search-box__icon {
+  display: block !important;
+
+  flex: 0 0 20px !important;
+
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 20px !important;
+  min-height: 20px !important;
+
+  max-width: 20px !important;
+  max-height: 20px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  fill: none !important;
+
+  stroke:
+    rgba(0, 0, 0, 0.68) !important;
+
+  stroke-width: 1.6 !important;
+}
+
+
+#site-search-panel .site-search-box__icon circle,
+#site-search-panel .site-search-box__icon line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INPUT
+   ========================================================== */
+
+#site-search-input {
+  flex: 1;
+
+  width: 100%;
+
+  margin: 0 !important;
+  padding: 6px 0 !important;
+
+  border: 0 !important;
+
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  box-shadow: none !important;
+
+  color: #111111 !important;
+
+  font-size: 18px;
+}
+
+
+#site-search-input::placeholder {
+  color:
+    rgba(0, 0, 0, 0.45) !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH CLOSE
+   ========================================================== */
+
+#site-search-close {
+  position: absolute !important;
+
+  top: 14px;
+  right: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color:
+    rgba(0, 0, 0, 0.60) !important;
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH RESULTS
+   ========================================================== */
+
+#site-search-panel .site-search-results-wrap {
+  margin-top: 20px;
+
+  background: transparent !important;
+
+  color: #26384d !important;
+}
+
+
+#site-search-panel .site-search-results-wrap a {
+  color: #182c45 !important;
+
+  text-decoration: none !important;
+}
+
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .publications-header {
+    height: 135px;
+  }
+
+
+  .publications-logo {
+    top: 10px;
+
+    width: 150px;
+  }
+
+
+  .publications-logo img {
+    max-width: 150px;
+  }
+
+
+  .publications-nav {
+    top: 85px;
+  }
+
+
+  .publications-nav-left {
+    left: 25px;
+  }
+
+
+  .publications-nav-right {
+    right: 25px;
+  }
+
+
+  .publications-main {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+
+  .publication-group {
+    margin-top: 70px;
+  }
+
+
+  .publication-group-prior {
+    margin-top: 95px;
+  }
+
+
+  .publication-group-heading {
+    grid-template-columns:
+      52px
+      minmax(0, 1fr);
+
+    gap: 17px;
+  }
+
+
+  .publication-group-title {
+    display: block;
+  }
+
+
+  .publication-group-title p {
+    margin-top: 9px !important;
+  }
+
+
+  .publication-item {
+    grid-template-columns:
+      52px
+      minmax(0, 1fr);
+
+    gap: 17px;
+  }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+  .publications-header {
+    height: 190px;
+  }
+
+
+  .publications-logo {
+    top: 12px;
+
+    width: 145px;
+  }
+
+
+  .publications-logo img {
+    max-width: 145px;
+  }
+
+
+  .publications-nav {
+    left: 50%;
+    right: auto;
+
+    transform:
+      translateX(-50%);
+
+    width:
+      calc(100% - 25px);
+
+    justify-content: center;
+
+    gap: 8px;
+  }
+
+
+  .publications-nav-left {
+    top: 82px;
+  }
+
+
+  .publications-nav-right {
+    top: 125px;
+  }
+
+
+  .publications-nav a {
+    font-size: 11px;
+  }
+
+
+  .publications-nav span {
+    font-size: 10px;
+  }
+
+
+  .publications-main {
+    padding:
+      15px
+      20px
+      65px;
+  }
+
+
+  /* TITLE */
+
+  .publications-heading h1 {
+    font-size: 30px;
+
+    letter-spacing: 0.09em;
+  }
+
+
+  .publications-heading p {
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  /* GROUP */
+
+  .publication-group {
+    margin-top: 55px;
+  }
+
+
+  .publication-group-prior {
+    margin-top: 80px;
+  }
+
+
+  .publication-group-heading {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .publication-group-index {
+    font-size: 14px;
+  }
+
+
+  .publication-group-title h2 {
+    font-size: 23px;
+  }
+
+
+  .publication-group-title p {
+    font-size: 9px;
+
+    line-height: 1.5;
+  }
+
+
+  /* PAPER */
+
+  .publication-item {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding:
+      25px
+      0
+      28px;
+  }
+
+
+  .publication-number span {
+    font-size: 13px;
+  }
+
+
+  .publication-number-line {
+    width: 25px;
+  }
+
+
+  .publication-title {
+    font-size: 18px;
+  }
+
+
+  .publication-authors {
+    font-size: 14px;
+  }
+
+
+  .publication-journal {
+    font-size: 14px;
+  }
+
+
+  .publication-status-pill {
+    padding:
+      5px
+      9px;
+
+    font-size: 9px;
+  }
+
+
+  .publication-links {
+    gap: 17px;
+  }
+
+
+  /* SEARCH */
+
+  #site-search-panel[aria-hidden="false"] {
+    padding-top: 80px;
+  }
+
+
+  #site-search-panel .site-search-panel__inner {
+    width:
+      calc(100vw - 28px);
+
+    padding:
+      20px
+      21px
+      25px;
+  }
+
+}

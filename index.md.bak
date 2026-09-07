@@ -61,29 +61,23 @@ classes: wide
     <a href="/news/">더보기 <span aria-hidden="true">→</span></a>
   </div>
 
-  <div class="home-news-list">
+<div class="home-news-list">
 
-    <a href="#" class="home-news-item">
-      <time datetime="2024-05-20">2024.05.20</time>
-      <span>[논문] ACS Nano 논문 게재</span>
+  {% for item in site.data.news limit:4 %}
+
+    <a href="{{ '/news/' | relative_url }}" class="home-news-item">
+
+      <time datetime="{{ item.datetime }}">
+        {{ item.date }}
+      </time>
+
+      <span>
+        {{ item.text }}
+      </span>
+
     </a>
 
-    <a href="#" class="home-news-item">
-      <time datetime="2024-04-10">2024.04.10</time>
-      <span>학부연구생 모집 공고</span>
-    </a>
-
-    <a href="#" class="home-news-item">
-      <time datetime="2024-03-15">2024.03.15</time>
-      <span>대한화학회 춘계 학술대회 발표</span>
-    </a>
-
-    <a href="#" class="home-news-item">
-      <time datetime="2024-02-28">2024.02.28</time>
-      <span>연구실 세미나 안내</span>
-    </a>
-
-  </div>
+  {% endfor %}
 </div>
 
 
@@ -95,40 +89,33 @@ classes: wide
     <a href="/publications/">더보기 <span aria-hidden="true">→</span></a>
   </div>
 
-  <div class="home-publication-list">
+<div class="home-publication-list">
 
-    <a href="/publications/" class="home-publication-item">
+  {% assign published_papers = site.data.publications | where: "published", true %}
+
+  {% for paper in published_papers limit:3 %}
+
+    <a href="{{ '/publications/' | relative_url }}"
+       class="home-publication-item">
+
       <span class="publication-bullet" aria-hidden="true"></span>
+
       <div>
+
         <strong>
-          Observation of Optical Picocavities in
-          Nanoparticle-on-Mirror Structures
+          {{ paper.title }}
         </strong>
-        <p>ACS Nano, 2024, 18, 12345–12356</p>
+
+        <p>
+          {{ paper.journal }}
+        </p>
+
       </div>
+
     </a>
 
-    <a href="/publications/" class="home-publication-item">
-      <span class="publication-bullet" aria-hidden="true"></span>
-      <div>
-        <strong>
-          Dimensionality-Dependent Plasmonic Hotspot Engineering
-        </strong>
-        <p>Nano Letters, 2023, 23, 5678–5686</p>
-      </div>
-    </a>
+  {% endfor %}
 
-    <a href="/publications/" class="home-publication-item">
-      <span class="publication-bullet" aria-hidden="true"></span>
-      <div>
-        <strong>
-          Flare and Picocavity Phenomena in Plasmonic Nanogaps
-        </strong>
-        <p>J. Phys. Chem. C, 2023, 127, 9867–9885</p>
-      </div>
-    </a>
-
-  </div>
 </div>
 
 
@@ -152,8 +139,8 @@ classes: wide
     <div class="professor-info">
       <strong>강경원 교수</strong>
       <span>연구실 지도교수</span>
-      <span>kwkang@kangwon.ac.kr</span>
-      <span>033-250-8517</span>
+      <span>gkang@kangwon.ac.kr</span>
+      <span>033-250-8487</span>
     </div>
 
   </a>
@@ -182,11 +169,6 @@ classes: wide
     <span class="footer-divider">|</span>
     E-mail. kwkang@kangwon.ac.kr
   </p>
-</div>
-
-<div class="footer-copy">
-  <p>Copyright © 2024 Nano Spectroscopy Lab.</p>
-  <p>All rights reserved.</p>
 </div>
 
 <a href="#" class="footer-top" aria-label="맨 위로 이동">

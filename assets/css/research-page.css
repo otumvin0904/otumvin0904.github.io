@@ -1,0 +1,1251 @@
+/* ==========================================================
+   NANOSPECTROSCOPY LAB
+   RESEARCH PAGE
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================================
+   REMOVE DEFAULT ACADEMICPAGES
+   ========================================================== */
+
+.masthead {
+  display: none !important;
+}
+
+
+.page__footer {
+  display: none !important;
+}
+
+
+.page__title {
+  display: none !important;
+}
+
+
+#main,
+#main .page,
+#main .page__inner-wrap,
+#main .page__content {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#main .page {
+  float: none !important;
+}
+
+
+#main .page__content p {
+  margin: 0;
+}
+
+
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
+
+.research-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #223650;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.research-header {
+  position: relative;
+
+  width: 100%;
+  height: 80px;
+
+  background: transparent;
+
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.research-nav {
+  position: absolute;
+
+  top: 27px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+
+.research-nav-left {
+  left: clamp(30px, 3vw, 65px);
+}
+
+
+.research-nav-right {
+  right: clamp(30px, 3vw, 65px);
+}
+
+
+.research-nav a {
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.78) !important;
+
+  font-size: clamp(13px, 0.8vw, 16px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  transition: color 180ms ease;
+}
+
+
+.research-nav a:hover {
+  color: #000000 !important;
+}
+
+
+.research-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ef4444;
+}
+
+
+.research-nav span {
+  color: rgba(0, 0, 0, 0.28);
+
+  font-size: 14px;
+}
+
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.research-logo {
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 56px;
+}
+
+
+.research-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 56px;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.research-search {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  margin-left: 5px;
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color: rgba(0, 0, 0, 0.70);
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+.research-search svg {
+  display: block;
+
+  width: 18px !important;
+  height: 18px !important;
+
+  fill: none !important;
+}
+
+
+.research-search svg circle,
+.research-search svg line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.research-main {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    clamp(50px, 4.5vw, 100px)
+    110px;
+}
+
+
+
+/* ==========================================================
+   SHARED SECTION LINE
+   ========================================================== */
+
+.section-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 17px auto 0;
+
+  background: #a3afbd;
+
+  border-radius: 2px;
+}
+
+
+
+/* ==========================================================
+   RESEARCH HEADING
+   ========================================================== */
+
+.research-heading {
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+
+.research-heading h1 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 3vw, 60px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+}
+
+
+.research-heading p {
+  margin: 21px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.22em;
+}
+
+
+
+/* ==========================================================
+   TECHNIQUES
+   ========================================================== */
+
+.techniques-section {
+  width: 100%;
+
+  margin-top: 52px;
+}
+
+
+.techniques-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: clamp(42px, 3.5vw, 78px);
+}
+
+
+
+/* ==========================================================
+   RESEARCH CARD
+   ========================================================== */
+
+.technique-card {
+  min-width: 0;
+}
+
+
+.technique-upper {
+  display: grid;
+
+  grid-template-columns:
+    48px minmax(0, 1fr);
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+
+
+/* ==========================================================
+   SHARED NUMBER
+   ========================================================== */
+
+.item-number {
+  padding-top: 7px;
+}
+
+
+.item-number span {
+  display: block;
+
+  color: #657b97;
+
+  font-size: clamp(17px, 1vw, 22px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.item-number-line {
+  width: 33px;
+  height: 2px;
+
+  margin-top: 14px;
+
+  background: #96a5b7;
+}
+
+
+
+/* ==========================================================
+   RESEARCH IMAGE
+   ========================================================== */
+
+.technique-image {
+  width: 100%;
+
+  height: clamp(250px, 16vw, 355px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+.technique-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   RESEARCH TEXT
+   ========================================================== */
+
+.technique-content {
+  margin-top: 21px;
+
+  padding-left: 68px;
+}
+
+
+.technique-content h2 {
+  margin: 0;
+
+  color: #20344f;
+
+  font-size: clamp(25px, 1.45vw, 31px);
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.technique-content h3 {
+  margin: 8px 0 0;
+
+  color: #61748d;
+
+  font-size: clamp(17px, 1vw, 21px);
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+.technique-content p {
+  margin: 14px 0 0 !important;
+
+  max-width: 96%;
+
+  color: #52657e;
+
+  font-size: clamp(16px, 0.9vw, 19px);
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+
+/* ==========================================================
+   APPLICATIONS
+   ========================================================== */
+
+.applications-section {
+  width: 100%;
+
+  margin-top: 115px;
+
+  padding-top: 66px;
+
+  border-top: 1px solid #e1e6ec;
+}
+
+
+
+/* ==========================================================
+   APPLICATION HEADING
+   ========================================================== */
+
+.applications-heading {
+  text-align: center;
+
+  margin-bottom: 68px;
+}
+
+
+.applications-heading h2 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 2.8vw, 56px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.applications-heading p {
+  margin: 20px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.20em;
+}
+
+
+
+/* ==========================================================
+   APPLICATION GRID
+   3 columns × 2 rows
+   ========================================================== */
+
+.applications-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap:
+    85px
+    clamp(42px, 3.5vw, 78px);
+}
+
+
+
+/* ==========================================================
+   APPLICATION CARD
+   ========================================================== */
+
+.application-card {
+  min-width: 0;
+}
+
+
+.application-upper {
+  display: grid;
+
+  grid-template-columns:
+    48px minmax(0, 1fr);
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+
+
+/* ==========================================================
+   APPLICATION IMAGE
+   Research와 거의 동일
+   ========================================================== */
+
+.application-image {
+  width: 100%;
+
+  height: clamp(250px, 16vw, 355px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+.application-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   APPLICATION TEXT
+   ========================================================== */
+
+.application-content {
+  margin-top: 21px;
+
+  padding-left: 68px;
+}
+
+
+.application-content h3 {
+  margin: 0;
+
+  color: #20344f;
+
+  font-size: clamp(23px, 1.35vw, 29px);
+  font-weight: 650;
+
+  line-height: 1.3;
+}
+
+
+.application-content p {
+  margin: 14px 0 0 !important;
+
+  max-width: 96%;
+
+  color: #52657e;
+
+  font-size: clamp(16px, 0.9vw, 19px);
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+.application-content small {
+  display: block;
+
+  margin-top: 11px;
+
+  color: #7b8797;
+
+  font-size: clamp(12px, 0.7vw, 15px);
+
+  line-height: 1.5;
+}
+
+
+
+/* ==========================================================
+   SEARCH PANEL CLOSED
+   ========================================================== */
+
+#site-search-panel[aria-hidden="true"] {
+  display: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH PANEL OPEN
+   ========================================================== */
+
+#site-search-panel[aria-hidden="false"] {
+  display: flex !important;
+
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 110px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.04) !important;
+
+  z-index: 9999 !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INNER
+   ========================================================== */
+
+#site-search-panel .site-search-panel__inner {
+  position: relative;
+
+  width: min(
+    760px,
+    calc(100vw - 60px)
+  );
+
+  max-height:
+    calc(100vh - 150px);
+
+  padding:
+    24px
+    30px
+    30px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  background:
+    rgba(255, 255, 255, 0.24) !important;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.06);
+}
+
+
+
+/* ==========================================================
+   SEARCH BOX
+   ========================================================== */
+
+#site-search-panel .site-search-box {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding:
+    4px
+    0
+    14px;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.28) !important;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH ICON
+   ========================================================== */
+
+#site-search-panel .site-search-box__icon {
+  display: block !important;
+
+  flex: 0 0 20px !important;
+
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 20px !important;
+  min-height: 20px !important;
+
+  max-width: 20px !important;
+  max-height: 20px !important;
+
+  fill: none !important;
+
+  stroke:
+    rgba(0, 0, 0, 0.68) !important;
+
+  stroke-width: 1.6 !important;
+}
+
+
+#site-search-panel .site-search-box__icon circle,
+#site-search-panel .site-search-box__icon line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INPUT
+   ========================================================== */
+
+#site-search-input {
+  flex: 1;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 6px 0 !important;
+
+  border: 0 !important;
+
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  box-shadow: none !important;
+
+  color: #111111 !important;
+
+  font-size: 18px;
+}
+
+
+#site-search-input::placeholder {
+  color:
+    rgba(0, 0, 0, 0.45) !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH CLOSE
+   ========================================================== */
+
+#site-search-close {
+  position: absolute !important;
+
+  top: 14px;
+  right: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color:
+    rgba(0, 0, 0, 0.60) !important;
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH RESULTS
+   ========================================================== */
+
+#site-search-panel .site-search-results-wrap {
+  margin-top: 20px;
+
+  background: transparent !important;
+
+  color: #26384d !important;
+}
+
+
+#site-search-panel .site-search-results-wrap a {
+  color: #182c45 !important;
+
+  text-decoration: none !important;
+}
+
+
+
+/* ==========================================================
+   MEDIUM SCREEN
+   ========================================================== */
+
+@media (max-width: 1250px) {
+
+  .research-main {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+
+  .techniques-grid,
+  .applications-grid {
+    gap:
+      65px
+      32px;
+  }
+
+
+  .technique-upper,
+  .application-upper {
+    grid-template-columns:
+      42px minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+
+  .technique-content,
+  .application-content {
+    padding-left: 57px;
+  }
+
+
+  .technique-image,
+  .application-image {
+    height:
+      clamp(220px, 19vw, 310px);
+  }
+
+}
+
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .research-header {
+    height: 135px;
+  }
+
+
+  .research-logo {
+    top: 10px;
+
+    width: 150px;
+  }
+
+
+  .research-logo img {
+    max-width: 150px;
+  }
+
+
+  .research-nav {
+    top: 85px;
+  }
+
+
+  .research-nav-left {
+    left: 25px;
+  }
+
+
+  .research-nav-right {
+    right: 25px;
+  }
+
+
+  /* Research */
+  .techniques-grid {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+
+  .technique-image {
+    height:
+      min(430px, 50vw);
+  }
+
+
+  /* Applications: 2 columns */
+  .applications-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      65px
+      35px;
+  }
+
+
+  .application-image {
+    height:
+      min(340px, 38vw);
+  }
+
+
+  .applications-section {
+    margin-top: 85px;
+  }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+  .research-header {
+    height: 190px;
+  }
+
+
+  .research-logo {
+    top: 12px;
+
+    width: 145px;
+  }
+
+
+  .research-logo img {
+    max-width: 145px;
+  }
+
+
+  .research-nav {
+    left: 50%;
+    right: auto;
+
+    transform:
+      translateX(-50%);
+
+    width:
+      calc(100% - 25px);
+
+    justify-content: center;
+
+    gap: 8px;
+  }
+
+
+  .research-nav-left {
+    top: 82px;
+  }
+
+
+  .research-nav-right {
+    top: 125px;
+  }
+
+
+  .research-nav a {
+    font-size: 11px;
+  }
+
+
+  .research-nav span {
+    font-size: 10px;
+  }
+
+
+  .research-main {
+    padding:
+      15px
+      20px
+      65px;
+  }
+
+
+  /* RESEARCH HEADING */
+
+  .research-heading h1 {
+    font-size: 34px;
+  }
+
+
+  .research-heading p {
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  /* NUMBER + IMAGE */
+
+  .technique-upper,
+  .application-upper {
+    grid-template-columns:
+      36px minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+
+  .item-number span {
+    font-size: 15px;
+  }
+
+
+  .item-number-line {
+    width: 26px;
+  }
+
+
+  /* RESEARCH */
+
+  .technique-content,
+  .application-content {
+    padding-left: 50px;
+  }
+
+
+  .technique-image {
+    height:
+      min(330px, 61vw);
+  }
+
+
+  .technique-content h2 {
+    font-size: 21px;
+  }
+
+
+  .technique-content h3 {
+    font-size: 15px;
+  }
+
+
+  .technique-content p {
+    font-size: 14px;
+  }
+
+
+  /* APPLICATIONS */
+
+  .applications-section {
+    margin-top: 80px;
+
+    padding-top: 50px;
+  }
+
+
+  .applications-heading {
+    margin-bottom: 48px;
+  }
+
+
+  .applications-heading h2 {
+    font-size: 31px;
+
+    letter-spacing: 0.10em;
+  }
+
+
+  .applications-heading p {
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .applications-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .application-image {
+    height:
+      min(340px, 65vw);
+  }
+
+
+  .application-content h3 {
+    font-size: 20px;
+  }
+
+
+  .application-content p {
+    font-size: 14px;
+  }
+
+
+  .application-content small {
+    font-size: 11px;
+  }
+
+
+  /* SEARCH */
+
+  #site-search-panel[aria-hidden="false"] {
+    padding-top: 80px;
+  }
+
+
+  #site-search-panel .site-search-panel__inner {
+    width:
+      calc(100vw - 28px);
+
+    padding:
+      20px
+      21px
+      25px;
+  }
+
+}

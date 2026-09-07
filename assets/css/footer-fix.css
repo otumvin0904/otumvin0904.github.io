@@ -1,0 +1,375 @@
+/* =========================================
+   FINAL FOOTER - 2 COLUMN
+   ========================================= */
+
+/* AcademicPages 기본 Footer 제거 */
+.page__footer,
+.page__footer-follow,
+.page__footer-copyright {
+    display: none !important;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.lab-footer {
+    position: relative !important;
+
+    display: grid !important;
+
+    /* 왼쪽 : 오른쪽 = 약 45 : 55 */
+    grid-template-columns:
+        minmax(360px, 0.9fr)
+        minmax(440px, 1.1fr) !important;
+
+    align-items: center !important;
+
+    column-gap: 70px !important;
+
+    width: calc(100% - 36px) !important;
+    max-width: 1480px !important;
+
+    margin: 16px auto 0 !important;
+
+    padding:
+        34px
+        100px
+        34px
+        70px !important;
+
+    box-sizing: border-box !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #031a3b 0%,
+            #05234d 55%,
+            #031a3b 100%
+        ) !important;
+
+    color: rgba(255,255,255,.75) !important;
+}
+
+
+/* =========================================
+   LEFT
+   KNU LOGO + LAB NAME
+   ========================================= */
+
+.lab-footer .footer-brand {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 32px !important;
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+}
+
+
+/* KNU Logo */
+
+.lab-footer .footer-brand img {
+    display: block !important;
+
+    width: auto !important;
+
+    max-width: 220px !important;
+    max-height: 92px !important;
+
+    object-fit: contain !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* 강원대학교 화학과 / Nano Spectroscopy */
+
+.lab-footer .footer-brand > div:last-child {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    min-width: 170px !important;
+
+    white-space: nowrap !important;
+}
+
+
+.lab-footer .footer-brand strong {
+    margin: 0 !important;
+
+    color: rgba(255,255,255,.95) !important;
+
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+
+    font-weight: 600 !important;
+}
+
+
+.lab-footer .footer-brand span {
+    margin-top: 4px !important;
+
+    color: rgba(255,255,255,.76) !important;
+
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* =========================================
+   RIGHT
+   ADDRESS / CONTACT
+   ========================================= */
+
+.lab-footer .footer-contact {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+}
+
+
+.lab-footer .footer-contact p {
+    margin: 0 !important;
+
+    color: rgba(255,255,255,.76) !important;
+
+    font-size: 11.5px !important;
+    line-height: 1.8 !important;
+
+    word-break: keep-all !important;
+
+    white-space: normal !important;
+}
+
+
+.lab-footer .footer-divider {
+    display: inline-block !important;
+
+    padding: 0 10px !important;
+
+    color: rgba(255,255,255,.35) !important;
+}
+
+
+/* =========================================
+   TOP BUTTON
+   ========================================= */
+
+.lab-footer .footer-top {
+    position: absolute !important;
+
+    right: 28px !important;
+
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 36px !important;
+    height: 36px !important;
+
+    border: 1px solid rgba(255,255,255,.4) !important;
+
+    border-radius: 50% !important;
+
+    color: rgba(255,255,255,.9) !important;
+
+    font-size: 17px !important;
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================
+   1100px 이하
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .lab-footer {
+
+        grid-template-columns:
+            minmax(300px, 0.9fr)
+            minmax(340px, 1.1fr) !important;
+
+        column-gap: 40px !important;
+
+        padding:
+            30px
+            80px
+            30px
+            40px !important;
+    }
+
+
+    .lab-footer .footer-brand {
+        gap: 22px !important;
+    }
+
+
+    .lab-footer .footer-brand img {
+        max-width: 185px !important;
+    }
+
+
+    .lab-footer .footer-brand > div:last-child {
+        min-width: 145px !important;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .lab-footer {
+
+        display: block !important;
+
+        width: calc(100% - 20px) !important;
+
+        padding:
+            28px
+            70px
+            28px
+            28px !important;
+    }
+
+
+    .lab-footer .footer-brand {
+        margin-bottom: 22px !important;
+    }
+
+
+    .lab-footer .footer-contact {
+        margin: 0 !important;
+    }
+
+
+    .lab-footer .footer-top {
+        right: 20px !important;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 520px) {
+
+    .lab-footer {
+
+        padding:
+            24px
+            55px
+            24px
+            18px !important;
+    }
+
+
+    .lab-footer .footer-brand {
+        gap: 14px !important;
+    }
+
+
+    .lab-footer .footer-brand img {
+        max-width: 135px !important;
+        max-height: 70px !important;
+    }
+
+
+    .lab-footer .footer-brand > div:last-child {
+        min-width: 0 !important;
+
+        white-space: normal !important;
+    }
+
+
+    .lab-footer .footer-brand strong {
+        font-size: 11px !important;
+    }
+
+
+    .lab-footer .footer-brand span,
+    .lab-footer .footer-contact p {
+        font-size: 10px !important;
+    }
+
+
+    .lab-footer .footer-top {
+        right: 13px !important;
+
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+}
+/* =========================================================
+   FOOTER - SAME WIDTH AS MAIN PAGE
+   ========================================================= */
+
+.lab-footer {
+    width: var(--lab-main-width) !important;
+    max-width: none !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding:
+        clamp(26px, 2.4vw, 38px)
+        clamp(48px, 4.5vw, 76px) !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.25fr) !important;
+
+    column-gap: clamp(40px, 5vw, 85px) !important;
+}
+
+
+.lab-footer .footer-brand img {
+    max-width: clamp(180px, 13vw, 235px) !important;
+}
+
+
+.lab-footer .footer-brand strong {
+    font-size: clamp(11px, 0.8vw, 13px) !important;
+}
+
+
+.lab-footer .footer-brand span {
+    font-size: clamp(10px, 0.75vw, 12px) !important;
+}
+
+
+.lab-footer .footer-contact p {
+    font-size: clamp(10px, 0.75vw, 12px) !important;
+}
+/* 메인 콘텐츠와 Footer 좌우 폭 완전히 통일 */
+
+.lab-footer {
+    width: min(94vw, 1560px) !important;
+    max-width: none !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

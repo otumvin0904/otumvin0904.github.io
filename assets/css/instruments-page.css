@@ -1,0 +1,1109 @@
+/* ==========================================================
+   NANOSPECTROSCOPY LAB
+   INSTRUMENTS PAGE
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================================
+   REMOVE DEFAULT ACADEMICPAGES
+   ========================================================== */
+
+.masthead {
+  display: none !important;
+}
+
+
+.page__footer {
+  display: none !important;
+}
+
+
+.page__title {
+  display: none !important;
+}
+
+
+#main,
+#main .page,
+#main .page__inner-wrap,
+#main .page__content {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#main .page {
+  float: none !important;
+}
+
+
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
+
+.instruments-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #223650;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.instruments-header {
+  position: relative;
+
+  width: 100%;
+  height: 80px;
+
+  background: transparent;
+
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.instruments-nav {
+  position: absolute;
+
+  top: 27px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+
+.instruments-nav-left {
+  left: clamp(30px, 3vw, 65px);
+}
+
+
+.instruments-nav-right {
+  right: clamp(30px, 3vw, 65px);
+}
+
+
+.instruments-nav a {
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.78) !important;
+
+  font-size: clamp(13px, 0.8vw, 16px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  transition: color 180ms ease;
+}
+
+
+.instruments-nav a:hover {
+  color: #000000 !important;
+}
+
+
+.instruments-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ef4444;
+}
+
+
+.instruments-nav span {
+  color: rgba(0, 0, 0, 0.28);
+
+  font-size: 14px;
+}
+
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.instruments-logo {
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 56px;
+
+  text-decoration: none !important;
+}
+
+
+.instruments-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 56px;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.instruments-search {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  margin-left: 5px;
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color: rgba(0, 0, 0, 0.70);
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+.instruments-search svg {
+  display: block;
+
+  width: 18px !important;
+  height: 18px !important;
+
+  fill: none !important;
+}
+
+
+.instruments-search svg circle,
+.instruments-search svg line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.instruments-main {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    clamp(50px, 4.5vw, 100px)
+    120px;
+}
+
+
+
+/* ==========================================================
+   MAIN SECTION LINE
+   ========================================================== */
+
+.section-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 17px auto 0;
+
+  background: #a3afbd;
+
+  border-radius: 2px;
+}
+
+
+
+/* ==========================================================
+   PAGE HEADING
+   ========================================================== */
+
+.instruments-heading {
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+
+.instruments-heading h1 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 3vw, 60px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.instruments-heading p {
+  margin: 21px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.18em;
+}
+
+
+
+/* ==========================================================
+   INSTRUMENT SECTION
+   ========================================================== */
+
+.instrument-section {
+  width: 100%;
+
+  max-width: 1650px;
+
+  margin:
+    100px
+    auto
+    0;
+}
+
+
+.instrument-section-last {
+  margin-bottom: 20px;
+}
+
+
+
+/* ==========================================================
+   SECTION HEADING
+   번호 제거
+   ========================================================== */
+
+.instrument-section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  width: 100%;
+
+  margin-bottom: 48px;
+}
+
+
+.instrument-section-heading h2 {
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  color: #263b56;
+
+  font-size: clamp(24px, 1.55vw, 32px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+}
+
+
+.instrument-section-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #dce3ea;
+}
+
+
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.instrument-grid {
+  display: grid;
+
+  width: 100%;
+}
+
+
+.instrument-grid-three {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: clamp(42px, 3.5vw, 78px);
+}
+
+
+.instrument-grid-two {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: clamp(65px, 6vw, 130px);
+
+  max-width: 1150px;
+
+  margin:
+    0
+    auto;
+}
+
+
+
+/* ==========================================================
+   CARD
+   ========================================================== */
+
+.instrument-card {
+  min-width: 0;
+}
+
+
+
+/* ==========================================================
+   CARD UPPER
+   ========================================================== */
+
+.instrument-upper {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr);
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+
+
+/* ==========================================================
+   CARD NUMBER
+   ========================================================== */
+
+.item-number {
+  padding-top: 7px;
+}
+
+
+.item-number span {
+  display: block;
+
+  color: #657b97;
+
+  font-size: clamp(17px, 1vw, 22px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.item-number-line {
+  width: 33px;
+  height: 2px;
+
+  margin-top: 14px;
+
+  background: #96a5b7;
+}
+
+
+
+/* ==========================================================
+   IMAGE
+   ========================================================== */
+
+.instrument-image {
+  width: 100%;
+
+  height: clamp(260px, 17vw, 370px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+.instrument-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.instrument-content {
+  margin-top: 22px;
+
+  padding-left: 68px;
+}
+
+
+.instrument-content h3 {
+  margin: 0;
+
+  color: #20344f;
+
+  font-size: clamp(23px, 1.35vw, 29px);
+  font-weight: 650;
+
+  line-height: 1.35;
+}
+
+
+
+/* ==========================================================
+   SPEC
+   ========================================================== */
+
+.instrument-spec {
+  margin-top: 9px;
+
+  color: #72849a;
+
+  font-size: clamp(13px, 0.78vw, 16px);
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.08em;
+}
+
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.instrument-content p {
+  margin: 14px 0 0 !important;
+
+  max-width: 96%;
+
+  color: #52657e;
+
+  font-size: clamp(16px, 0.9vw, 19px);
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+
+/* ==========================================================
+   SEARCH CLOSED
+   ========================================================== */
+
+#site-search-panel[aria-hidden="true"] {
+  display: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH OPEN
+   ========================================================== */
+
+#site-search-panel[aria-hidden="false"] {
+  display: flex !important;
+
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 110px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.04) !important;
+
+  z-index: 9999 !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INNER
+   ========================================================== */
+
+#site-search-panel .site-search-panel__inner {
+  position: relative;
+
+  width: min(
+    760px,
+    calc(100vw - 60px)
+  );
+
+  max-height:
+    calc(100vh - 150px);
+
+  padding:
+    24px
+    30px
+    30px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  background:
+    rgba(255, 255, 255, 0.24) !important;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.06);
+}
+
+
+
+/* ==========================================================
+   SEARCH BOX
+   ========================================================== */
+
+#site-search-panel .site-search-box {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding:
+    4px
+    0
+    14px;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.28) !important;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH ICON
+   ========================================================== */
+
+#site-search-panel .site-search-box__icon {
+  display: block !important;
+
+  flex: 0 0 20px !important;
+
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 20px !important;
+  min-height: 20px !important;
+
+  max-width: 20px !important;
+  max-height: 20px !important;
+
+  fill: none !important;
+
+  stroke:
+    rgba(0, 0, 0, 0.68) !important;
+
+  stroke-width: 1.6 !important;
+}
+
+
+#site-search-panel .site-search-box__icon circle,
+#site-search-panel .site-search-box__icon line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INPUT
+   ========================================================== */
+
+#site-search-input {
+  flex: 1;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 6px 0 !important;
+
+  border: 0 !important;
+
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  box-shadow: none !important;
+
+  color: #111111 !important;
+
+  font-size: 18px;
+}
+
+
+
+/* ==========================================================
+   SEARCH CLOSE
+   ========================================================== */
+
+#site-search-close {
+  position: absolute !important;
+
+  top: 14px;
+  right: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color:
+    rgba(0, 0, 0, 0.60) !important;
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH RESULTS
+   ========================================================== */
+
+#site-search-panel .site-search-results-wrap {
+  margin-top: 20px;
+
+  background: transparent !important;
+
+  color: #26384d !important;
+}
+
+
+#site-search-panel .site-search-results-wrap a {
+  color: #182c45 !important;
+
+  text-decoration: none !important;
+}
+
+
+
+/* ==========================================================
+   MEDIUM SCREEN
+   ========================================================== */
+
+@media (max-width: 1250px) {
+
+  .instruments-main {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+
+  .instrument-grid-three {
+    gap: 32px;
+  }
+
+
+  .instrument-upper {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+
+  .instrument-content {
+    padding-left: 57px;
+  }
+
+
+  .instrument-image {
+    height:
+      clamp(230px, 20vw, 320px);
+  }
+
+}
+
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .instruments-header {
+    height: 135px;
+  }
+
+
+  .instruments-logo {
+    top: 10px;
+
+    width: 150px;
+  }
+
+
+  .instruments-logo img {
+    max-width: 150px;
+  }
+
+
+  .instruments-nav {
+    top: 85px;
+  }
+
+
+  .instruments-nav-left {
+    left: 25px;
+  }
+
+
+  .instruments-nav-right {
+    right: 25px;
+  }
+
+
+  .instrument-grid-three,
+  .instrument-grid-two {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    max-width: none;
+
+    gap:
+      65px
+      35px;
+  }
+
+
+  .instrument-image {
+    height:
+      min(350px, 38vw);
+  }
+
+
+  .instrument-section-heading {
+    gap: 20px;
+  }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+  .instruments-header {
+    height: 190px;
+  }
+
+
+  .instruments-logo {
+    top: 12px;
+
+    width: 145px;
+  }
+
+
+  .instruments-logo img {
+    max-width: 145px;
+  }
+
+
+  .instruments-nav {
+    left: 50%;
+    right: auto;
+
+    transform:
+      translateX(-50%);
+
+    width:
+      calc(100% - 25px);
+
+    justify-content: center;
+
+    gap: 8px;
+  }
+
+
+  .instruments-nav-left {
+    top: 82px;
+  }
+
+
+  .instruments-nav-right {
+    top: 125px;
+  }
+
+
+  .instruments-nav a {
+    font-size: 11px;
+  }
+
+
+  .instruments-nav span {
+    font-size: 10px;
+  }
+
+
+  .instruments-main {
+    padding:
+      15px
+      20px
+      65px;
+  }
+
+
+  /* PAGE TITLE */
+
+  .instruments-heading h1 {
+    font-size: 31px;
+
+    letter-spacing: 0.10em;
+  }
+
+
+  .instruments-heading p {
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.11em;
+  }
+
+
+  /* SECTION */
+
+  .instrument-section {
+    margin-top: 75px;
+  }
+
+
+  .instrument-section-heading {
+    gap: 15px;
+
+    margin-bottom: 38px;
+  }
+
+
+  .instrument-section-heading h2 {
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  /* GRID */
+
+  .instrument-grid-three,
+  .instrument-grid-two {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .instrument-upper {
+    grid-template-columns:
+      36px
+      minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+
+  .item-number span {
+    font-size: 15px;
+  }
+
+
+  .item-number-line {
+    width: 26px;
+  }
+
+
+  .instrument-image {
+    height:
+      min(350px, 65vw);
+  }
+
+
+  .instrument-content {
+    padding-left: 50px;
+  }
+
+
+  .instrument-content h3 {
+    font-size: 20px;
+  }
+
+
+  .instrument-spec {
+    font-size: 13px;
+  }
+
+
+  .instrument-content p {
+    font-size: 14px;
+  }
+
+
+  /* SEARCH */
+
+  #site-search-panel[aria-hidden="false"] {
+    padding-top: 80px;
+  }
+
+
+  #site-search-panel .site-search-panel__inner {
+    width:
+      calc(100vw - 28px);
+
+    padding:
+      20px
+      21px
+      25px;
+  }
+
+}
