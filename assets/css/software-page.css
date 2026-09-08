@@ -1,197 +1,1183 @@
-/* =========================================
-   NanoSpectroscopy Lab - SOFTWARE PAGE
-   ========================================= */
+/* ==========================================================
+   NANOSPECTROSCOPY LAB
+   SOFTWARE PAGE
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================================
+   REMOVE DEFAULT ACADEMICPAGES
+   ========================================================== */
+
+.masthead {
+  display: none !important;
+}
+
+
+.page__footer {
+  display: none !important;
+}
+
+
+.page__title {
+  display: none !important;
+}
+
+
+#main,
+#main .page,
+#main .page__inner-wrap,
+#main .page__content {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#main .page {
+  float: none !important;
+}
+
+
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
 
 .software-page {
-    width: 100%;
+  width: 100%;
+  min-height: 100vh;
 
-    margin: 0;
+  background: #ffffff;
 
-    padding: 52px 0 100px;
+  color: #223650;
 
-    box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 
-/* =========================================
-   TITLE
-   ========================================= */
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
 
 .software-header {
-    width: min(1180px, calc(100% - 48px));
+  position: relative;
 
-    margin: 0 auto 58px;
+  width: 100%;
+  height: 80px;
 
-    text-align: center;
+  background: transparent;
+
+  box-sizing: border-box;
+
+  z-index: 100;
 }
 
 
-.software-header h1 {
-    margin: 0 !important;
 
-    color: #202020;
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
 
-    font-size: 52px;
-    line-height: 1.1;
+.software-nav {
+  position: absolute;
 
-    font-weight: 700;
+  top: 27px;
 
-    letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
 }
 
 
-/* SOFTWARE 아래 빨간 선 */
-
-.software-title-line {
-    width: 52%;
-    max-width: 620px;
-
-    height: 8px;
-
-    margin: 17px auto 0;
-
-    background: #ff545d;
+.software-nav-left {
+  left: clamp(30px, 3vw, 65px);
 }
 
 
-/* =========================================
-   SOFTWARE AREA
-   ========================================= */
+.software-nav-right {
+  right: clamp(30px, 3vw, 65px);
+}
+
+
+.software-nav a {
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.78) !important;
+
+  font-size: clamp(13px, 0.8vw, 16px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  transition: color 180ms ease;
+}
+
+
+.software-nav a:hover {
+  color: #000000 !important;
+}
+
+
+.software-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ef4444;
+}
+
+
+.software-nav span {
+  color: rgba(0, 0, 0, 0.28);
+
+  font-size: 14px;
+}
+
+
+
+/* ==========================================================
+   CENTER LOGO
+   ========================================================== */
+
+.software-logo {
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 56px;
+
+  text-decoration: none !important;
+}
+
+
+.software-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 56px;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.software-search {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  margin-left: 5px;
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color: rgba(0, 0, 0, 0.70);
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+.software-search svg {
+  display: block;
+
+  width: 18px !important;
+  height: 18px !important;
+
+  fill: none !important;
+}
+
+
+.software-search svg circle,
+.software-search svg line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.software-main {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    clamp(50px, 4.5vw, 100px)
+    120px;
+}
+
+
+
+/* ==========================================================
+   SECTION LINE
+   ========================================================== */
+
+.section-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 17px auto 0;
+
+  background: #a3afbd;
+
+  border-radius: 2px;
+}
+
+
+
+/* ==========================================================
+   PAGE HEADING
+   ========================================================== */
+
+.software-heading {
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+
+.software-heading h1 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 3vw, 60px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.software-heading p {
+  margin: 21px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.18em;
+}
+
+
+
+/* ==========================================================
+   SOFTWARE SECTION
+   ========================================================== */
 
 .software-section {
-    width: 100%;
+  width: 100%;
 
-    padding: 0 0 50px;
+  max-width: 1350px;
 
-    box-sizing: border-box;
+  margin:
+    100px
+    auto
+    0;
 }
 
 
-/* 두 개의 Software를 좌우 배치 */
+
+/* ==========================================================
+   SECTION HEADING
+   ========================================================== */
+
+.software-section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  width: 100%;
+
+  margin-bottom: 50px;
+}
+
+
+.software-section-heading h2 {
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  color: #263b56;
+
+  font-size: clamp(24px, 1.55vw, 32px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+}
+
+
+.software-section-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #dce3ea;
+}
+
+
+
+/* ==========================================================
+   GRID
+   ========================================================== */
 
 .software-grid {
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
-    column-gap: 70px;
+  gap: clamp(60px, 6vw, 120px);
 
-    width: min(760px, calc(100% - 50px));
-
-    margin: 0 auto;
+  width: 100%;
 }
 
 
-/* 각 항목 */
 
-.software-item {
-    display: flex;
+/* ==========================================================
+   CARD
+   ========================================================== */
 
-    align-items: flex-start;
+.software-card {
+  min-width: 0;
+}
+
+
+
+/* ==========================================================
+   CARD TOP
+   ========================================================== */
+
+.software-card-top {
+  display: grid;
+
+  grid-template-columns:
+    48px
+    minmax(0, 1fr);
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+
+
+/* ==========================================================
+   NUMBER
+   ========================================================== */
+
+.item-number {
+  padding-top: 7px;
+}
+
+
+.item-number span {
+  display: block;
+
+  color: #657b97;
+
+  font-size: clamp(17px, 1vw, 22px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.item-number-line {
+  width: 33px;
+  height: 2px;
+
+  margin-top: 14px;
+
+  background: #96a5b7;
+}
+
+
+
+/* ==========================================================
+   TYPOGRAPHIC SOFTWARE VISUAL
+   이미지 대신 사용
+   ========================================================== */
+
+.software-visual {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  width: 100%;
+  height: clamp(260px, 18vw, 360px);
+
+  padding:
+    0
+    clamp(25px, 2.5vw, 45px);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f9fb 0%,
+      #ffffff 65%
+    );
+
+  border:
+    1px solid #e4e9ee;
+}
+
+
+
+/* subtle background mark */
+
+.software-visual::after {
+  content: "";
+
+  position: absolute;
+
+  right: -70px;
+  bottom: -100px;
+
+  width: 260px;
+  height: 260px;
+
+  border:
+    1px solid rgba(85, 110, 140, 0.08);
+
+  border-radius: 50%;
+}
+
+
+
+/* ==========================================================
+   FDTD / ADF
+   ========================================================== */
+
+.software-visual-code {
+  position: relative;
+
+  z-index: 2;
+
+  color: #253a55;
+
+  font-size: clamp(58px, 5vw, 92px);
+  font-weight: 300;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+}
+
+
+
+/* ==========================================================
+   SMALL LINE
+   ========================================================== */
+
+.software-visual-line {
+  position: relative;
+
+  z-index: 2;
+
+  width: 48px;
+  height: 2px;
+
+  margin-top: 26px;
+
+  background: #ef4444;
+}
+
+
+
+/* ==========================================================
+   LABEL
+   ========================================================== */
+
+.software-visual-label {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 18px;
+
+  color: #708198;
+
+  font-size: clamp(11px, 0.72vw, 14px);
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.18em;
+}
+
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.software-content {
+  margin-top: 25px;
+
+  padding-left: 68px;
+}
+
+
+.software-content h3 {
+  margin: 0;
+
+  color: #20344f;
+
+  font-size: clamp(25px, 1.45vw, 31px);
+  font-weight: 650;
+
+  line-height: 1.35;
+}
+
+
+.software-short-name {
+  font-weight: 400;
+
+  color: #64768c;
+}
+
+
+
+/* ==========================================================
+   CATEGORY
+   ========================================================== */
+
+.software-category {
+  margin-top: 9px;
+
+  color: #71839a;
+
+  font-size: clamp(14px, 0.82vw, 17px);
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.07em;
+}
+
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.software-content p {
+  margin: 14px 0 0 !important;
+
+  max-width: 96%;
+
+  color: #52657e;
+
+  font-size: clamp(16px, 0.9vw, 19px);
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+
+
+/* ==========================================================
+   USE TAGLINE
+   ========================================================== */
+
+.software-use {
+  margin-top: 19px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid #e0e6ec;
+
+  color: #7b899b;
+
+  font-size: clamp(12px, 0.72vw, 15px);
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.04em;
+}
+
+
+
+/* ==========================================================
+   SEARCH PANEL CLOSED
+   ========================================================== */
+
+#site-search-panel[aria-hidden="true"] {
+  display: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH PANEL OPEN
+   ========================================================== */
+
+#site-search-panel[aria-hidden="false"] {
+  display: flex !important;
+
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 110px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.04) !important;
+
+  z-index: 9999 !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INNER
+   ========================================================== */
+
+#site-search-panel .site-search-panel__inner {
+  position: relative;
+
+  width: min(
+    760px,
+    calc(100vw - 60px)
+  );
+
+  max-height:
+    calc(100vh - 150px);
+
+  padding:
+    24px
+    30px
+    30px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  background:
+    rgba(255, 255, 255, 0.24) !important;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 10px 35px
+    rgba(0, 0, 0, 0.06);
+}
+
+
+
+/* ==========================================================
+   SEARCH BOX
+   ========================================================== */
+
+#site-search-panel .site-search-box {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding:
+    4px
+    0
+    14px;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.28) !important;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH ICON
+   ========================================================== */
+
+#site-search-panel .site-search-box__icon {
+  display: block !important;
+
+  flex: 0 0 20px !important;
+
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 20px !important;
+  min-height: 20px !important;
+
+  max-width: 20px !important;
+  max-height: 20px !important;
+
+  fill: none !important;
+
+  stroke:
+    rgba(0, 0, 0, 0.68) !important;
+
+  stroke-width: 1.6 !important;
+}
+
+
+#site-search-panel .site-search-box__icon circle,
+#site-search-panel .site-search-box__icon line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INPUT
+   ========================================================== */
+
+#site-search-input {
+  flex: 1;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+  padding: 6px 0 !important;
+
+  border: 0 !important;
+
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  box-shadow: none !important;
+
+  color: #111111 !important;
+
+  font-size: 18px;
+}
+
+
+
+/* ==========================================================
+   SEARCH CLOSE
+   ========================================================== */
+
+#site-search-close {
+  position: absolute !important;
+
+  top: 14px;
+  right: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color:
+    rgba(0, 0, 0, 0.60) !important;
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH RESULTS
+   ========================================================== */
+
+#site-search-panel .site-search-results-wrap {
+  margin-top: 20px;
+
+  background: transparent !important;
+
+  color: #26384d !important;
+}
+
+
+#site-search-panel .site-search-results-wrap a {
+  color: #182c45 !important;
+
+  text-decoration: none !important;
+}
+
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .software-header {
+    height: 135px;
+  }
+
+
+  .software-logo {
+    top: 10px;
+
+    width: 150px;
+  }
+
+
+  .software-logo img {
+    max-width: 150px;
+  }
+
+
+  .software-nav {
+    top: 85px;
+  }
+
+
+  .software-nav-left {
+    left: 25px;
+  }
+
+
+  .software-nav-right {
+    right: 25px;
+  }
+
+
+  .software-main {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+
+  .software-grid {
+    gap: 45px;
+  }
+
+
+  .software-card-top {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+
+  .software-content {
+    padding-left: 57px;
+  }
+
+
+  .software-visual {
+    height:
+      clamp(240px, 29vw, 320px);
+  }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+  .software-header {
+    height: 190px;
+  }
+
+
+  .software-logo {
+    top: 12px;
+
+    width: 145px;
+  }
+
+
+  .software-logo img {
+    max-width: 145px;
+  }
+
+
+  .software-nav {
+    left: 50%;
+    right: auto;
+
+    transform:
+      translateX(-50%);
+
+    width:
+      calc(100% - 25px);
+
     justify-content: center;
 
-    min-height: 90px;
-
-    margin: 0;
-    padding: 0;
-
-    text-align: center;
-}
+    gap: 8px;
+  }
 
 
-/* Software 이름 */
-
-.software-item h2 {
-    margin: 0 !important;
-
-    color: #222;
-
-    font-size: 16px;
-    line-height: 1.6;
-
-    font-weight: 700;
-
-    word-break: keep-all;
-}
+  .software-nav-left {
+    top: 82px;
+  }
 
 
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    .software-header h1 {
-        font-size: 44px;
-    }
+  .software-nav-right {
+    top: 125px;
+  }
 
 
-    .software-grid {
-        width: min(650px, calc(100% - 40px));
-
-        column-gap: 40px;
-    }
+  .software-nav a {
+    font-size: 11px;
+  }
 
 
-    .software-item h2 {
-        font-size: 15px;
-    }
-
-}
+  .software-nav span {
+    font-size: 10px;
+  }
 
 
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    .software-page {
-        padding-top: 36px;
-        padding-bottom: 65px;
-    }
+  .software-main {
+    padding:
+      15px
+      20px
+      65px;
+  }
 
 
-    .software-header {
-        width: calc(100% - 30px);
+  /* PAGE TITLE */
 
-        margin-bottom: 45px;
-    }
+  .software-heading h1 {
+    font-size: 31px;
 
-
-    .software-header h1 {
-        font-size: 35px;
-    }
+    letter-spacing: 0.10em;
+  }
 
 
-    .software-title-line {
-        width: 85%;
+  .software-heading p {
+    font-size: 11px;
 
-        height: 6px;
+    line-height: 1.7;
 
-        margin-top: 14px;
-    }
-
-
-    /* 2열 → 1열 */
-
-    .software-grid {
-        grid-template-columns: 1fr;
-
-        width: calc(100% - 30px);
-
-        row-gap: 32px;
-    }
+    letter-spacing: 0.11em;
+  }
 
 
-    .software-item {
-        min-height: 0;
-    }
+  /* SECTION */
+
+  .software-section {
+    margin-top: 75px;
+  }
 
 
-    .software-item h2 {
-        font-size: 15px;
-    }
+  .software-section-heading {
+    gap: 15px;
+
+    margin-bottom: 38px;
+  }
+
+
+  .software-section-heading h2 {
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  /* GRID */
+
+  .software-grid {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+
+  .software-card-top {
+    grid-template-columns:
+      36px
+      minmax(0, 1fr);
+
+    gap: 14px;
+  }
+
+
+  .item-number span {
+    font-size: 15px;
+  }
+
+
+  .item-number-line {
+    width: 26px;
+  }
+
+
+  .software-visual {
+    height:
+      min(300px, 65vw);
+
+    padding:
+      0
+      25px;
+  }
+
+
+  .software-visual-code {
+    font-size: 55px;
+  }
+
+
+  .software-content {
+    padding-left: 50px;
+  }
+
+
+  .software-content h3 {
+    font-size: 20px;
+  }
+
+
+  .software-category {
+    font-size: 13px;
+  }
+
+
+  .software-content p {
+    font-size: 14px;
+  }
+
+
+  .software-use {
+    font-size: 11px;
+  }
+
+
+  /* SEARCH */
+
+  #site-search-panel[aria-hidden="false"] {
+    padding-top: 80px;
+  }
+
+
+  #site-search-panel .site-search-panel__inner {
+    width:
+      calc(100vw - 28px);
+
+    padding:
+      20px
+      21px
+      25px;
+  }
 
 }

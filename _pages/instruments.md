@@ -163,10 +163,6 @@ classes: wide
         INSTRUMENTS
       </h1>
 
-      <p>
-        TOOLS FOR NANOSPECTROSCOPY, ELECTROCHEMISTRY, AND NANOFABRICATION
-      </p>
-
       <div class="section-line"></div>
 
     </section>

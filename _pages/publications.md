@@ -56,7 +56,6 @@ classes: wide
     </nav>
 
 
-
     <!-- CENTER LOGO -->
     <a
       class="publications-logo"
@@ -70,7 +69,6 @@ classes: wide
       >
 
     </a>
-
 
 
     <!-- RIGHT NAVIGATION -->
@@ -163,10 +161,6 @@ classes: wide
         PUBLICATIONS
       </h1>
 
-      <p>
-        RESEARCH OUTPUTS IN NANOSPECTROSCOPY AND NANOSCALE CHEMISTRY
-      </p>
-
       <div class="section-line"></div>
 
     </section>
@@ -180,12 +174,12 @@ classes: wide
     <section class="publication-group publication-group-current">
 
 
-      <!-- GROUP HEADING -->
       <div class="publication-group-heading">
 
         <div class="publication-group-index">
-          01
+      
         </div>
+
 
         <div class="publication-group-title">
 
@@ -203,7 +197,7 @@ classes: wide
 
 
 
-      <!-- PUBLICATION LIST -->
+      <!-- PUBLICATIONS -->
       <div class="publication-list">
 
 
@@ -238,8 +232,9 @@ classes: wide
               <div class="publication-information">
 
 
-                <!-- TITLE / STATUS -->
+                <!-- TITLE ROW -->
                 <div class="publication-title-row">
+
 
                   <h3 class="publication-title">
 
@@ -272,6 +267,8 @@ classes: wide
                   </h3>
 
 
+
+                  <!-- STATUS -->
                   {% unless paper.published %}
 
                     {% if paper.status %}
@@ -284,13 +281,13 @@ classes: wide
 
                   {% endunless %}
 
+
                 </div>
 
 
 
-                <!-- PUBLISHED PAPER INFORMATION -->
+                <!-- AUTHORS -->
                 {% if paper.published %}
-
 
                   {% if paper.authors_html %}
 
@@ -302,6 +299,7 @@ classes: wide
 
 
 
+                  <!-- JOURNAL -->
                   {% if paper.journal %}
 
                     <div class="publication-journal">
@@ -312,8 +310,8 @@ classes: wide
 
 
 
-                  <!-- OPTIONAL LINKS -->
-                  {% if paper.paperurl or paper.doi or paper.url %}
+                  <!-- LINKS -->
+                  {% if paper.paperurl or paper.doi %}
 
                     <div class="publication-links">
 
@@ -376,12 +374,12 @@ classes: wide
     <section class="publication-group publication-group-prior">
 
 
-      <!-- GROUP HEADING -->
       <div class="publication-group-heading">
 
         <div class="publication-group-index">
-          02
+      
         </div>
+
 
         <div class="publication-group-title">
 
@@ -399,7 +397,6 @@ classes: wide
 
 
 
-      <!-- PUBLICATION LIST -->
       <div class="publication-list">
 
 
@@ -487,8 +484,8 @@ classes: wide
 
 
 
-                <!-- OPTIONAL LINKS -->
-                {% if paper.paperurl or paper.doi or paper.url %}
+                <!-- LINKS -->
+                {% if paper.paperurl or paper.doi %}
 
                   <div class="publication-links">
 
@@ -547,7 +544,7 @@ classes: wide
 
 
 <!-- =========================================================
-     SAME-PAGE SEARCH CONTROL
+     SEARCH
 ========================================================= -->
 
 <script>
@@ -567,8 +564,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("site-search-input");
 
 
-  /* OPEN SEARCH */
-
   if (openButton && searchPanel) {
 
     openButton.addEventListener("click", function () {
@@ -584,9 +579,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (searchInput) {
 
         setTimeout(function () {
-
           searchInput.focus();
-
         }, 50);
 
       }
@@ -595,9 +588,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-
-
-  /* CLOSE BUTTON */
 
   if (closeButton && searchPanel) {
 
@@ -614,9 +604,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-
-
-  /* CLICK OUTSIDE */
 
   if (searchPanel) {
 
@@ -637,9 +624,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-
-
-  /* ESC */
 
   document.addEventListener("keydown", function (event) {
 

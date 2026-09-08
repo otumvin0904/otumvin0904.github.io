@@ -1,326 +1,1195 @@
-/* =========================================
-   NanoSpectroscopy Lab - CONTACT PAGE
-   ========================================= */
+/* ==========================================================
+   NANOSPECTROSCOPY LAB
+   CONTACT PAGE
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================================
+   REMOVE DEFAULT ACADEMICPAGES
+   ========================================================== */
+
+.masthead {
+  display: none !important;
+}
+
+
+.page__footer {
+  display: none !important;
+}
+
+
+.page__title {
+  display: none !important;
+}
+
+
+#main,
+#main .page,
+#main .page__inner-wrap,
+#main .page__content {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#main .page {
+  float: none !important;
+}
+
+
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
 
 .contact-page {
-    width: 100%;
-    margin: 0;
-    padding: 50px 0 85px;
+  width: 100%;
+  min-height: 100vh;
 
-    box-sizing: border-box;
+  background: #ffffff;
 
-    color: #222;
+  color: #223650;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 
-/* =========================================
-   TITLE
-   ========================================= */
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
 
 .contact-header {
-    width: min(1180px, calc(100% - 48px));
+  position: relative;
 
-    margin: 0 auto 110px;
+  width: 100%;
+  height: 80px;
 
-    text-align: center;
+  background: transparent;
+
+  box-sizing: border-box;
+
+  z-index: 100;
 }
 
 
-.contact-header h1 {
-    margin: 0 !important;
 
-    color: #202020;
+/* ==========================================================
+   NAV
+   ========================================================== */
 
-    font-size: 52px;
-    line-height: 1.1;
+.contact-nav {
+  position: absolute;
 
-    font-weight: 700;
+  top: 27px;
 
-    letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
 }
 
 
-/* CONTACT 아래 빨간 선 */
-
-.contact-title-line {
-    width: 52%;
-    max-width: 620px;
-
-    height: 8px;
-
-    margin: 17px auto 0;
-
-    background: #3A6D8F;
+.contact-nav-left {
+  left: clamp(30px, 3vw, 65px);
 }
 
 
-/* =========================================
-   CONTACT SECTION
-   ========================================= */
-
-.contact-section {
-    width: 100%;
+.contact-nav-right {
+  right: clamp(30px, 3vw, 65px);
 }
 
 
-/* 지도 + 정보 */
+.contact-nav a {
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.78) !important;
+
+  font-size: clamp(13px, 0.8vw, 16px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  transition: color 180ms ease;
+}
+
+
+.contact-nav a:hover {
+  color: #000000 !important;
+}
+
+
+.contact-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ef4444;
+}
+
+
+.contact-nav span {
+  color: rgba(0, 0, 0, 0.28);
+
+  font-size: 14px;
+}
+
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.contact-logo {
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 56px;
+}
+
+
+.contact-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 56px;
+
+  border: 0;
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.contact-search {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  margin-left: 5px;
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color: rgba(0, 0, 0, 0.70);
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+.contact-search svg {
+  width: 18px !important;
+  height: 18px !important;
+
+  fill: none !important;
+}
+
+
+.contact-search svg circle,
+.contact-search svg line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.contact-main {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    clamp(55px, 5vw, 110px)
+    100px;
+}
+
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.section-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 17px auto 0;
+
+  background: #a3afbd;
+
+  border-radius: 2px;
+}
+
+
+.contact-heading {
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+
+.contact-heading h1 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 3vw, 60px);
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.contact-heading p {
+  margin: 21px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.20em;
+}
+
+
+
+/* ==========================================================
+   CONTACT GRID
+   ========================================================== */
 
 .contact-content {
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        minmax(360px, 0.95fr)
-        minmax(420px, 1.15fr);
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
 
-    gap: 55px;
+  gap: clamp(65px, 6vw, 125px);
 
-    align-items: center;
+  width: 100%;
+  max-width: 1500px;
 
-    width: min(950px, calc(100% - 50px));
+  margin:
+    90px
+    auto
+    0;
 
-    margin: 0 auto;
-
-    padding-top: 30px;
-
-    border-top: 2px solid #3A6D8F;
+  align-items: start;
 }
 
 
-/* =========================================
+
+/* ==========================================================
+   SECTION HEADING
+   ========================================================== */
+
+.contact-section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  width: 100%;
+
+  margin-bottom: 33px;
+}
+
+
+.contact-section-heading h2 {
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  color: #263b56;
+
+  font-size: clamp(15px, 0.95vw, 19px);
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+}
+
+
+.contact-section-heading > div {
+  flex: 1;
+
+  height: 1px;
+
+  background: #dce3ea;
+}
+
+
+
+/* ==========================================================
    MAP
-   ========================================= */
+   ========================================================== */
+
+.contact-map-column {
+  width: 100%;
+}
+
 
 .contact-map {
-    width: 100%;
+  position: relative;
 
-    overflow: hidden;
+  width: 100%;
 
-    background: #eee;
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: #f2f4f6;
+
+  border:
+    1px solid #e0e6eb;
 }
 
 
 .contact-map iframe {
-    display: block;
+  position: absolute;
 
-    width: 100%;
-    height: 310px;
+  inset: 0;
 
-    margin: 0;
+  display: block;
 
-    border: 0;
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+
+  border: 0;
 }
 
 
-/* =========================================
-   CONTACT INFO
-   ========================================= */
 
-.contact-info {
-    min-width: 0;
+/* ==========================================================
+   MAP LOCATION
+   ========================================================== */
+
+.map-location {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  margin-top: 20px;
 }
 
 
-/* 각 정보 block */
+.map-location-dot {
+  width: 8px;
+  height: 8px;
 
-.contact-block {
-    width: 100%;
+  flex: 0 0 8px;
+
+  margin-top: 7px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
 }
 
 
-/* 교수님 이름 */
+.map-location h3 {
+  margin: 0;
 
-.contact-block h2 {
-    margin: 0 0 22px !important;
+  color: #263b56;
 
-    color: #202020;
+  font-size: clamp(16px, 1vw, 20px);
+  font-weight: 600;
 
-    font-size: 21px;
-    line-height: 1.4;
-
-    font-weight: 700;
-
-    text-align: center;
+  line-height: 1.4;
 }
 
 
-/* Email / Phone */
+.map-location p {
+  margin: 5px 0 0 !important;
 
-.contact-basic {
-    margin-bottom: 28px;
+  color: #708096;
+
+  font-size: clamp(14px, 0.82vw, 17px);
+
+  line-height: 1.55;
 }
 
 
-.contact-basic p,
-.contact-address p,
-.contact-lab p {
-    margin: 0 0 8px !important;
 
-    color: #333;
+/* ==========================================================
+   MAP LINK
+   ========================================================== */
 
-    font-size: 13px;
-    line-height: 1.65;
+.map-open-link {
+  position: relative;
 
-    word-break: keep-all;
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  color: #526983 !important;
+
+  font-size: clamp(11px, 0.68vw, 14px);
+  font-weight: 600;
+
+  letter-spacing: 0.11em;
+
+  text-decoration: none !important;
 }
 
 
-/* label */
+.map-open-link::after {
+  content: "";
 
-.contact-info strong {
-    color: #222;
+  position: absolute;
 
-    font-weight: 700;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #71869f;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform 180ms ease;
 }
 
 
-/* Email */
-
-.contact-info a {
-    color: #333 !important;
-
-    text-decoration: underline;
-
-    text-underline-offset: 2px;
+.map-open-link:hover::after {
+  transform: scaleX(1);
 }
 
 
-.contact-info a:hover {
-    color: #0b55b5 !important;
+
+/* ==========================================================
+   PROFESSOR
+   ========================================================== */
+
+.contact-info-column {
+  width: 100%;
 }
 
 
-/* 주소 */
+.professor-name {
+  margin:
+    0
+    0
+    35px;
 
-.contact-address {
-    margin-top: 10px;
+  color: #111111;
+
+  font-size: clamp(31px, 2.1vw, 43px);
+  font-weight: 600;
+
+  line-height: 1.25;
 }
 
 
-/* =========================================
+
+/* ==========================================================
+   CONTACT ROW
+   ========================================================== */
+
+.contact-row {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    minmax(0, 1fr);
+
+  gap: 24px;
+
+  align-items: baseline;
+
+  padding:
+    16px
+    0;
+
+  border-bottom:
+    1px solid #e1e6eb;
+}
+
+
+.contact-row-label {
+  color: #79899d;
+
+  font-size: clamp(11px, 0.67vw, 14px);
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+.contact-row-value a {
+  position: relative;
+
+  color: #283e59 !important;
+
+  font-size: clamp(17px, 1.08vw, 22px);
+
+  text-decoration: none !important;
+}
+
+
+
+/* ==========================================================
+   ADDRESS
+   ========================================================== */
+
+.contact-address-block {
+  margin-top: 42px;
+}
+
+
+.address-title {
+  margin-bottom: 20px;
+
+  color: #7b8a9c;
+
+  font-size: clamp(11px, 0.68vw, 14px);
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+}
+
+
+.contact-address-block p {
+  margin:
+    0
+    0
+    18px !important;
+
+  color: #3f5269;
+
+  font-size: clamp(16px, 1vw, 20px);
+
+  line-height: 1.7;
+}
+
+
+.contact-address-block strong {
+  color: #263b56;
+
+  font-weight: 700;
+}
+
+
+
+/* ==========================================================
    LAB
-   ========================================= */
+   ========================================================== */
 
-.contact-lab {
-    margin-top: 26px;
+.lab-section {
+  margin-top: 65px;
 }
 
 
-.contact-lab h2 {
-    margin-bottom: 16px !important;
+.lab-address {
+  margin-top: 0;
 }
 
 
-/* =========================================
+
+/* ==========================================================
+   INSTAGRAM
+   ========================================================== */
+
+.instagram-section {
+  width: 100%;
+  max-width: 1500px;
+
+  margin:
+    110px
+    auto
+    0;
+
+  padding-top: 58px;
+
+  border-top:
+    1px solid #dfe5eb;
+}
+
+
+.instagram-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  width: 100%;
+
+  margin-bottom: 45px;
+}
+
+
+.instagram-heading h2 {
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  color: #263b56;
+
+  font-size: clamp(23px, 1.45vw, 30px);
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+.instagram-heading > div {
+  flex: 1;
+
+  height: 1px;
+
+  background: #dce3ea;
+}
+
+
+.instagram-content {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: clamp(45px, 5vw, 90px);
+
+  width: min(100%, 850px);
+
+  margin:
+    0
+    auto;
+}
+
+
+.instagram-qr {
+  width: clamp(170px, 13vw, 240px);
+  height: clamp(170px, 13vw, 240px);
+
+  flex: 0 0 auto;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid #dde4ea;
+}
+
+
+.instagram-qr img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border: 0;
+  box-shadow: none;
+}
+
+
+.instagram-info {
+  max-width: 430px;
+}
+
+
+.instagram-small {
+  color: #7b8a9d;
+
+  font-size: clamp(11px, 0.67vw, 14px);
+  font-weight: 600;
+
+  letter-spacing: 0.17em;
+}
+
+
+.instagram-info h3 {
+  margin:
+    15px
+    0
+    0;
+
+  color: #263b56;
+
+  font-size: clamp(24px, 1.55vw, 32px);
+  font-weight: 500;
+}
+
+
+.instagram-info p {
+  margin:
+    13px
+    0
+    0 !important;
+
+  color: #66788f;
+
+  font-size: clamp(15px, 0.88vw, 18px);
+
+  line-height: 1.65;
+}
+
+
+
+/* ==========================================================
+   BOTTOM
+   ========================================================== */
+
+.contact-bottom {
+  width: 100%;
+  max-width: 1500px;
+
+  margin:
+    100px
+    auto
+    0;
+}
+
+
+.contact-bottom-line {
+  width: 100%;
+  height: 1px;
+
+  background: #dfe5eb;
+}
+
+
+.contact-bottom-content {
+  padding-top: 38px;
+
+  text-align: center;
+}
+
+
+.contact-bottom-label {
+  color: #7b8a9d;
+
+  font-size: clamp(11px, 0.68vw, 14px);
+  font-weight: 600;
+
+  letter-spacing: 0.20em;
+}
+
+
+.contact-bottom-content h2 {
+  margin:
+    18px
+    0
+    0;
+
+  color: #263b56;
+
+  font-size: clamp(25px, 1.6vw, 34px);
+  font-weight: 300;
+}
+
+
+.contact-bottom-content p {
+  margin:
+    10px
+    0
+    0 !important;
+
+  color: #8190a1;
+
+  font-size: clamp(12px, 0.72vw, 15px);
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+}
+
+
+
+/* ==========================================================
+   SEARCH
+   ========================================================== */
+
+#site-search-panel[aria-hidden="true"] {
+  display: none !important;
+}
+
+
+#site-search-panel[aria-hidden="false"] {
+  display: flex !important;
+
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 110px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.04) !important;
+
+  z-index: 9999 !important;
+}
+
+
+#site-search-panel .site-search-panel__inner {
+  position: relative;
+
+  width: min(
+    760px,
+    calc(100vw - 60px)
+  );
+
+  max-height:
+    calc(100vh - 150px);
+
+  padding:
+    24px
+    30px
+    30px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  background:
+    rgba(255, 255, 255, 0.24) !important;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+}
+
+
+#site-search-panel .site-search-box {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding:
+    4px
+    0
+    14px;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.28) !important;
+}
+
+
+#site-search-panel .site-search-box__icon {
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 20px !important;
+  min-height: 20px !important;
+
+  max-width: 20px !important;
+  max-height: 20px !important;
+
+  fill: none !important;
+
+  stroke:
+    rgba(0, 0, 0, 0.68) !important;
+}
+
+
+#site-search-panel .site-search-box__icon circle,
+#site-search-panel .site-search-box__icon line {
+  fill: none !important;
+}
+
+
+#site-search-input {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 6px 0 !important;
+
+  border: 0 !important;
+
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  color: #111111 !important;
+
+  font-size: 18px;
+}
+
+
+#site-search-close {
+  position: absolute !important;
+
+  top: 14px;
+  right: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color:
+    rgba(0, 0, 0, 0.60) !important;
+
+  cursor: pointer;
+}
+
+
+
+/* ==========================================================
    TABLET
-   ========================================= */
+   ========================================================== */
 
 @media (max-width: 900px) {
 
-    .contact-header {
-        margin-bottom: 75px;
-    }
+  .contact-header {
+    height: 135px;
+  }
 
 
-    .contact-header h1 {
-        font-size: 44px;
-    }
+  .contact-logo {
+    top: 10px;
+
+    width: 150px;
+  }
 
 
-    .contact-content {
-        grid-template-columns:
-            minmax(320px, 0.95fr)
-            minmax(340px, 1.05fr);
-
-        gap: 35px;
-
-        width: calc(100% - 40px);
-    }
+  .contact-nav {
+    top: 85px;
+  }
 
 
-    .contact-map iframe {
-        height: 285px;
-    }
+  .contact-nav-left {
+    left: 25px;
+  }
 
 
-    .contact-block h2 {
-        font-size: 19px;
-    }
+  .contact-nav-right {
+    right: 25px;
+  }
 
 
-    .contact-basic p,
-    .contact-address p,
-    .contact-lab p {
-        font-size: 12px;
-    }
+  .contact-content {
+    grid-template-columns: 1fr;
+
+    gap: 75px;
+  }
+
+
+  .contact-map {
+    aspect-ratio: 16 / 9;
+  }
 
 }
 
 
-/* =========================================
+
+/* ==========================================================
    MOBILE
-   ========================================= */
+   ========================================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
-    .contact-page {
-        padding-top: 36px;
-        padding-bottom: 60px;
-    }
-
-
-    .contact-header {
-        width: calc(100% - 30px);
-
-        margin-bottom: 50px;
-    }
+  .contact-header {
+    height: 190px;
+  }
 
 
-    .contact-header h1 {
-        font-size: 35px;
-    }
+  .contact-nav {
+    left: 50%;
+    right: auto;
+
+    transform:
+      translateX(-50%);
+
+    width:
+      calc(100% - 25px);
+
+    justify-content: center;
+  }
 
 
-    .contact-title-line {
-        width: 85%;
-
-        height: 6px;
-
-        margin-top: 14px;
-    }
+  .contact-nav-left {
+    top: 82px;
+  }
 
 
-    /* 지도 위 / 정보 아래 */
-
-    .contact-content {
-        display: block;
-
-        width: calc(100% - 30px);
-
-        padding-top: 25px;
-    }
+  .contact-nav-right {
+    top: 125px;
+  }
 
 
-    .contact-map {
-        margin-bottom: 35px;
-    }
+  .contact-nav a {
+    font-size: 11px;
+  }
 
 
-    .contact-map iframe {
-        height: 270px;
-    }
+  .contact-main {
+    padding:
+      15px
+      20px
+      65px;
+  }
 
 
-    .contact-block h2 {
-        text-align: left;
-
-        font-size: 18px;
-    }
+  .contact-heading h1 {
+    font-size: 32px;
+  }
 
 
-    .contact-basic p,
-    .contact-address p,
-    .contact-lab p {
-        font-size: 12px;
-    }
+  .contact-heading p {
+    font-size: 11px;
+  }
+
+
+  .contact-map {
+    aspect-ratio: 4 / 3;
+  }
+
+
+  .professor-name {
+    font-size: 28px;
+  }
+
+
+  .contact-row {
+    grid-template-columns:
+      70px
+      minmax(0, 1fr);
+  }
+
+
+  .contact-address-block p {
+    font-size: 14px;
+  }
+
+
+  .instagram-content {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+
+  .instagram-qr {
+    width: 190px;
+    height: 190px;
+  }
+
+
+  #site-search-panel[aria-hidden="false"] {
+    padding-top: 80px;
+  }
+
+
+  #site-search-panel .site-search-panel__inner {
+    width:
+      calc(100vw - 28px);
+  }
 
 }

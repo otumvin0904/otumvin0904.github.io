@@ -1,199 +1,1156 @@
-/* =========================================
-   NanoSpectroscopy Lab - NEWS PAGE
-   ========================================= */
+/* ==========================================================
+   NANOSPECTROSCOPY LAB
+   NEWS PAGE
+   COMPACT VERSION
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================================
+   REMOVE DEFAULT ACADEMICPAGES
+   ========================================================== */
+
+.masthead {
+  display: none !important;
+}
+
+
+.page__footer {
+  display: none !important;
+}
+
+
+.page__title {
+  display: none !important;
+}
+
+
+#main,
+#main .page,
+#main .page__inner-wrap,
+#main .page__content {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#main .page {
+  float: none !important;
+}
+
+
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
 
 .news-page {
-    width: min(1280px, calc(100% - 60px));
-    margin: 0 auto;
+  width: 100%;
 
-    padding: 55px 0 90px;
+  min-height: 100vh;
 
-    color: #222;
+  background: #ffffff;
 
-    box-sizing: border-box;
+  color: #223650;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 
-/* =========================================
-   TITLE
-   ========================================= */
 
-.news-page__header {
-    margin-bottom: 72px;
+/* ==========================================================
+   HEADER
+   ========================================================== */
 
-    text-align: center;
-}
+.news-header {
+  position: relative;
 
-.news-page__header h1 {
-    margin: 0 !important;
+  width: 100%;
+  height: 80px;
 
-    color: #202020;
+  background: transparent;
 
-    font-size: 58px;
-    line-height: 1.1;
+  box-sizing: border-box;
 
-    font-weight: 700;
-
-    letter-spacing: 0.02em;
+  z-index: 100;
 }
 
 
-/* NEWS 아래 빨간 선 */
 
-.news-page__title-line {
-    width: 72%;
-    max-width: 900px;
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
 
-    height: 9px;
+.news-nav {
+  position: absolute;
 
-    margin: 20px auto 0;
+  top: 27px;
 
-    background: #ff545d;
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
 }
 
 
-/* =========================================
+.news-nav-left {
+  left: clamp(30px, 3vw, 65px);
+}
+
+
+.news-nav-right {
+  right: clamp(30px, 3vw, 65px);
+}
+
+
+.news-nav a {
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.78) !important;
+
+  font-size: clamp(13px, 0.8vw, 16px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+}
+
+
+.news-nav a:hover {
+  color: #000000 !important;
+}
+
+
+.news-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ef4444;
+}
+
+
+.news-nav span {
+  color: rgba(0, 0, 0, 0.28);
+
+  font-size: 14px;
+}
+
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.news-logo {
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 56px;
+}
+
+
+.news-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 56px;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.news-search {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  margin-left: 5px;
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color: rgba(0, 0, 0, 0.70);
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+.news-search svg {
+  width: 18px !important;
+  height: 18px !important;
+
+  fill: none !important;
+}
+
+
+.news-search svg circle,
+.news-search svg line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.news-main {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    clamp(60px, 6vw, 130px)
+    100px;
+}
+
+
+
+/* ==========================================================
+   PAGE HEADING
+   ========================================================== */
+
+.section-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 17px auto 0;
+
+  background: #a3afbd;
+
+  border-radius: 2px;
+}
+
+
+.news-heading {
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+
+.news-heading h1 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 3vw, 60px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.news-heading p {
+  margin: 21px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.20em;
+}
+
+
+
+/* ==========================================================
+   NEWS CONTENT
+   ========================================================== */
+
+.news-content {
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin:
+    66px
+    auto
+    0;
+}
+
+
+
+/* ==========================================================
+   YEAR SECTION
+   기존보다 연도 사이 간격 축소
+   ========================================================== */
+
+.news-year-section {
+  display: grid;
+
+  grid-template-columns:
+    130px
+    minmax(0, 1fr);
+
+  column-gap: clamp(35px, 3.5vw, 65px);
+
+  width: 100%;
+
+  margin-top: 58px;
+}
+
+
+.news-year-section:first-child {
+  margin-top: 0;
+}
+
+
+
+/* ==========================================================
+   YEAR
+   ========================================================== */
+
+.news-year {
+  padding-top: 4px;
+}
+
+
+.news-year span {
+  display: block;
+
+  color: #223650;
+
+  font-size: clamp(27px, 1.75vw, 35px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.07em;
+}
+
+
+.news-year-line {
+  width: 68px;
+  height: 2px;
+
+  margin-top: 15px;
+
+  background: #a4b1c0;
+}
+
+
+
+/* ==========================================================
    NEWS LIST
-   ========================================= */
+   ========================================================== */
 
-.news-page__list {
-    width: 100%;
+.news-list {
+  width: 100%;
+
+  border-top:
+    1px solid #dce3ea;
 }
 
 
-/* 뉴스 한 줄 */
 
-.news-page__item {
-    display: grid;
+/* ==========================================================
+   NEWS ITEM
+   핵심: 위아래 높이 감소
+   ========================================================== */
 
-    grid-template-columns:
-        135px minmax(0, 1fr);
+.news-item {
+  display: grid;
 
-    column-gap: 18px;
+  grid-template-columns:
+    50px
+    minmax(0, 1fr);
 
-    align-items: baseline;
+  column-gap: 20px;
 
-    margin-bottom: 24px;
+  width: 100%;
+
+  padding:
+    17px
+    0
+    19px;
+
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid #dce3ea;
 }
 
 
-/* 날짜 */
 
-.news-page__item time {
-    color: #071eea;
+/* ==========================================================
+   ITEM WITH IMAGE
+   ========================================================== */
 
-    font-size: 17px;
-    line-height: 1.5;
+.news-item-with-image {
+  grid-template-columns:
+    50px
+    minmax(0, 1fr)
+    clamp(150px, 14vw, 230px);
 
-    font-weight: 700;
-
-    white-space: nowrap;
+  column-gap:
+    clamp(20px, 2vw, 34px);
 }
 
 
-/* 내용 */
 
-.news-page__item p {
-    margin: 0 !important;
+/* ==========================================================
+   NEWS NUMBER
+   ========================================================== */
 
-    color: #222;
-
-    font-size: 17px;
-    line-height: 1.55;
-
-    font-weight: 400;
+.news-number {
+  padding-top: 3px;
 }
 
 
-/* 강조 */
+.news-number span {
+  display: block;
 
-.news-page__item strong {
-    color: #111;
+  color: #667c97;
 
-    font-weight: 700;
+  font-size: clamp(14px, 0.82vw, 17px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
 }
 
 
-/* =========================================
+.news-number-line {
+  width: 28px;
+  height: 2px;
+
+  margin-top: 10px;
+
+  background: #98a8ba;
+}
+
+
+
+/* ==========================================================
+   NEWS BODY
+   ========================================================== */
+
+.news-body {
+  display: grid;
+
+  grid-template-columns:
+    60px
+    minmax(0, 1fr);
+
+  gap: 18px;
+
+  min-width: 0;
+
+  align-items: center;
+}
+
+
+
+/* ==========================================================
+   DATE
+   ========================================================== */
+
+.news-date {
+  padding-top: 0;
+}
+
+
+.news-date-month {
+  display: block;
+
+  color: #72849a;
+
+  font-size: clamp(10px, 0.6vw, 12px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+}
+
+
+.news-date-day {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #263b56;
+
+  font-size: clamp(19px, 1.15vw, 24px);
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+
+/* ==========================================================
+   INFORMATION
+   ========================================================== */
+
+.news-information {
+  min-width: 0;
+
+  max-width: 1050px;
+}
+
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.news-title {
+  margin: 0;
+
+  color: #20344f;
+
+  font-size: clamp(17px, 1.05vw, 22px);
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+.news-title a {
+  color: #20344f !important;
+
+  text-decoration: none !important;
+}
+
+
+.news-title a:hover {
+  color: #64788f !important;
+}
+
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.news-description {
+  max-width: 1050px;
+
+  margin-top: 0;
+
+  color: #596b82;
+
+  font-size: clamp(14px, 0.82vw, 17px);
+
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* title이 있을 때만 description 간격 */
+.news-title + .news-description {
+  margin-top: 7px;
+}
+
+
+
+/* ==========================================================
+   CATEGORY
+   ========================================================== */
+
+.news-category {
+  display: inline-block;
+
+  margin-top: 9px;
+
+  padding:
+    4px
+    8px;
+
+  border:
+    1px solid #cad3dd;
+
+  border-radius: 20px;
+
+  color: #718196;
+
+  font-size: clamp(9px, 0.52vw, 11px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+
+/* ==========================================================
+   LINK
+   ========================================================== */
+
+.news-links {
+  margin-top: 10px;
+}
+
+
+.news-links a {
+  position: relative;
+
+  color: #526983 !important;
+
+  font-size: clamp(10px, 0.58vw, 12px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.10em;
+
+  text-decoration: none !important;
+}
+
+
+
+/* ==========================================================
+   OPTIONAL IMAGE
+   ========================================================== */
+
+.news-image {
+  width: 100%;
+
+  height: clamp(100px, 9vw, 150px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+.news-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH CLOSED
+   ========================================================== */
+
+#site-search-panel[aria-hidden="true"] {
+  display: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH OPEN
+   ========================================================== */
+
+#site-search-panel[aria-hidden="false"] {
+  display: flex !important;
+
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 110px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.04) !important;
+
+  z-index: 9999 !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INNER
+   ========================================================== */
+
+#site-search-panel .site-search-panel__inner {
+  position: relative;
+
+  width: min(
+    760px,
+    calc(100vw - 60px)
+  );
+
+  max-height:
+    calc(100vh - 150px);
+
+  padding:
+    24px
+    30px
+    30px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  background:
+    rgba(255, 255, 255, 0.24) !important;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+}
+
+
+
+/* ==========================================================
+   SEARCH BOX
+   ========================================================== */
+
+#site-search-panel .site-search-box {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding:
+    4px
+    0
+    14px;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.28) !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH ICON
+   ========================================================== */
+
+#site-search-panel .site-search-box__icon {
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 20px !important;
+  min-height: 20px !important;
+
+  max-width: 20px !important;
+  max-height: 20px !important;
+
+  fill: none !important;
+
+  stroke:
+    rgba(0, 0, 0, 0.68) !important;
+}
+
+
+#site-search-panel .site-search-box__icon circle,
+#site-search-panel .site-search-box__icon line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH INPUT
+   ========================================================== */
+
+#site-search-input {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 6px 0 !important;
+
+  border: 0 !important;
+
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  color: #111111 !important;
+
+  font-size: 18px;
+}
+
+
+
+/* ==========================================================
+   SEARCH CLOSE
+   ========================================================== */
+
+#site-search-close {
+  position: absolute !important;
+
+  top: 14px;
+  right: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color:
+    rgba(0, 0, 0, 0.60) !important;
+
+  cursor: pointer;
+}
+
+
+
+/* ==========================================================
    TABLET
-   ========================================= */
+   ========================================================== */
 
 @media (max-width: 900px) {
 
-    .news-page {
-        width: calc(100% - 40px);
-    }
+  .news-header {
+    height: 135px;
+  }
 
-    .news-page__header h1 {
-        font-size: 48px;
-    }
 
-    .news-page__item {
-        grid-template-columns:
-            120px minmax(0, 1fr);
+  .news-logo {
+    top: 10px;
 
-        column-gap: 15px;
+    width: 150px;
+  }
 
-        margin-bottom: 21px;
-    }
 
-    .news-page__item time,
-    .news-page__item p {
-        font-size: 15px;
-    }
+  .news-nav {
+    top: 85px;
+  }
+
+
+  .news-nav-left {
+    left: 25px;
+  }
+
+
+  .news-nav-right {
+    right: 25px;
+  }
+
+
+  .news-main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+
+  .news-year-section {
+    grid-template-columns:
+      90px
+      minmax(0, 1fr);
+
+    column-gap: 28px;
+
+    margin-top: 48px;
+  }
+
+
+  .news-item-with-image {
+    grid-template-columns:
+      48px
+      minmax(0, 1fr);
+  }
+
+
+  .news-item-with-image .news-image {
+    grid-column: 2;
+
+    margin-top: 14px;
+
+    max-width: 300px;
+  }
 
 }
 
 
-/* =========================================
+
+/* ==========================================================
    MOBILE
-   ========================================= */
+   ========================================================== */
 
 @media (max-width: 650px) {
 
-    .news-page {
-        width: calc(100% - 30px);
-
-        padding-top: 38px;
-        padding-bottom: 60px;
-    }
-
-    .news-page__header {
-        margin-bottom: 48px;
-    }
-
-    .news-page__header h1 {
-        font-size: 38px;
-    }
-
-    .news-page__title-line {
-        width: 88%;
-
-        height: 6px;
-
-        margin-top: 15px;
-    }
+  .news-header {
+    height: 190px;
+  }
 
 
-    /* 모바일에서는 날짜 위, 내용 아래 */
+  .news-nav {
+    left: 50%;
+    right: auto;
 
-    .news-page__item {
-        display: block;
+    transform:
+      translateX(-50%);
 
-        margin-bottom: 25px;
-    }
+    width:
+      calc(100% - 25px);
 
-    .news-page__item time {
-        display: block;
+    justify-content: center;
 
-        margin-bottom: 3px;
+    gap: 8px;
+  }
 
-        font-size: 14px;
-    }
 
-    .news-page__item p {
-        font-size: 14px;
-        line-height: 1.55;
-    }
+  .news-nav-left {
+    top: 82px;
+  }
+
+
+  .news-nav-right {
+    top: 125px;
+  }
+
+
+  .news-nav a {
+    font-size: 11px;
+  }
+
+
+  .news-main {
+    padding:
+      15px
+      20px
+      65px;
+  }
+
+
+  /* TITLE */
+
+  .news-heading h1 {
+    font-size: 32px;
+
+    letter-spacing: 0.10em;
+  }
+
+
+  .news-heading p {
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  /* CONTENT */
+
+  .news-content {
+    margin-top: 45px;
+  }
+
+
+  .news-year-section {
+    display: block;
+
+    margin-top: 45px;
+  }
+
+
+  .news-year {
+    margin-bottom: 15px;
+  }
+
+
+  .news-year span {
+    font-size: 25px;
+  }
+
+
+  .news-year-line {
+    width: 62px;
+  }
+
+
+  /* ITEM */
+
+  .news-item,
+  .news-item-with-image {
+    grid-template-columns:
+      34px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      14px
+      0
+      16px;
+  }
+
+
+  .news-number span {
+    font-size: 12px;
+  }
+
+
+  .news-number-line {
+    width: 22px;
+  }
+
+
+  .news-body {
+    grid-template-columns:
+      43px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+
+  .news-date-month {
+    font-size: 9px;
+  }
+
+
+  .news-date-day {
+    font-size: 18px;
+  }
+
+
+  .news-title {
+    font-size: 16px;
+  }
+
+
+  .news-description {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  .news-item-with-image .news-image {
+    grid-column: 2;
+
+    min-height: 120px;
+  }
+
+
+  /* SEARCH */
+
+  #site-search-panel[aria-hidden="false"] {
+    padding-top: 80px;
+  }
+
+
+  #site-search-panel .site-search-panel__inner {
+    width:
+      calc(100vw - 28px);
+  }
 
 }

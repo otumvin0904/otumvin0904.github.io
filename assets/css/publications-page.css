@@ -68,6 +68,7 @@ body {
 
 .publications-page {
   width: 100%;
+
   min-height: 100vh;
 
   background: #ffffff;
@@ -114,6 +115,7 @@ body {
   top: 27px;
 
   display: flex;
+
   align-items: center;
 
   gap: 10px;
@@ -138,13 +140,12 @@ body {
   color: rgba(0, 0, 0, 0.78) !important;
 
   font-size: clamp(13px, 0.8vw, 16px);
+
   font-weight: 400;
 
   line-height: 1;
 
   text-decoration: none !important;
-
-  transition: color 180ms ease;
 }
 
 
@@ -195,8 +196,6 @@ body {
 
   width: 170px;
   height: 56px;
-
-  text-decoration: none !important;
 }
 
 
@@ -245,8 +244,6 @@ body {
 
 
 .publications-search svg {
-  display: block;
-
   width: 18px !important;
   height: 18px !important;
 
@@ -273,13 +270,13 @@ body {
   padding:
     20px
     clamp(55px, 5vw, 110px)
-    120px;
+    100px;
 }
 
 
 
 /* ==========================================================
-   SECTION LINE
+   MAIN TITLE
    ========================================================== */
 
 .section-line {
@@ -294,11 +291,6 @@ body {
 }
 
 
-
-/* ==========================================================
-   MAIN HEADING
-   ========================================================== */
-
 .publications-heading {
   text-align: center;
 
@@ -312,6 +304,7 @@ body {
   color: #223650;
 
   font-size: clamp(42px, 3vw, 60px);
+
   font-weight: 500;
 
   line-height: 1;
@@ -326,6 +319,7 @@ body {
   color: #64778f;
 
   font-size: clamp(14px, 0.9vw, 18px);
+
   font-weight: 600;
 
   line-height: 1.5;
@@ -345,47 +339,47 @@ body {
   max-width: 1550px;
 
   margin:
-    85px
+    72px
     auto
     0;
 }
 
 
 .publication-group-prior {
-  margin-top: 120px;
+  margin-top: 90px;
 }
 
 
 
 /* ==========================================================
    GROUP HEADING
-   Research의 번호 + 제목 디자인과 연결
    ========================================================== */
 
 .publication-group-heading {
   display: grid;
 
   grid-template-columns:
-    68px
+    58px
     minmax(0, 1fr);
 
-  gap: 24px;
+  gap: 18px;
 
   align-items: end;
 
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 }
 
 
 .publication-group-index {
   color: #657b97;
 
-  font-size: clamp(17px, 1vw, 22px);
+  font-size: clamp(15px, 0.9vw, 19px);
+
   font-weight: 500;
 
   line-height: 1;
 
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
 }
 
 
@@ -394,9 +388,9 @@ body {
 
   align-items: baseline;
 
-  gap: 22px;
+  gap: 20px;
 
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 
   border-bottom:
     1px solid #dce3ea;
@@ -408,12 +402,13 @@ body {
 
   color: #223650;
 
-  font-size: clamp(28px, 1.8vw, 38px);
+  font-size: clamp(25px, 1.55vw, 33px);
+
   font-weight: 600;
 
   line-height: 1;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
 }
 
 
@@ -422,12 +417,13 @@ body {
 
   color: #8491a1;
 
-  font-size: clamp(11px, 0.67vw, 14px);
+  font-size: clamp(10px, 0.6vw, 12px);
+
   font-weight: 600;
 
   line-height: 1;
 
-  letter-spacing: 0.17em;
+  letter-spacing: 0.15em;
 }
 
 
@@ -444,23 +440,26 @@ body {
 
 /* ==========================================================
    PUBLICATION ITEM
+
+   핵심:
+   기존보다 위아래 padding을 크게 줄임
    ========================================================== */
 
 .publication-item {
   display: grid;
 
   grid-template-columns:
-    68px
+    58px
     minmax(0, 1fr);
 
-  gap: 24px;
+  gap: 18px;
 
   width: 100%;
 
   padding:
-    30px
+    12px
     0
-    34px;
+    15px;
 
   box-sizing: border-box;
 
@@ -475,7 +474,7 @@ body {
    ========================================================== */
 
 .publication-number {
-  padding-top: 7px;
+  padding-top: 4px;
 }
 
 
@@ -484,20 +483,21 @@ body {
 
   color: #657b97;
 
-  font-size: clamp(16px, 0.95vw, 20px);
+  font-size: clamp(14px, 0.82vw, 17px);
+
   font-weight: 500;
 
   line-height: 1;
 
-  letter-spacing: 0.14em;
+  letter-spacing: 0.13em;
 }
 
 
 .publication-number-line {
-  width: 33px;
+  width: 29px;
   height: 2px;
 
-  margin-top: 13px;
+  margin-top: 10px;
 
   background: #96a5b7;
 }
@@ -511,7 +511,7 @@ body {
 .publication-information {
   min-width: 0;
 
-  max-width: 1250px;
+  max-width: 1300px;
 }
 
 
@@ -523,19 +523,20 @@ body {
 .publication-title-row {
   display: flex;
 
-  align-items: flex-start;
+  align-items: center;
 
   flex-wrap: wrap;
 
   gap:
-    10px
-    18px;
+    7px
+    14px;
 }
 
 
 
 /* ==========================================================
    TITLE
+   글씨 크기 축소
    ========================================================== */
 
 .publication-title {
@@ -543,10 +544,11 @@ body {
 
   color: #20344f;
 
-  font-size: clamp(20px, 1.25vw, 27px);
+  font-size: clamp(17px, 1.05vw, 22px);
+
   font-weight: 600;
 
-  line-height: 1.45;
+  line-height: 1.38;
 }
 
 
@@ -555,18 +557,19 @@ body {
 
   text-decoration: none !important;
 
-  transition: color 180ms ease;
+  transition:
+    color 180ms ease;
 }
 
 
 .publication-title a:hover {
-  color: #6a7d94 !important;
+  color: #687c94 !important;
 }
 
 
 
 /* ==========================================================
-   STATUS
+   STATUS PILL
    ========================================================== */
 
 .publication-status-pill {
@@ -576,27 +579,26 @@ body {
 
   flex: 0 0 auto;
 
-  margin-top: 3px;
-
   padding:
-    6px
-    11px;
+    4px
+    9px;
 
   border:
-    1px solid #c5ced8;
+    1px solid #cbd3dd;
 
   border-radius: 20px;
 
   background: #ffffff;
 
-  color: #738296;
+  color: #748397;
 
-  font-size: clamp(10px, 0.63vw, 13px);
+  font-size: clamp(9px, 0.52vw, 11px);
+
   font-weight: 600;
 
   line-height: 1;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
 
   text-transform: uppercase;
 }
@@ -608,19 +610,17 @@ body {
    ========================================================== */
 
 .publication-authors {
-  margin-top: 12px;
+  margin-top: 7px;
 
   color: #5f7187;
 
-  font-size: clamp(15px, 0.88vw, 18px);
+  font-size: clamp(13px, 0.76vw, 16px);
+
   font-weight: 400;
 
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-
-
-/* Highlight lab PI name from existing authors_html */
 
 .publication-authors .my-name,
 .my-name {
@@ -636,16 +636,17 @@ body {
    ========================================================== */
 
 .publication-journal {
-  margin-top: 7px;
+  margin-top: 4px;
 
   color: #687a90;
 
-  font-size: clamp(15px, 0.86vw, 18px);
+  font-size: clamp(13px, 0.75vw, 16px);
+
   font-weight: 500;
 
   font-style: italic;
 
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 
@@ -659,9 +660,9 @@ body {
 
   flex-wrap: wrap;
 
-  gap: 24px;
+  gap: 18px;
 
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 
@@ -670,12 +671,13 @@ body {
 
   color: #526983 !important;
 
-  font-size: clamp(11px, 0.67vw, 14px);
+  font-size: clamp(10px, 0.58vw, 12px);
+
   font-weight: 600;
 
   line-height: 1;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.10em;
 
   text-decoration: none !important;
 }
@@ -687,7 +689,7 @@ body {
   position: absolute;
 
   left: 0;
-  bottom: -5px;
+  bottom: -4px;
 
   width: 100%;
   height: 1px;
@@ -696,7 +698,7 @@ body {
 
   transform: scaleX(0);
 
-  transform-origin: left center;
+  transform-origin: left;
 
   transition:
     transform 180ms ease;
@@ -710,27 +712,22 @@ body {
 
 
 /* ==========================================================
-   UNPUBLISHED ITEM
+   IN PREPARATION / SUBMITTED
    ========================================================== */
-
-.publication-item-status .publication-title {
-  color: #314a68;
-}
-
 
 .publication-item-status {
   background:
     linear-gradient(
       90deg,
-      rgba(241, 245, 249, 0.55) 0%,
-      rgba(255, 255, 255, 0) 45%
+      rgba(241, 245, 249, 0.45) 0%,
+      rgba(255, 255, 255, 0) 38%
     );
 }
 
 
 
 /* ==========================================================
-   SEARCH PANEL CLOSED
+   SEARCH CLOSED
    ========================================================== */
 
 #site-search-panel[aria-hidden="true"] {
@@ -740,7 +737,7 @@ body {
 
 
 /* ==========================================================
-   SEARCH PANEL OPEN
+   SEARCH OPEN
    ========================================================== */
 
 #site-search-panel[aria-hidden="false"] {
@@ -803,10 +800,6 @@ body {
     1px solid rgba(0, 0, 0, 0.08);
 
   border-radius: 8px;
-
-  box-shadow:
-    0 10px 35px
-    rgba(0, 0, 0, 0.06);
 }
 
 
@@ -834,10 +827,7 @@ body {
   border: 0 !important;
 
   border-bottom:
-    1px solid
-    rgba(0, 0, 0, 0.28) !important;
-
-  box-shadow: none !important;
+    1px solid rgba(0, 0, 0, 0.28) !important;
 }
 
 
@@ -847,10 +837,6 @@ body {
    ========================================================== */
 
 #site-search-panel .site-search-box__icon {
-  display: block !important;
-
-  flex: 0 0 20px !important;
-
   width: 20px !important;
   height: 20px !important;
 
@@ -860,15 +846,10 @@ body {
   max-width: 20px !important;
   max-height: 20px !important;
 
-  margin: 0 !important;
-  padding: 0 !important;
-
   fill: none !important;
 
   stroke:
     rgba(0, 0, 0, 0.68) !important;
-
-  stroke-width: 1.6 !important;
 }
 
 
@@ -888,7 +869,6 @@ body {
 
   width: 100%;
 
-  margin: 0 !important;
   padding: 6px 0 !important;
 
   border: 0 !important;
@@ -897,17 +877,9 @@ body {
 
   background: transparent !important;
 
-  box-shadow: none !important;
-
   color: #111111 !important;
 
   font-size: 18px;
-}
-
-
-#site-search-input::placeholder {
-  color:
-    rgba(0, 0, 0, 0.45) !important;
 }
 
 
@@ -925,9 +897,6 @@ body {
   width: 32px;
   height: 32px;
 
-  margin: 0 !important;
-  padding: 0 !important;
-
   border: 0 !important;
 
   background: transparent !important;
@@ -936,29 +905,6 @@ body {
     rgba(0, 0, 0, 0.60) !important;
 
   cursor: pointer;
-
-  box-shadow: none !important;
-}
-
-
-
-/* ==========================================================
-   SEARCH RESULTS
-   ========================================================== */
-
-#site-search-panel .site-search-results-wrap {
-  margin-top: 20px;
-
-  background: transparent !important;
-
-  color: #26384d !important;
-}
-
-
-#site-search-panel .site-search-results-wrap a {
-  color: #182c45 !important;
-
-  text-decoration: none !important;
 }
 
 
@@ -978,11 +924,6 @@ body {
     top: 10px;
 
     width: 150px;
-  }
-
-
-  .publications-logo img {
-    max-width: 150px;
   }
 
 
@@ -1008,40 +949,12 @@ body {
 
 
   .publication-group {
-    margin-top: 70px;
+    margin-top: 60px;
   }
 
 
   .publication-group-prior {
-    margin-top: 95px;
-  }
-
-
-  .publication-group-heading {
-    grid-template-columns:
-      52px
-      minmax(0, 1fr);
-
-    gap: 17px;
-  }
-
-
-  .publication-group-title {
-    display: block;
-  }
-
-
-  .publication-group-title p {
-    margin-top: 9px !important;
-  }
-
-
-  .publication-item {
-    grid-template-columns:
-      52px
-      minmax(0, 1fr);
-
-    gap: 17px;
+    margin-top: 75px;
   }
 
 }
@@ -1056,18 +969,6 @@ body {
 
   .publications-header {
     height: 190px;
-  }
-
-
-  .publications-logo {
-    top: 12px;
-
-    width: 145px;
-  }
-
-
-  .publications-logo img {
-    max-width: 145px;
   }
 
 
@@ -1102,11 +1003,6 @@ body {
   }
 
 
-  .publications-nav span {
-    font-size: 10px;
-  }
-
-
   .publications-main {
     padding:
       15px
@@ -1115,7 +1011,7 @@ body {
   }
 
 
-  /* TITLE */
+  /* MAIN TITLE */
 
   .publications-heading h1 {
     font-size: 30px;
@@ -1135,94 +1031,91 @@ body {
 
   /* GROUP */
 
-  .publication-group {
-    margin-top: 55px;
-  }
-
-
-  .publication-group-prior {
-    margin-top: 80px;
-  }
-
-
   .publication-group-heading {
     grid-template-columns:
       38px
       minmax(0, 1fr);
 
-    gap: 12px;
+    gap: 11px;
   }
 
 
   .publication-group-index {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+
+  .publication-group-title {
+    display: block;
   }
 
 
   .publication-group-title h2 {
-    font-size: 23px;
+    font-size: 22px;
   }
 
 
   .publication-group-title p {
-    font-size: 9px;
+    margin-top: 7px !important;
 
-    line-height: 1.5;
+    font-size: 9px;
   }
 
 
-  /* PAPER */
+  /* PAPER ROW */
 
   .publication-item {
     grid-template-columns:
       38px
       minmax(0, 1fr);
 
-    gap: 12px;
+    gap: 11px;
 
     padding:
-      25px
+      15px
       0
-      28px;
+      17px;
   }
 
 
   .publication-number span {
-    font-size: 13px;
+    font-size: 12px;
   }
 
 
   .publication-number-line {
-    width: 25px;
+    width: 23px;
   }
 
 
   .publication-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
 
   .publication-authors {
-    font-size: 14px;
+    font-size: 13px;
   }
 
 
   .publication-journal {
-    font-size: 14px;
+    font-size: 13px;
   }
 
 
   .publication-status-pill {
     padding:
-      5px
-      9px;
+      4px
+      7px;
 
-    font-size: 9px;
+    font-size: 8px;
   }
 
 
   .publication-links {
-    gap: 17px;
+    margin-top: 8px;
+
+    gap: 15px;
   }
 
 
@@ -1236,11 +1129,6 @@ body {
   #site-search-panel .site-search-panel__inner {
     width:
       calc(100vw - 28px);
-
-    padding:
-      20px
-      21px
-      25px;
   }
 
 }

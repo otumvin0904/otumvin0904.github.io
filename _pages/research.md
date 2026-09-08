@@ -162,10 +162,6 @@ classes: wide
         RESEARCH
       </h1>
 
-      <p>
-        EXPLORING LIGHT–MATTER INTERACTIONS AT THE NANOSCALE
-      </p>
-
       <div class="section-line"></div>
 
     </section>

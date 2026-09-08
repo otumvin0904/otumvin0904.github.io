@@ -1,0 +1,1193 @@
+/* ==========================================================
+   NANOSPECTROSCOPY LAB
+   TEAM PAGE
+   ========================================================== */
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+html,
+body {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================================
+   REMOVE DEFAULT ACADEMICPAGES
+   ========================================================== */
+
+.masthead {
+  display: none !important;
+}
+
+
+.page__footer {
+  display: none !important;
+}
+
+
+.page__title {
+  display: none !important;
+}
+
+
+#main,
+#main .page,
+#main .page__inner-wrap,
+#main .page__content {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+#main .page {
+  float: none !important;
+}
+
+
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
+
+.team-page {
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #223650;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.team-header {
+  position: relative;
+
+  width: 100%;
+  height: 80px;
+
+  background: transparent;
+
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.team-nav {
+  position: absolute;
+
+  top: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+
+.team-nav-left {
+  left: clamp(30px, 3vw, 65px);
+}
+
+
+.team-nav-right {
+  right: clamp(30px, 3vw, 65px);
+}
+
+
+.team-nav a {
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.78) !important;
+
+  font-size: clamp(13px, 0.8vw, 16px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+}
+
+
+.team-nav a:hover {
+  color: #000000 !important;
+}
+
+
+.team-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #ef4444;
+}
+
+
+.team-nav span {
+  color: rgba(0, 0, 0, 0.28);
+
+  font-size: 14px;
+}
+
+
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.team-logo {
+  position: absolute;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 56px;
+}
+
+
+.team-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 170px;
+  max-height: 56px;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.team-search {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  margin-left: 5px;
+  padding: 0;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color: rgba(0, 0, 0, 0.70);
+
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+
+.team-search svg {
+  width: 18px !important;
+  height: 18px !important;
+
+  fill: none !important;
+}
+
+
+.team-search svg circle,
+.team-search svg line {
+  fill: none !important;
+}
+
+
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+
+.team-main {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    clamp(50px, 4.5vw, 100px)
+    110px;
+}
+
+
+
+/* ==========================================================
+   PAGE TITLE
+   ========================================================== */
+
+.section-line {
+  width: 38px;
+  height: 3px;
+
+  margin: 17px auto 0;
+
+  background: #a3afbd;
+
+  border-radius: 2px;
+}
+
+
+.team-heading {
+  text-align: center;
+
+  margin-top: 2px;
+}
+
+
+.team-heading h1 {
+  margin: 0;
+
+  color: #223650;
+
+  font-size: clamp(42px, 3vw, 60px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.team-heading p {
+  margin: 21px 0 0 !important;
+
+  color: #64778f;
+
+  font-size: clamp(14px, 0.9vw, 18px);
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.20em;
+}
+
+
+
+/* ==========================================================
+   TEAM SECTION
+   ========================================================== */
+
+.team-section {
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin:
+    95px
+    auto
+    0;
+}
+
+
+.team-section-last {
+  margin-bottom: 10px;
+}
+
+
+
+/* ==========================================================
+   SECTION TITLE
+   ========================================================== */
+
+.team-section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  width: 100%;
+
+  margin-bottom: 48px;
+}
+
+
+.team-section-heading h2 {
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  color: #263b56;
+
+  font-size: clamp(23px, 1.45vw, 30px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+}
+
+
+.team-section-heading > div {
+  flex: 1;
+
+  height: 1px;
+
+  background: #dce3ea;
+}
+
+
+
+/* ==========================================================
+   PRINCIPAL INVESTIGATOR
+   ========================================================== */
+
+.pi-card {
+  display: grid;
+
+  grid-template-columns:
+    clamp(220px, 17vw, 290px)
+    minmax(0, 1fr);
+
+  gap: clamp(45px, 5vw, 85px);
+
+  align-items: center;
+
+  width: min(100%, 950px);
+
+  margin:
+    0
+    auto;
+}
+
+
+
+/* ==========================================================
+   PI PHOTO
+   ========================================================== */
+
+.pi-photo {
+  width: 100%;
+  height: clamp(270px, 21vw, 350px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #fafbfc;
+}
+
+
+.pi-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   PI INFO
+   ========================================================== */
+
+.pi-information {
+  min-width: 0;
+}
+
+
+.member-korean-name {
+  color: #7a899c;
+
+  font-size: clamp(13px, 0.78vw, 16px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.06em;
+}
+
+
+.pi-information h3 {
+  margin:
+    9px
+    0
+    0;
+
+  color: #20344f;
+
+  font-size: clamp(30px, 2vw, 42px);
+
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+
+.member-position {
+  margin-top: 10px;
+
+  color: #738398;
+
+  font-size: clamp(14px, 0.85vw, 17px);
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.04em;
+}
+
+
+.pi-divider {
+  width: 100%;
+  height: 1px;
+
+  margin:
+    28px
+    0;
+
+  background: #e0e5eb;
+}
+
+
+
+/* ==========================================================
+   PI CONTACT
+   ========================================================== */
+
+.pi-contact {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 35px;
+}
+
+
+.pi-contact span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #8390a0;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+.pi-contact a,
+.pi-contact p {
+  margin: 0 !important;
+
+  color: #3f536c !important;
+
+  font-size: clamp(14px, 0.82vw, 17px);
+
+  line-height: 1.55;
+
+  text-decoration: none !important;
+}
+
+
+
+/* ==========================================================
+   POSTDOC
+   ========================================================== */
+
+.postdoc-card {
+  display: grid;
+
+  grid-template-columns:
+    clamp(190px, 15vw, 250px)
+    minmax(0, 1fr);
+
+  gap: clamp(40px, 4vw, 70px);
+
+  align-items: center;
+
+  width: min(100%, 850px);
+
+  margin:
+    0
+    auto;
+}
+
+
+.postdoc-photo {
+  width: 100%;
+  height: clamp(230px, 18vw, 310px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  background: #fafbfc;
+}
+
+
+.postdoc-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  border: 0;
+}
+
+
+.postdoc-information h3 {
+  margin: 0;
+
+  color: #20344f;
+
+  font-size: clamp(24px, 1.5vw, 31px);
+
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+
+
+/* ==========================================================
+   MEMBER GRID
+   ========================================================== */
+
+.member-grid {
+  display: grid;
+
+  width: 100%;
+}
+
+
+.member-grid-three {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap:
+    65px
+    clamp(35px, 4vw, 70px);
+}
+
+
+
+/* ==========================================================
+   MEMBER CARD
+   ========================================================== */
+
+.member-card {
+  display: grid;
+
+  grid-template-columns:
+    clamp(125px, 9vw, 165px)
+    minmax(0, 1fr);
+
+  gap: 24px;
+
+  align-items: center;
+
+  min-width: 0;
+
+  padding-bottom: 26px;
+
+  border-bottom:
+    1px solid #e4e8ed;
+}
+
+
+
+/* ==========================================================
+   MEMBER PHOTO
+   ========================================================== */
+
+.member-photo {
+  width: 100%;
+
+  height: clamp(160px, 12vw, 205px);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #fafbfc;
+}
+
+
+.member-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+
+/* ==========================================================
+   MEMBER INFO
+   ========================================================== */
+
+.member-information {
+  min-width: 0;
+}
+
+
+.member-information h3 {
+  margin:
+    6px
+    0
+    0;
+
+  color: #20344f;
+
+  font-size: clamp(19px, 1.15vw, 24px);
+
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+
+/* ==========================================================
+   FAVORITE INFO
+   ========================================================== */
+
+.member-details {
+  margin-top: 15px;
+}
+
+
+.member-details-large {
+  margin-top: 24px;
+}
+
+
+.member-details > div {
+  margin-top: 7px;
+
+  font-size: clamp(12px, 0.72vw, 15px);
+
+  line-height: 1.5;
+}
+
+
+.detail-label {
+  color: #8a96a5;
+
+  font-weight: 500;
+}
+
+
+.detail-label::after {
+  content: " · ";
+}
+
+
+.detail-value {
+  color: #52657e;
+
+  font-weight: 500;
+}
+
+
+
+/* ==========================================================
+   EMAIL
+   ========================================================== */
+
+.member-email {
+  display: inline-block;
+
+  margin-top: 11px;
+
+  color: #738397 !important;
+
+  font-size: clamp(10px, 0.62vw, 13px);
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  text-decoration: none !important;
+
+  word-break: break-all;
+}
+
+
+.member-email:hover {
+  color: #263b56 !important;
+}
+
+
+
+/* ==========================================================
+   SEARCH
+   ========================================================== */
+
+#site-search-panel[aria-hidden="true"] {
+  display: none !important;
+}
+
+
+#site-search-panel[aria-hidden="false"] {
+  display: flex !important;
+
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 110px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.04) !important;
+
+  z-index: 9999 !important;
+}
+
+
+#site-search-panel .site-search-panel__inner {
+  position: relative;
+
+  width: min(
+    760px,
+    calc(100vw - 60px)
+  );
+
+  max-height:
+    calc(100vh - 150px);
+
+  padding:
+    24px
+    30px
+    30px;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.24) !important;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 8px;
+}
+
+
+#site-search-panel .site-search-box {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  padding:
+    4px
+    0
+    14px;
+
+  background: transparent !important;
+
+  border: 0 !important;
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.28) !important;
+}
+
+
+#site-search-panel .site-search-box__icon {
+  width: 20px !important;
+  height: 20px !important;
+
+  min-width: 20px !important;
+  min-height: 20px !important;
+
+  max-width: 20px !important;
+  max-height: 20px !important;
+
+  fill: none !important;
+
+  stroke:
+    rgba(0, 0, 0, 0.68) !important;
+}
+
+
+#site-search-panel .site-search-box__icon circle,
+#site-search-panel .site-search-box__icon line {
+  fill: none !important;
+}
+
+
+#site-search-input {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 6px 0 !important;
+
+  border: 0 !important;
+
+  outline: 0 !important;
+
+  background: transparent !important;
+
+  color: #111111 !important;
+
+  font-size: 18px;
+}
+
+
+#site-search-close {
+  position: absolute !important;
+
+  top: 14px;
+  right: 15px;
+
+  width: 32px;
+  height: 32px;
+
+  border: 0 !important;
+
+  background: transparent !important;
+
+  color:
+    rgba(0, 0, 0, 0.60) !important;
+
+  cursor: pointer;
+}
+
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1050px) {
+
+  .member-grid-three {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+  .team-header {
+    height: 135px;
+  }
+
+
+  .team-logo {
+    top: 10px;
+
+    width: 150px;
+  }
+
+
+  .team-nav {
+    top: 85px;
+  }
+
+
+  .team-nav-left {
+    left: 25px;
+  }
+
+
+  .team-nav-right {
+    right: 25px;
+  }
+
+
+  .team-main {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+  .team-header {
+    height: 190px;
+  }
+
+
+  .team-nav {
+    left: 50%;
+    right: auto;
+
+    transform:
+      translateX(-50%);
+
+    width:
+      calc(100% - 25px);
+
+    justify-content: center;
+
+    gap: 8px;
+  }
+
+
+  .team-nav-left {
+    top: 82px;
+  }
+
+
+  .team-nav-right {
+    top: 125px;
+  }
+
+
+  .team-nav a {
+    font-size: 11px;
+  }
+
+
+  .team-main {
+    padding:
+      15px
+      20px
+      65px;
+  }
+
+
+  /* TITLE */
+
+  .team-heading h1 {
+    font-size: 32px;
+
+    letter-spacing: 0.10em;
+  }
+
+
+  .team-heading p {
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  /* SECTIONS */
+
+  .team-section {
+    margin-top: 70px;
+  }
+
+
+  .team-section-heading {
+    gap: 15px;
+
+    margin-bottom: 35px;
+  }
+
+
+  .team-section-heading h2 {
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.07em;
+  }
+
+
+  /* PI */
+
+  .pi-card,
+  .postdoc-card {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    max-width: 370px;
+  }
+
+
+  .pi-photo,
+  .postdoc-photo {
+    width: 230px;
+
+    margin:
+      0
+      auto;
+  }
+
+
+  .pi-information,
+  .postdoc-information {
+    text-align: center;
+  }
+
+
+  .pi-contact {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  /* MEMBERS */
+
+  .member-grid-three {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+
+  .member-card {
+    grid-template-columns:
+      115px
+      minmax(0, 1fr);
+
+    gap: 20px;
+
+    padding-bottom: 22px;
+  }
+
+
+  .member-photo {
+    height: 145px;
+  }
+
+
+  .member-information h3 {
+    font-size: 18px;
+  }
+
+
+  .member-details > div {
+    font-size: 12px;
+  }
+
+
+  .member-email {
+    font-size: 10px;
+  }
+
+
+  /* SEARCH */
+
+  #site-search-panel[aria-hidden="false"] {
+    padding-top: 80px;
+  }
+
+
+  #site-search-panel .site-search-panel__inner {
+    width:
+      calc(100vw - 28px);
+  }
+
+}
