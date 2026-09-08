@@ -71,7 +71,7 @@ classes: wide
         >
 
           <img
-            src="{{ '/images/logo.jpg' | relative_url }}"
+            src="{{ '/images/logo.png' | relative_url }}"
             alt="NanoSpectroscopy Laboratory"
           >
 
@@ -145,84 +145,6 @@ classes: wide
         </nav>
 
       </header>
-
-
-
-      <!-- =====================================================
-           LEFT MAIN TEXT
-           기존 이미지 속 글자를 흰색 영역으로 가리고
-           실제 HTML text로 다시 표현
-      ====================================================== -->
-      <div class="ns-copy ns-copy-main">
-
-        <div class="ns-main-title">
-          <span class="ns-title-light">Nano</span><span class="ns-title-bold">Spectroscopy</span>
-        </div>
-
-
-        <div class="ns-small-line"></div>
-
-
-        <div class="ns-main-subtitle">
-          Probing molecules and materials<br>
-          with light
-        </div>
-
-
-        <div class="ns-main-keywords">
-
-          <div>MOLECULES</div>
-          <div>MATERIALS</div>
-          <div>NANOSTRUCTURES</div>
-          <div>NEW POSSIBILITIES</div>
-
-        </div>
-
-      </div>
-
-
-
-      <!-- =====================================================
-           BOTTOM-LEFT LAB TEXT
-      ====================================================== -->
-      <div class="ns-copy ns-copy-lab">
-
-        <div class="ns-lab-vertical-line"></div>
-
-        <div class="ns-lab-text">
-
-          <div class="ns-lab-name">
-            NANOSPECTROSCOPY LAB
-          </div>
-
-          <div class="ns-lab-fields">
-            CHEMISTRY
-            <span>·</span>
-            SPECTROSCOPY
-            <span>·</span>
-            NANOSCIENCE
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-      <!-- =====================================================
-           TOP-RIGHT MOTTO
-      ====================================================== -->
-      <div class="ns-copy ns-copy-motto">
-
-        <div>LIGHT</div>
-        <div>DRIVES</div>
-        <div>A DEEPER</div>
-        <div>UNDERSTANDING</div>
-
-        <div class="ns-motto-line"></div>
-
-      </div>
-
 
     </div>
 
