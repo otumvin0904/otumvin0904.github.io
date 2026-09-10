@@ -563,7 +563,6 @@ body {
 }
 
 
-
 /* ==========================================================
    POSTDOC
    ========================================================== */
@@ -571,30 +570,33 @@ body {
 .postdoc-card {
   display: grid;
 
+  /* 아래 학생들과 동일한 사진 폭 */
   grid-template-columns:
-    clamp(190px, 15vw, 250px)
+    clamp(125px, 9vw, 165px)
     minmax(0, 1fr);
 
-  gap: clamp(40px, 4vw, 70px);
+  /* 아래 학생들과 동일한 간격 */
+  gap: 24px;
 
   align-items: center;
 
-  width: min(100%, 850px);
+  /* 중앙 정렬 제거 */
+  width: min(100%, 500px);
 
-  margin:
-    0
-    auto;
+  margin: 0;
 }
 
 
 .postdoc-photo {
   width: 100%;
-  height: clamp(230px, 18vw, 310px);
+
+  /* 아래 학생 사진과 동일한 높이 */
+  height: clamp(160px, 12vw, 205px);
 
   display: flex;
 
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 
   overflow: hidden;
 
@@ -603,26 +605,49 @@ body {
 
 
 .postdoc-photo img {
+  display: block;
+
   width: 100%;
   height: 100%;
 
   object-fit: contain;
-  object-position: center bottom;
+  object-position: center;
 
   border: 0;
+
+  box-shadow: none;
+}
+
+
+.postdoc-information {
+  min-width: 0;
 }
 
 
 .postdoc-information h3 {
-  margin: 0;
+  margin:
+    6px
+    0
+    0;
 
   color: #20344f;
 
-  font-size: clamp(24px, 1.5vw, 31px);
+  /* 아래 학생 이름과 동일 */
+  font-size: clamp(19px, 1.15vw, 24px);
 
   font-weight: 600;
 
-  line-height: 1.35;
+  line-height: 1.3;
+}
+
+
+/* Postdoctoral Researcher 글씨도 학생 세부정보 크기에 맞춤 */
+.postdoc-information .member-position {
+  margin-top: 8px;
+
+  font-size: clamp(12px, 0.72vw, 15px);
+
+  line-height: 1.5;
 }
 
 
