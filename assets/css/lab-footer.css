@@ -1,0 +1,219 @@
+/* ==========================================================
+   NANOSPECTROSCOPY LAB — SHARED FOOTER / BOTTOM SPACE FIX v2
+   각 페이지의 전용 CSS 뒤에서 이 파일을 불러옵니다.
+   주소, 색상, 글자 크기는 이전 공통 하단 바와 동일합니다.
+   ========================================================== */
+
+/* ==========================================================
+   1. THEME BOTTOM SPACE
+   AcademicPages의 스크립트가 body에 margin-bottom을 다시 넣어도
+   공통 주소 바가 있는 페이지에서는 적용되지 않도록 처리합니다.
+   본문 전체의 스크롤을 막거나 주소 바를 화면 위에 고정하지 않습니다.
+   ========================================================== */
+
+html:has(.lab-site-footer),
+body:has(.lab-site-footer) {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 테마 기본 footer의 크기도 0으로 만들어 중복 공간을 제거합니다. */
+.page__footer {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+/* 주소 바 바깥에 있는 테마 컨테이너의 하단 여백만 제거합니다.
+   각 페이지 본문(main)의 내부 여백 및 제목/논문 간격은 유지합니다. */
+#main:has(.lab-site-footer),
+#main .page:has(.lab-site-footer),
+#main .page__inner-wrap:has(.lab-site-footer),
+#main .page__content:has(.lab-site-footer) {
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* single 레이아웃이 본문 뒤에 만드는 빈 메타데이터 footer만 제거.
+   실제 링크/태그 등 자식 요소가 있는 메타데이터는 숨기지 않습니다. */
+#main .page__inner-wrap:has(.lab-site-footer) > footer.page__meta:not(:has(*)) {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ==========================================================
+   2. PAGE SHELL
+   내용이 짧으면 화면 아래, 길면 본문 끝에 주소 바를 배치합니다.
+   .lab-page-shell은 header/본문/footer를 함께 감싸는 div입니다.
+   ========================================================== */
+
+.lab-page-shell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-height: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box;
+}
+
+.lab-page-shell > header,
+.lab-page-shell > .lab-site-footer {
+  flex: 0 0 auto;
+}
+
+.lab-page-shell > main {
+  flex: 1 0 auto;
+  min-width: 0;
+}
+
+/* 메인 페이지에는 main 대신 ns-hero가 있습니다.
+   ns-stage의 크기/비율과 메뉴/로고 배치는 기존 lab-home.css를 따릅니다. */
+.ns-home.lab-page-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+.ns-home.lab-page-shell > .ns-hero {
+  flex: 1 0 auto;
+  min-width: 0;
+}
+
+/* ==========================================================
+   3. FOOTER APPEARANCE
+   ========================================================== */
+
+/* 색상과 크기를 바꾸려면 이 변수들을 수정합니다. */
+.lab-site-footer {
+  --footer-bg: #223650;
+  --footer-text: #E7EDF4;
+  --footer-muted: #BECADA;
+  --footer-padding-y: 26px;
+  --footer-address-size: 14px;
+  --footer-contact-size: 13px;
+
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: auto 0 0;
+  padding: var(--footer-padding-y) 24px;
+  box-sizing: border-box;
+  background: var(--footer-bg);
+  border-top: 1px solid #314761;
+  color: var(--footer-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.lab-site-footer,
+.lab-site-footer * {
+  box-sizing: border-box;
+}
+
+.lab-site-footer .lab-site-footer__inner {
+  display: block;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0;
+  color: inherit;
+  font-style: normal;
+  text-align: inherit;
+}
+
+.lab-site-footer .lab-site-footer__address {
+  margin: 0 !important;
+  padding: 0;
+  color: var(--footer-text);
+  font-size: var(--footer-address-size);
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.lab-site-footer .lab-site-footer__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  margin: 4px 0 0;
+  padding: 0;
+  color: var(--footer-text);
+  font-size: var(--footer-contact-size);
+  line-height: 1.6;
+}
+
+.lab-site-footer .lab-site-footer__contact-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.lab-site-footer .lab-site-footer__label,
+.lab-site-footer .lab-site-footer__divider {
+  color: var(--footer-muted);
+}
+
+/* 테마의 링크 색상과 밑줄 설정이 하단 바에 적용되지 않도록 제한 */
+.lab-site-footer a,
+.lab-site-footer a:visited {
+  color: var(--footer-text) !important;
+  font: inherit;
+  text-decoration: none !important;
+  border: 0;
+  box-shadow: none;
+  overflow-wrap: anywhere;
+}
+
+.lab-site-footer a:hover,
+.lab-site-footer a:focus-visible {
+  color: #FFFFFF !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.lab-site-footer a:focus-visible {
+  outline: 2px solid #E7EDF4;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* 모바일에서는 주소가 줄바꿈되고 전화번호와 이메일이 세로로 배치 */
+@media (max-width: 650px) {
+  .lab-site-footer {
+    --footer-padding-y: 24px;
+    --footer-address-size: 13px;
+    --footer-contact-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .lab-site-footer .lab-site-footer__contact {
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 6px;
+  }
+
+  .lab-site-footer .lab-site-footer__divider {
+    display: none;
+  }
+}

@@ -10,7 +10,7 @@ classes: wide
   rel="stylesheet"
   href="{{ '/assets/css/contact-page.css' | relative_url }}"
 >
-
+<link rel="stylesheet" href="{{ '/assets/css/lab-footer.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
 
 <div class="contact-page">
 
@@ -475,7 +475,7 @@ classes: wide
 
 
   </main>
-
+  {% include lab-footer.html %}
 </div>
 
 

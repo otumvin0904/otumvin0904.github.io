@@ -251,7 +251,7 @@ body {
     sans-serif;
 
   font-size: clamp(
-    10px,
+    16px,
     0.82cqw,
     18px
   );

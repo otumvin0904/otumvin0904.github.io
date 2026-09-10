@@ -139,7 +139,7 @@ body {
 
   color: rgba(0, 0, 0, 0.78) !important;
 
-  font-size: clamp(13px, 0.8vw, 16px);
+  font-size: clamp(16px, 0.8vw, 16px);
 
   font-weight: 400;
 
@@ -346,7 +346,7 @@ body {
 
 
 .publication-group-prior {
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 
@@ -452,14 +452,14 @@ body {
     58px
     minmax(0, 1fr);
 
-  gap: 18px;
+  gap: 16px;
 
   width: 100%;
 
   padding:
-    12px
+    6px
     0
-    15px;
+    8px;
 
   box-sizing: border-box;
 
@@ -544,7 +544,7 @@ body {
 
   color: #20344f;
 
-  font-size: clamp(17px, 1.05vw, 22px);
+  font-size: clamp(14px, 1.05vw, 22px);
 
   font-weight: 600;
 
@@ -954,7 +954,7 @@ body {
 
 
   .publication-group-prior {
-    margin-top: 75px;
+    margin-top: 30px;
   }
 
 }
@@ -1131,4 +1131,75 @@ body {
       calc(100vw - 28px);
   }
 
+}
+
+/* ==========================================================
+   PUBLISHED PAPER LINKS
+   번호와 제목만 링크로 연결합니다. 기존 배치/크기는 유지합니다.
+   ========================================================== */
+
+.publications-page .publication-number-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+
+  color: #657b97 !important;
+  text-decoration: none !important;
+
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.publications-page .publication-number-link span {
+  transition: color 180ms ease;
+}
+
+.publications-page .publication-number-link .publication-number-line {
+  transition: background-color 180ms ease;
+}
+
+.publications-page .publication-number-link:hover span,
+.publications-page .publication-number-link:focus-visible span {
+  color: #20344f;
+}
+
+.publications-page .publication-number-link:hover .publication-number-line,
+.publications-page .publication-number-link:focus-visible .publication-number-line {
+  background-color: #20344f;
+}
+
+.publications-page .publication-title a {
+  /* 테마의 기본 링크 장식을 제거하고 기존 글자 스타일을 유지합니다. */
+  font: inherit;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+
+  text-decoration: none !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.publications-page .publication-title a:hover,
+.publications-page .publication-title a:focus-visible {
+  color: #687c94 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 0.18em;
+}
+
+.publications-page .publication-number-link:focus-visible,
+.publications-page .publication-title a:focus-visible {
+  outline: 2px solid #657b97;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .publications-page .publication-number-link span,
+  .publications-page .publication-number-link .publication-number-line,
+  .publications-page .publication-title a {
+    transition: none;
+  }
 }

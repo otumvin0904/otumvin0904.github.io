@@ -7,12 +7,20 @@ classes: wide
 
 <link rel="stylesheet" href="{{ '/assets/css/lab-home.css' | relative_url }}">
 
-<div class="ns-home">
+<!-- 모든 페이지에서 사용하는 하단 주소 바 -->
+<link rel="stylesheet" href="{{ '/assets/css/lab-footer.css' | relative_url }}?v=footer-bottom-2-{{ site.time | date: '%Y%m%d%H%M%S' }}">
+
+<!-- 메인 전체 폭 · 문구 · 회베이지 슬라이드쇼 · 기존 남색 주소 바 -->
+<link rel="stylesheet" href="{{ '/assets/css/lab-home-fullwidth.css' | relative_url }}?v=home-pi-20260909-1-{{ site.time | date: '%Y%m%d%H%M%S' }}">
+
+<link rel="stylesheet" href="{{ '/assets/css/lab-navigation.css' | relative_url }}?v=pi-nav-1">
+
+<div class="ns-home lab-page-shell ns-home--fullwidth ns-home--slides" markdown="0">
 
   <section class="ns-hero">
 
     <!-- =====================================================
-         16:9 RESPONSIVE STAGE
+         FULL-WIDTH STAGE / ORIGINAL IMAGE ASPECT RATIO
     ====================================================== -->
     <div class="ns-stage">
 
@@ -20,22 +28,33 @@ classes: wide
       <!-- =====================================================
            BACKGROUND / RAMAN IMAGE
       ====================================================== -->
+    <div class="ns-hero-visual">
+
+      <!-- 메인 문구: 아래 세 텍스트만 바꾸면 됩니다. -->
+      <div class="ns-hero-copy" lang="en">
+        <h1 class="ns-hero-copy__title">NanoSpectroscopy group</h1>
+        <p class="ns-hero-copy__description">
+          Probing plasmon-driven chemistry with Raman spectroscopy
+        </p>
+      </div>
+
       <img
         class="ns-background-image"
         src="{{ '/images/raman-main.png' | relative_url }}"
         alt="Raman spectroscopy research"
       >
+    </div>
 
 
 
       <!-- =====================================================
            HEADER
       ====================================================== -->
-      <header class="ns-header">
+      <header class="ns-header lab-global-header">
 
 
         <!-- LEFT MENU -->
-        <nav class="ns-nav ns-nav-left">
+        <nav class="ns-nav ns-nav-left lab-global-nav-left" aria-label="Research navigation">
 
           <a href="{{ '/research/' | relative_url }}">
             Research
@@ -65,7 +84,7 @@ classes: wide
 
         <!-- CENTER LOGO -->
         <a
-          class="ns-logo"
+          class="ns-logo lab-global-logo"
           href="{{ '/' | relative_url }}"
           aria-label="NanoSpectroscopy Laboratory Home"
         >
@@ -80,7 +99,13 @@ classes: wide
 
 
         <!-- RIGHT MENU -->
-        <nav class="ns-nav ns-nav-right">
+        <nav class="ns-nav ns-nav-right lab-global-nav-right" aria-label="Laboratory navigation">
+
+          <a href="{{ '/pi/' | relative_url }}" class="lab-nav-pi-link" aria-label="Principal Investigator">
+            PI
+          </a>
+
+          <span class="ns-divider" aria-hidden="true">/</span>
 
           <a href="{{ '/team/' | relative_url }}">
             Team
@@ -149,6 +174,137 @@ classes: wide
     </div>
 
   </section>
+
+  <!-- =====================================================
+       RESEARCH / GALLERY
+       기존 페이지의 이미지 주소를 읽어 각각 한 장씩 자동 전환합니다.
+       속도는 각 영역의 data-interval을 수정합니다. 5000 = 5초.
+       사진 파일명이나 원래 Research / Gallery 페이지는 바꾸지 않습니다.
+  ====================================================== -->
+  <section class="ns-showcase" aria-label="Research and gallery highlights">
+    <div class="ns-showcase__grid">
+        <section
+          class="ns-showcase-card ns-showcase-card--research"
+          data-home-slideshow="research"
+          data-source="{{ '/research/' | relative_url }}"
+          data-interval="5000"
+          aria-labelledby="home-research-title"
+          aria-roledescription="carousel"
+        >
+          <div class="ns-showcase-card__heading">
+            <h2 id="home-research-title">Research</h2>
+          </div>
+
+          <div class="ns-home-slides__viewport" aria-busy="true">
+            <a
+              class="ns-home-slides__image-link"
+              href="{{ '/research/' | relative_url }}"
+              aria-label="Open Research"
+            >
+              <div class="ns-home-slides__slides" id="home-research-slides" aria-live="off"></div>
+            </a>
+            <p class="ns-home-slides__message" role="status">Loading Research images…</p>
+          </div>
+
+          <p class="ns-home-slides__caption" aria-live="off"></p>
+
+          <div class="ns-showcase-card__bottom">
+            <a class="ns-showcase-card__more" href="{{ '/research/' | relative_url }}">
+              View Research <span aria-hidden="true">→</span>
+            </a>
+
+            <div class="ns-home-slides__controls" hidden>
+              <span class="ns-home-slides__counter" aria-label="Image number">01 / 01</span>
+              <button
+                class="ns-home-slides__button"
+                type="button"
+                data-slide-action="previous"
+                aria-label="Previous Research image"
+                aria-controls="home-research-slides"
+              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+              <button
+                class="ns-home-slides__button"
+                type="button"
+                data-slide-action="toggle"
+                aria-label="Pause Research slideshow"
+                aria-controls="home-research-slides"
+              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg></button>
+              <button
+                class="ns-home-slides__button"
+                type="button"
+                data-slide-action="next"
+                aria-label="Next Research image"
+                aria-controls="home-research-slides"
+              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="ns-showcase-card ns-showcase-card--gallery"
+          data-home-slideshow="gallery"
+          data-source="{{ '/gallery/' | relative_url }}"
+          data-gallery-root="{{ '/images/gallery/' | relative_url }}"
+          data-interval="5000"
+          aria-labelledby="home-gallery-title"
+          aria-roledescription="carousel"
+        >
+          <div class="ns-showcase-card__heading">
+            <h2 id="home-gallery-title">Gallery</h2>
+          </div>
+
+          <div class="ns-home-slides__viewport" aria-busy="true">
+            <a
+              class="ns-home-slides__image-link"
+              href="{{ '/gallery/' | relative_url }}"
+              aria-label="Open Gallery"
+            >
+              <div class="ns-home-slides__slides" id="home-gallery-slides" aria-live="off"></div>
+            </a>
+            <p class="ns-home-slides__message" role="status">Loading Gallery images…</p>
+          </div>
+
+          <p class="ns-home-slides__caption" aria-live="off"></p>
+
+          <div class="ns-showcase-card__bottom">
+            <a class="ns-showcase-card__more" href="{{ '/gallery/' | relative_url }}">
+              View Gallery <span aria-hidden="true">→</span>
+            </a>
+
+            <div class="ns-home-slides__controls" hidden>
+              <span class="ns-home-slides__counter" aria-label="Image number">01 / 01</span>
+              <button
+                class="ns-home-slides__button"
+                type="button"
+                data-slide-action="previous"
+                aria-label="Previous Gallery image"
+                aria-controls="home-gallery-slides"
+              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+              <button
+                class="ns-home-slides__button"
+                type="button"
+                data-slide-action="toggle"
+                aria-label="Pause Gallery slideshow"
+                aria-controls="home-gallery-slides"
+              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg></button>
+              <button
+                class="ns-home-slides__button"
+                type="button"
+                data-slide-action="next"
+                aria-label="Next Gallery image"
+                aria-controls="home-gallery-slides"
+              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+            </div>
+          </div>
+        </section>
+      <noscript>
+        <p class="ns-showcase__noscript">Enable JavaScript to play the slideshows, or use the Research and Gallery links.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- 주소 바는 기존 공통 남색 배경과 밝은 글씨를 유지 -->
+  {% include lab-footer.html %}
 
 </div>
 
@@ -243,3 +399,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+<!-- 외부 라이브러리 없이 작동하는 메인 홈 전용 자동 슬라이드쇼 -->
+<script src="{{ '/assets/js/lab-home-slides.js' | relative_url }}?v=home-slides-1-{{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>

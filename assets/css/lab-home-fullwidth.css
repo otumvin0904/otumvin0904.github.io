@@ -1,0 +1,610 @@
+/* ==========================================================
+   NANOSPECTROSCOPY LAB — HOME IMAGE FULL WIDTH
+
+   로딩 순서:
+   lab-home.css → lab-footer.css → lab-home-fullwidth.css → lab-navigation.css
+
+   기존 lab-home.css를 대체하지 않는 메인 홈 전용 보정 파일입니다.
+   .ns-home--fullwidth가 있는 페이지에만 적용됩니다.
+   이미지 원본·슬라이드쇼·검색을 유지하고 문구와 PI 탭을 추가합니다.
+   슬라이드쇼에는 밝은 회베이지색을, 주소 바에는 기존 남색을 사용합니다.
+   ========================================================== */
+
+/* 1. 메인 홈을 감싸는 테마 컨테이너의 좌우 폭 제한 해제 */
+html:has(.ns-home--fullwidth),
+body:has(.ns-home--fullwidth) {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#main:has(.ns-home--fullwidth),
+#main .page:has(.ns-home--fullwidth),
+#main .page__inner-wrap:has(.ns-home--fullwidth),
+#main .page__content:has(.ns-home--fullwidth) {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+#main .page:has(.ns-home--fullwidth) {
+  float: none !important;
+}
+
+/* 2. 페이지와 이미지 영역이 주소 바와 같은 전체 폭을 사용 */
+.ns-home.ns-home--fullwidth,
+.ns-home.ns-home--fullwidth > .ns-hero {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+.ns-home.ns-home--fullwidth > .ns-hero {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 3. 화면 높이에 맞추면서 폭이 좁아지는 설정을 해제.
+   이미지의 원래 가로세로 비율로 영역 높이가 결정됩니다.
+   메뉴와 이미지를 같은 그리드 칸에 두어 메뉴가 아래로 밀리지 않게 합니다. */
+.ns-home.ns-home--fullwidth .ns-stage {
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto;
+  gap: 0;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+}
+
+/* 4. 원본 이미지를 자르거나 가로로 찌그러뜨리지 않고 전체 폭에 맞춤.
+   height: auto를 유지해야 원본 비율이 보존됩니다. */
+.ns-home.ns-home--fullwidth .ns-hero-visual > .ns-background-image {
+  grid-area: 1 / 1;
+  align-self: start;
+  justify-self: stretch;
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  float: none !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain;
+  object-position: center;
+  box-sizing: border-box;
+}
+
+/* 기존 메뉴의 position/top/left/right, 글자 크기, 로고 크기 등은 유지 */
+.ns-home.ns-home--fullwidth .ns-stage > .ns-header {
+  grid-area: 1 / 1;
+  align-self: start;
+}
+
+/* ==========================================================
+   5. RESEARCH / GALLERY SLIDESHOWS
+   상단 이미지의 청회색 및 하단 주소 바의 남색과 구분되는 회베이지 단색입니다.
+   그라데이션이나 영역 전체의 투명도는 사용하지 않습니다.
+   이미지 파일 내부의 색상과 흰 배경은 그대로 유지합니다.
+   아래 변수는 슬라이드쇼 영역용입니다. 하단 주소 바에는 적용하지 않습니다.
+   배경색 / 글씨색 / 콘텐츠 폭 / 사진 비율을 여기서 조절합니다.
+   ========================================================== */
+.ns-home.ns-home--slides {
+  --home-lower-bg: #eaebee;
+  --home-lower-text: #0f1824;
+  --home-lower-muted: #5F6872;
+  --home-lower-line: #D3CEC5;
+  --home-slide-bg: #eaebee;
+  --home-control-border: #7C8085;
+  --home-control-hover: #E3DED5;
+  --home-focus: #365C83;
+  --home-slides-max-width: 1320px;
+  --home-slides-ratio: 16 / 10;
+  --home-slides-padding-y: 44px;
+
+  background: var(--home-lower-bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+}
+
+/* 기존 lab-footer.css의 flex: 1 0 auto를 메인 이미지에서만 해제.
+   이미지 아래 흰 공백 없이 슬라이드쇼가 바로 이어집니다. */
+.ns-home.ns-home--slides.lab-page-shell > .ns-hero {
+  flex: 0 0 auto !important;
+}
+
+.ns-home.ns-home--slides > .ns-showcase {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: auto;
+  margin: 0 !important;
+  padding: var(--home-slides-padding-y) clamp(22px, 4vw, 72px) 36px;
+  box-sizing: border-box;
+  background: var(--home-lower-bg);
+  background-image: none;
+  color: var(--home-lower-text);
+}
+
+.ns-showcase,
+.ns-showcase * {
+  box-sizing: border-box;
+}
+
+.ns-showcase .ns-showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(26px, 4vw, 60px);
+  align-items: start;
+  width: 100%;
+  max-width: var(--home-slides-max-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.ns-showcase .ns-showcase-card {
+  position: relative;
+  display: block;
+  float: none;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ns-showcase .ns-showcase-card__heading {
+  margin: 0 0 20px;
+  padding: 0 0 15px;
+  border-bottom: 1px solid var(--home-lower-line);
+}
+
+.ns-showcase .ns-showcase-card__heading h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--home-lower-text);
+  font-size: clamp(22px, 1.75vw, 30px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.ns-showcase .ns-home-slides__viewport {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--home-slides-ratio);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--home-lower-line);
+  border-radius: 3px;
+  background: var(--home-slide-bg);
+  isolation: isolate;
+}
+
+/* Research / Gallery의 사진 바깥 여백도 회베이지 계열로 통일합니다.
+   이미지 파일 안에 포함된 흰 배경과 도표 색상은 변경하지 않습니다. */
+.ns-showcase .ns-showcase-card--research .ns-home-slides__viewport {
+  background: var(--home-slide-bg);
+  border-color: var(--home-lower-line);
+}
+
+.ns-showcase .ns-home-slides__image-link {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  touch-action: pan-y;
+}
+
+.ns-showcase .ns-home-slides__slides,
+.ns-showcase .ns-home-slides__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ns-showcase .ns-home-slides__slide {
+  opacity: 0;
+  transition: opacity 450ms ease;
+}
+
+.ns-showcase .ns-home-slides__slide.is-active {
+  opacity: 1;
+}
+
+.ns-showcase .ns-home-slides__slide img {
+  display: block;
+  position: static;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none !important;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+/* 캡션은 원래 페이지의 alt / 제목을 사용하며 새 설명을 만들지 않습니다. */
+.ns-showcase .ns-home-slides__caption {
+  display: -webkit-box;
+  min-height: 2.9em;
+  margin: 13px 0 10px !important;
+  padding: 0;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: var(--home-lower-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.ns-showcase .ns-showcase-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ns-showcase a.ns-showcase-card__more,
+.ns-showcase a.ns-showcase-card__more:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  color: var(--home-lower-text) !important;
+  background: transparent;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-decoration: none !important;
+}
+
+.ns-showcase a.ns-showcase-card__more:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 5px;
+}
+
+.ns-showcase .ns-home-slides__controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.ns-showcase .ns-home-slides__counter {
+  min-width: 54px;
+  margin-right: 6px;
+  color: var(--home-lower-muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ns-showcase button.ns-home-slides__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--home-control-border) !important;
+  border-radius: 50%;
+  background: transparent !important;
+  color: var(--home-lower-text) !important;
+  font: inherit;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.ns-showcase button.ns-home-slides__button:hover {
+  background: var(--home-control-hover) !important;
+}
+
+.ns-showcase button.ns-home-slides__button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.ns-showcase .ns-home-slides__button svg {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  fill: none !important;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.ns-showcase .ns-home-slides__message {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 24px;
+  color: var(--home-lower-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  pointer-events: none;
+}
+
+.ns-showcase .ns-showcase-card--research .ns-home-slides__message {
+  color: var(--home-lower-muted);
+}
+
+.ns-showcase .ns-showcase__noscript {
+  color: var(--home-lower-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ns-showcase [hidden] {
+  display: none !important;
+}
+
+.ns-showcase a:focus-visible,
+.ns-showcase button:focus-visible {
+  outline: 2px solid var(--home-focus);
+  outline-offset: 4px;
+}
+
+.ns-showcase .ns-home-slides__image-link:focus-visible {
+  outline-offset: -4px;
+}
+
+/* 주소 바는 공통 lab-footer.css의 원래 색상을 그대로 사용합니다.
+   배경 #223650 / 본문 #E7EDF4 / 보조 글씨 #BECADA.
+   슬라이드쇼의 배경색 변수를 footer에 덮어쓰지 않습니다.
+   hover / focus 색상 역시 공통 footer 설정을 따릅니다. */
+.ns-home.ns-home--slides > .lab-site-footer {
+  flex: 0 0 auto;
+  margin: 0 !important;
+  background-image: none;
+}
+
+/* 화면 폭 760px 이하에서는 Research / Gallery를 한 열로 배치. */
+@media (max-width: 760px) {
+  .ns-home.ns-home--slides > .ns-showcase {
+    padding: 30px 22px 30px;
+  }
+
+  .ns-showcase .ns-showcase__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+    max-width: 620px;
+  }
+
+  .ns-showcase .ns-showcase-card__heading {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .ns-showcase .ns-showcase-card__heading h2 {
+    font-size: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ns-showcase .ns-home-slides__slide {
+    transition: none;
+  }
+}
+
+/* ==========================================================
+   6. HERO COPY
+   원본 이미지를 수정하지 않고 글씨를 겹칩니다. 그라데이션 없음.
+   위치: --hero-copy-left / --hero-copy-top
+   크기: --hero-title-size
+   ========================================================== */
+.ns-home.ns-home--fullwidth {
+  --hero-copy-left: 6%;
+  --hero-copy-top: 70%;
+  --hero-copy-width: 60%;
+  --hero-title-size: clamp(32px, 3.3vw, 64px);
+  --hero-title-color: #223650;
+  --hero-description-color: #41566F;
+}
+
+.ns-home.ns-home--fullwidth .ns-stage > .ns-hero-visual {
+  grid-area: 1 / 1;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: #F3F7FB;
+  box-sizing: border-box;
+  isolation: isolate;
+}
+
+.ns-home.ns-home--fullwidth .ns-stage > .ns-header {
+  z-index: 20;
+}
+
+.ns-home.ns-home--fullwidth .ns-hero-copy {
+  position: absolute;
+  z-index: 2;
+  left: var(--hero-copy-left);
+  top: var(--hero-copy-top);
+  width: var(--hero-copy-width);
+  max-width: 680px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--hero-title-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  text-align: left;
+  text-shadow: 0 1px 10px rgba(255, 255, 255, .9);
+}
+
+.ns-home.ns-home--fullwidth .ns-hero-copy__eyebrow {
+  margin: 0 0 15px !important;
+  padding: 0;
+  color: #4E647D;
+  font-size: clamp(10px, .78vw, 14px);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.ns-home.ns-home--fullwidth .ns-hero-copy__title {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--hero-title-color);
+  font-size: var(--hero-title-size);
+  font-weight: 600;
+  line-height: 1.10;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+}
+
+.ns-home.ns-home--fullwidth .ns-hero-copy__description {
+  margin: 19px 0 0 !important;
+  padding: 0;
+  color: var(--hero-description-color);
+  font-size: clamp(13px, 1vw, 18px);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+/* 메뉴가 이미지 위에서 밀집되지 않도록 좁은 화면에서는 메뉴 행 분리. */
+@media (max-width: 1100px) {
+  .ns-home.ns-home--fullwidth .ns-stage > .ns-header {
+    grid-area: 1 / 1;
+    background: #F3F7FB;
+  }
+  .ns-home.ns-home--fullwidth .ns-stage > .ns-hero-visual {
+    grid-area: 2 / 1;
+  }
+  .ns-home.ns-home--fullwidth {
+    --hero-copy-width: 46%;
+    --hero-copy-top: 31%;
+    --hero-title-size: clamp(29px, 3.3vw, 38px);
+  }
+  .ns-home.ns-home--fullwidth .ns-hero-copy__eyebrow {
+    margin-bottom: 10px !important;
+    font-size: 10px;
+    letter-spacing: .10em;
+  }
+  .ns-home.ns-home--fullwidth .ns-hero-copy__description {
+    margin-top: 13px !important;
+    font-size: 12px;
+  }
+}
+
+/* 휴대전화에서는 작은 그림을 글씨로 덮지 않고, 그림 바로 위에 같은 문구 표시. */
+@media (max-width: 700px) {
+  .ns-home.ns-home--fullwidth .ns-hero-copy {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: none;
+    padding: 27px 7% 24px;
+    background: #F3F7FB;
+    text-shadow: none;
+  }
+  .ns-home.ns-home--fullwidth .ns-hero-copy__title {
+    font-size: clamp(29px, 7.4vw, 43px);
+  }
+  .ns-home.ns-home--fullwidth .ns-hero-copy__description {
+    max-width: 40em;
+    font-size: 13px;
+  }
+  .ns-home.ns-home--fullwidth .ns-hero-copy__break {
+    display: none;
+  }
+}

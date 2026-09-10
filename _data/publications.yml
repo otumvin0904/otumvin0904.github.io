@@ -27,6 +27,7 @@
   title: Alkali metal cation impurities stabilize Cu+ in oxide-derived copper for CO2 electrolysis
   published: true
   group: knu
+  url: "https://doi.org/10.1038/s41929-026-01571-2"
   authors_html: H Kim, S Lee, J Son, H Choi, J Cho, B Gault, W Lee, BP Klein, C Jeon, J Moon, DH Won, D Nam, <strong class="my-name">G
     Kang</strong>, H Shin, S Kim, CH Choi
   journal: Nature Catalysis, ASAP (2026)
@@ -35,6 +36,7 @@
     at normal heating and superheating conditions - Implications and limitations of the Spurr-Mayers equation
   published: true
   group: knu
+  url: "https://doi.org/10.1016/j.ceramint.2025.10.297"
   authors_html: S Aswathappa, L Dai, SJD Sathiyadhas, RS Kumar, AI Almansour, PTC Freire, S Athiruban, <strong class="my-name">G
     Kang</strong>
   journal: Ceramics International, 51(29) (2025)
@@ -42,37 +44,54 @@
   title: Structural Determinants of Optical Cavities in Plasmonic Nanogaps
   published: true
   group: knu
+  url: "https://doi.org/10.1117/12.3063712"
   authors_html: <strong class="my-name">G Kang</strong>, S Lim
   journal: Proceedings 13584, Enhanced Spectroscopies and Nanoimaging 2025; 1358407 (2025)
 - number: 23
   title: 초고해상도 플라즈모닉스 표면 분광법을 이용한 광촉매 연구
   published: true
   group: knu
+  url: "https://chemworld.kcsnet.or.kr/post/%EC%B4%88%EA%B3%A0%ED%95%B4%EC%83%81%EB%8F%84-%ED%94%8C%EB%9D%BC%EC%A6%88%EB%AA%A8%EB%8B%89%EC%8A%A4-%ED%91%9C%EB%A9%B4-%EB%B6%84%EA%B4%91%EB%B2%95%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B4%91%EC%B4%89%EB%A7%A4-%EC%97%B0%EA%B5%AC"
   authors_html: 김홍기, <strong class="my-name">강경원*</strong>
   journal: 화학세계 2025년 7월호
 - number: 22
   title: Electronically Perturbed Vibrational Excitations of the Luminescing Stable Blatter Radical
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acsnano.4c09661"
   authors_html: J Bar-David, A Daaoub, S Chen, S M Sibug-Torres, S Rocchetti, <strong class="my-name">G Kang</strong>, R J
     Davidson, R J Salthouse, C Guo, N S Mueller, S Sangtarash, M R Bryce, H Sadeghi, J J Baumberg
   journal: ACS Nano, 19(8) 7650-7660 (2025)
 - number: 21
-  title: Catalytic Single-particle Plasmonic Nanogap Reactors with Precisely-aligned Molecular Monolayers
+  title: Design rules for catalysis in single-particle plasmonic nanogap reactors with precisely aligned molecular monolayers
   published: true
   group: prior
+  url: "https://doi.org/10.1038/s41467-024-53544-3"
   authors_html: <strong class="my-name">G Kang</strong>, S Hu, C Guo, R Arul, S M Sibug-Torres, J J Baumberg
   journal: Nature Communications, 15, 9220 (2024)
+# 21-P is the preprint version of publication 21, not another journal article.
+- number: "21-P"
+  title: Catalytic Single-particle Plasmonic Nanogap Reactors with Precisely-aligned Molecular Monolayers
+  published: true
+  type: preprint
+  group: prior
+  status: preprint
+  url: "https://doi.org/10.21203/rs.3.rs-3653134/v1"
+  authors_html: J Baumberg, <strong class="my-name">G Kang</strong>, S Hu
+  journal: Research Square, preprint (2024)
+  related_publication: 21
 - number: 20
   title: Atomic-Level Insights into Defect-Driven Nitrogen Doping of Reduced Graphene Oxide
   published: true
   group: prior
+  url: "https://doi.org/10.3390/catal14040242"
   authors_html: <strong class="my-name">G Kang</strong>, H Kim, H Lim
   journal: Catalysts, 14(4), 242 (2024)
 - number: 19
   title: In Situ Electrochemical Regeneration of Nanogap Hotspots for Continuously Reusable Ultrathin SERS Sensors
   published: true
   group: prior
+  url: "https://doi.org/10.1038/s41467-024-46097-y"
   authors_html: S M Sibug-Torres, D-B Grys, <strong class="my-name">G Kang</strong>, M Niihori, E Wyatt, N Spiesshofer, A
     Ruane, B de Nijs, J J Baumberg
   journal: Nature Communications, 15, 2022 (2024)
@@ -81,6 +100,7 @@
     Excitons
   published: true
   group: prior
+  url: "https://doi.org/10.1038/s41467-023-41401-8"
   authors_html: N S Mueller, R Arul, <strong class="my-name">G Kang</strong>, A P Saunders, A C Johnson, A Sánchez-Iglesias,
     S Hu, L A Jakob, J Bar-David, B de Nijs, L M Liz-Marzán, F Liu, J J Baumberg
   journal: Nature Communications, 14, 5726 (2023)
@@ -88,24 +108,28 @@
   title: Amplified Plasmonic Forces from DNA Origami-Scaffolded Single Dyes in Nanogaps
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acs.nanolett.3c01016"
   authors_html: S Rocchetti, A Ohmann, R Chikkaraddy, <strong class="my-name">G Kang</strong>, U F Keyser, J J Baumberg
   journal: Nano Letters 23 (13), 5959–5966 (2023)
 - number: 16
   title: Controlling Aggregation-Induced Two-Photon Absorption Enhancement via Intermolecular Interactions
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acsami.2c12436"
   authors_html: C J Zeman IV, <strong class="my-name">G Kang</strong>, K L Kohlstedt
   journal: ACS Applied Materials & Interfaces 14 (40), 45644-45657 (2022)
 - number: 15
   title: Interfacial Engineering of Plasmonic Nanoparticle Metasurfaces
   published: true
   group: prior
+  url: "https://doi.org/10.1073/pnas.2202621119"
   authors_html: S Deng, J-E Park, <strong class="my-name">G Kang</strong>, J Guan, R Li, G C Schatz, T W Odom
   journal: Proceedings of the National Academy of Sciences 119 (22), e2202621119 (2022)
 - number: 14
   title: Second Linear Response Theory and the Analytic Calculation of Excited-state Properties
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acs.jpca.0c10152"
   authors_html: M A Mosquera, L O Jones, <strong class="my-name">G Kang</strong>, M A Ratner, G C Schatz
   journal: The Journal of Physical Chemistry A 125 (4), 1093-1102 (2021)
 - number: 13
@@ -113,6 +137,7 @@
     for Singlet Fission'
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acs.jpca.0c07646"
   authors_html: Y-J Bae, D Shimizu, J D Schultz, <strong class="my-name">G Kang</strong>, J Zhou, G C Schatz, A Osuka, M R
     Wasielewski
   journal: The Journal of Physical Chemistry A 124 (41), 8478-8487 (2020)
@@ -120,6 +145,7 @@
   title: Efficient Modeling of Organic Chromophores for Entangled Two-photon Absorption
   published: true
   group: prior
+  url: "https://doi.org/10.1021/jacs.0c02808"
   authors_html: <strong class="my-name">G Kang</strong>, K N Avanaki, M A Mosquera, R K Burdick, J P Villabona-Monsalve, T
     Goodson III, G C Schatz
   journal: Journal of the American Chemical Society 142 (23), 10446-10458 (2020)
@@ -128,12 +154,14 @@
     Tip-enhanced Raman Spectroscopy
   published: true
   group: prior
+  url: "https://doi.org/10.1021/jacs.9b07979"
   authors_html: Z Chen, S Jiang, <strong class="my-name">G Kang</strong>, D Nguyen, G C Schatz, R P Van Duyne
   journal: Journal of the American Chemical Society 141 (39), 15684-15692 (2019)
 - number: 10
   title: Design Principles for Efficient Singlet Fission in Anthracene-based Organic Semiconductors
   published: true
   group: prior
+  url: "https://doi.org/10.1117/12.2527346"
   authors_html: Y-J Bae, J A Christensen, <strong class="my-name">G Kang</strong>, C D Malliakas, J Zhou, J N Nelson, R M
     Young, Y-L Wu, R P Van Duyne, G C Schatz, M R Wasielewski
   journal: Physical Chemistry of Semiconductor Materials and Interfaces XVIII 11084, 76-82 (2019)
@@ -141,6 +169,7 @@
   title: Substituent Effects on Energetics and Crystal Morphology Modulate Singlet Fission in 9, 10-bis(phenylethynyl)anthracenes
   published: true
   group: prior
+  url: "https://doi.org/10.1063/1.5110411"
   authors_html: Y-J Bae, J A Christensen, <strong class="my-name">G Kang</strong>, J Zhou, R M Young, Y-L Wu, R P Van Duyne,
     G C Schatz, M R Wasielewski
   journal: The Journal of Chemical Physics 151 (4) (2019)
@@ -149,12 +178,14 @@
     Phthalocyanine
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acs.jpclett.9b00926"
   authors_html: D Nguyen*, <strong class="my-name">G Kang*</strong>, M C Hersam, G C Schatz, R P Van Duyne
   journal: The Journal of Physical Chemistry Letters 10 (14), 3966-3971 (2019)
 - number: 7
   title: In Situ Nanoscale Redox Mapping Using Tip-Enhanced Raman Spectroscopy
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acs.nanolett.9b00313"
   authors_html: <strong class="my-name">G Kang</strong>, M Yang, M S Mattei, G C Schatz, R P Van Duyne
   journal: Nano Letters 19 (3), 2106-2113 (2019)
 - number: 6
@@ -162,12 +193,14 @@
     Raman Spectroscopy
   published: true
   group: prior
+  url: "https://doi.org/10.1021/jacs.8b10689"
   authors_html: R A Hackler, <strong class="my-name">G Kang</strong>, G C Schatz, P C Stair, R P Van Duyne
   journal: Journal of the American Chemical Society 141 (1), 414-422 (2018)
 - number: 5
   title: Singlet Fission in 9,10-bis(phenylethynyl)anthracene Thin Films
   published: true
   group: prior
+  url: "https://doi.org/10.1021/jacs.8b07498"
   authors_html: Y-J Bae, <strong class="my-name">G Kang</strong>, C D Malliakas, J N Nelson, J Zhou, R M Young, Y-L Wu, R
     P Van Duyne, G C Schatz, M R Wasielewski
   journal: Journal of the American Chemical Society 140 (45), 15140-15144 (2018)
@@ -176,6 +209,7 @@
     Spectroscopy
   published: true
   group: prior
+  url: "https://doi.org/10.1021/jacs.8b01154"
   authors_html: D Nguyen, <strong class="my-name">G Kang</strong>, N Chiang, X Chen, T Seideman, M C Hersam, G C Schatz, R
     P Van Duyne
   journal: Journal of the American Chemical Society 140 (18), 5948-5954 (2018)
@@ -183,12 +217,14 @@
   title: 'Tip-enhanced Raman Voltammetry: Coverage Dependence and Quantitative Modeling'
   published: true
   group: prior
+  url: "https://doi.org/10.1021/acs.nanolett.6b04868"
   authors_html: M Mattei, <strong class="my-name">G Kang</strong>, G Goubert, D V Chulhai, G C Schatz, L Jensen, R P Van Duyne
   journal: Nano Letters 19 (3), 2106-2113 (2017)
 - number: 2
   title: Laser-induced Phase Separation of Silicon Carbide
   published: true
   group: prior
+  url: "https://doi.org/10.1038/ncomms13562"
   authors_html: I Choi, H-Y Jeong, H Shin, <strong class="my-name">G Kang</strong>, M Byun, H Kim, A M Chitu, J S Im, R S
     Ruoff, S-Y Choi, K-J Lee
   journal: Nature Communications 7 (1), 13562 (2016)
@@ -196,6 +232,7 @@
   title: Ultra - Specific Zeptomole MicroRNA Detection by Plasmonic Nanowire Interstice Sensor with Bi - Temperature Hybridization
   published: true
   group: prior
+  url: "https://doi.org/10.1002/smll.201400164"
   authors_html: T Kang, H Kim, J-M Lee, H Lee, Y-S Choi, <strong class="my-name">G Kang</strong>, M-K Seo, B-H Chung, Y Jung,
     B Kim
   journal: Small, 10 (20), (2014) 4200-4206 (2014)

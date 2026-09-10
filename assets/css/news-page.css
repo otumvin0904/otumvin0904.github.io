@@ -140,7 +140,7 @@ body {
 
   color: rgba(0, 0, 0, 0.78) !important;
 
-  font-size: clamp(13px, 0.8vw, 16px);
+  font-size: clamp(16px, 0.8vw, 16px);
 
   font-weight: 400;
 
