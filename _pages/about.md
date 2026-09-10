@@ -11,7 +11,7 @@ classes: wide
 <link rel="stylesheet" href="{{ '/assets/css/lab-footer.css' | relative_url }}?v=footer-bottom-2-{{ site.time | date: '%Y%m%d%H%M%S' }}">
 
 <!-- 메인 전체 폭 · 문구 · 회베이지 슬라이드쇼 · 기존 남색 주소 바 -->
-<link rel="stylesheet" href="{{ '/assets/css/lab-home-fullwidth.css' | relative_url }}?v=home-pi-20260909-1-{{ site.time | date: '%Y%m%d%H%M%S' }}">
+<link rel="stylesheet" href="{{ '/assets/css/lab-home-fullwidth.css' | relative_url }}?v=home-3col-publications-20260910-1-{{ site.time | date: '%Y%m%d%H%M%S' }}">
 
 <link rel="stylesheet" href="{{ '/assets/css/lab-navigation.css' | relative_url }}?v=pi-nav-1">
 
@@ -176,130 +176,210 @@ classes: wide
   </section>
 
   <!-- =====================================================
-       RESEARCH / GALLERY
-       기존 페이지의 이미지 주소를 읽어 각각 한 장씩 자동 전환합니다.
-       속도는 각 영역의 data-interval을 수정합니다. 5000 = 5초.
-       사진 파일명이나 원래 Research / Gallery 페이지는 바꾸지 않습니다.
+       RESEARCH / GALLERY / PUBLICATIONS
+       Research와 Gallery는 기존 페이지의 이미지를 자동 전환합니다.
+       Publications는 _data/publications.yml에서 최신 게재 논문 3편을 자동 표시합니다.
+       Research / Gallery의 속도는 data-interval을 수정합니다. 5000 = 5초.
   ====================================================== -->
-  <section class="ns-showcase" aria-label="Research and gallery highlights">
+  <section class="ns-showcase" aria-label="Research, gallery, and publications highlights">
     <div class="ns-showcase__grid">
-        <section
-          class="ns-showcase-card ns-showcase-card--research"
-          data-home-slideshow="research"
-          data-source="{{ '/research/' | relative_url }}"
-          data-interval="5000"
-          aria-labelledby="home-research-title"
-          aria-roledescription="carousel"
-        >
-          <div class="ns-showcase-card__heading">
-            <h2 id="home-research-title">Research</h2>
+
+      <!-- ===================================================
+           RESEARCH
+      ==================================================== -->
+      <section
+        class="ns-showcase-card ns-showcase-card--research"
+        data-home-slideshow="research"
+        data-source="{{ '/research/' | relative_url }}"
+        data-interval="5000"
+        aria-labelledby="home-research-title"
+        aria-roledescription="carousel"
+      >
+        <div class="ns-showcase-card__heading">
+          <h2 id="home-research-title">Research</h2>
+        </div>
+
+        <div class="ns-home-slides__viewport" aria-busy="true">
+          <a
+            class="ns-home-slides__image-link"
+            href="{{ '/research/' | relative_url }}"
+            aria-label="Open Research"
+          >
+            <div class="ns-home-slides__slides" id="home-research-slides" aria-live="off"></div>
+          </a>
+          <p class="ns-home-slides__message" role="status">Loading Research images…</p>
+        </div>
+
+        <p class="ns-home-slides__caption" aria-live="off"></p>
+
+        <div class="ns-showcase-card__bottom">
+          <a class="ns-showcase-card__more" href="{{ '/research/' | relative_url }}">
+            View Research <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="ns-home-slides__controls" hidden>
+            <span class="ns-home-slides__counter" aria-label="Image number">01 / 01</span>
+            <button
+              class="ns-home-slides__button"
+              type="button"
+              data-slide-action="previous"
+              aria-label="Previous Research image"
+              aria-controls="home-research-slides"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+            <button
+              class="ns-home-slides__button"
+              type="button"
+              data-slide-action="toggle"
+              aria-label="Pause Research slideshow"
+              aria-controls="home-research-slides"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg></button>
+            <button
+              class="ns-home-slides__button"
+              type="button"
+              data-slide-action="next"
+              aria-label="Next Research image"
+              aria-controls="home-research-slides"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
           </div>
+        </div>
+      </section>
 
-          <div class="ns-home-slides__viewport" aria-busy="true">
-            <a
-              class="ns-home-slides__image-link"
-              href="{{ '/research/' | relative_url }}"
-              aria-label="Open Research"
-            >
-              <div class="ns-home-slides__slides" id="home-research-slides" aria-live="off"></div>
-            </a>
-            <p class="ns-home-slides__message" role="status">Loading Research images…</p>
+      <!-- ===================================================
+           GALLERY
+      ==================================================== -->
+      <section
+        class="ns-showcase-card ns-showcase-card--gallery"
+        data-home-slideshow="gallery"
+        data-source="{{ '/gallery/' | relative_url }}"
+        data-gallery-root="{{ '/images/gallery/' | relative_url }}"
+        data-interval="5000"
+        aria-labelledby="home-gallery-title"
+        aria-roledescription="carousel"
+      >
+        <div class="ns-showcase-card__heading">
+          <h2 id="home-gallery-title">Gallery</h2>
+        </div>
+
+        <div class="ns-home-slides__viewport" aria-busy="true">
+          <a
+            class="ns-home-slides__image-link"
+            href="{{ '/gallery/' | relative_url }}"
+            aria-label="Open Gallery"
+          >
+            <div class="ns-home-slides__slides" id="home-gallery-slides" aria-live="off"></div>
+          </a>
+          <p class="ns-home-slides__message" role="status">Loading Gallery images…</p>
+        </div>
+
+        <p class="ns-home-slides__caption" aria-live="off"></p>
+
+        <div class="ns-showcase-card__bottom">
+          <a class="ns-showcase-card__more" href="{{ '/gallery/' | relative_url }}">
+            View Gallery <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="ns-home-slides__controls" hidden>
+            <span class="ns-home-slides__counter" aria-label="Image number">01 / 01</span>
+            <button
+              class="ns-home-slides__button"
+              type="button"
+              data-slide-action="previous"
+              aria-label="Previous Gallery image"
+              aria-controls="home-gallery-slides"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+            <button
+              class="ns-home-slides__button"
+              type="button"
+              data-slide-action="toggle"
+              aria-label="Pause Gallery slideshow"
+              aria-controls="home-gallery-slides"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg></button>
+            <button
+              class="ns-home-slides__button"
+              type="button"
+              data-slide-action="next"
+              aria-label="Next Gallery image"
+              aria-controls="home-gallery-slides"
+            ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
           </div>
+        </div>
+      </section>
 
-          <p class="ns-home-slides__caption" aria-live="off"></p>
+      <!-- ===================================================
+           PUBLICATIONS
+           _data/publications.yml의 순서를 따라 게재된 논문 3편을 표시합니다.
+           preprint와 in preparation / submitted 항목은 제외합니다.
+      ==================================================== -->
+      <section
+        class="ns-showcase-card ns-showcase-card--publications"
+        aria-labelledby="home-publications-title"
+      >
+        <div class="ns-showcase-card__heading">
+          <h2 id="home-publications-title">Publications</h2>
+        </div>
 
-          <div class="ns-showcase-card__bottom">
-            <a class="ns-showcase-card__more" href="{{ '/research/' | relative_url }}">
-              View Research <span aria-hidden="true">→</span>
-            </a>
+        <div class="ns-home-publications" aria-label="Latest publications">
+          {% assign home_publication_count = 0 %}
+          {% for publication in site.data.publications %}
+            {% if publication.published == true and publication.type != "preprint" and home_publication_count < 3 %}
 
-            <div class="ns-home-slides__controls" hidden>
-              <span class="ns-home-slides__counter" aria-label="Image number">01 / 01</span>
-              <button
-                class="ns-home-slides__button"
-                type="button"
-                data-slide-action="previous"
-                aria-label="Previous Research image"
-                aria-controls="home-research-slides"
-              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
-              <button
-                class="ns-home-slides__button"
-                type="button"
-                data-slide-action="toggle"
-                aria-label="Pause Research slideshow"
-                aria-controls="home-research-slides"
-              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg></button>
-              <button
-                class="ns-home-slides__button"
-                type="button"
-                data-slide-action="next"
-                aria-label="Next Research image"
-                aria-controls="home-research-slides"
-              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
-            </div>
-          </div>
-        </section>
+              {% assign home_publication_url = publication.url | default: "" | strip %}
 
-        <section
-          class="ns-showcase-card ns-showcase-card--gallery"
-          data-home-slideshow="gallery"
-          data-source="{{ '/gallery/' | relative_url }}"
-          data-gallery-root="{{ '/images/gallery/' | relative_url }}"
-          data-interval="5000"
-          aria-labelledby="home-gallery-title"
-          aria-roledescription="carousel"
-        >
-          <div class="ns-showcase-card__heading">
-            <h2 id="home-gallery-title">Gallery</h2>
-          </div>
+              {% if home_publication_url != "" %}
+              <a
+                class="ns-home-publication"
+                href="{{ home_publication_url | escape }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="{{ publication.title | escape }} (opens in a new tab)"
+              >
+              {% else %}
+              <a
+                class="ns-home-publication"
+                href="{{ '/publications/' | relative_url }}"
+                aria-label="View {{ publication.title | escape }} on Publications page"
+              >
+              {% endif %}
 
-          <div class="ns-home-slides__viewport" aria-busy="true">
-            <a
-              class="ns-home-slides__image-link"
-              href="{{ '/gallery/' | relative_url }}"
-              aria-label="Open Gallery"
-            >
-              <div class="ns-home-slides__slides" id="home-gallery-slides" aria-live="off"></div>
-            </a>
-            <p class="ns-home-slides__message" role="status">Loading Gallery images…</p>
-          </div>
+                <div class="ns-home-publication__meta">
+                  <span class="ns-home-publication__number">No. {{ publication.number }}</span>
+                  {% if publication.year %}
+                  <span class="ns-home-publication__year">{{ publication.year }}</span>
+                  {% endif %}
+                </div>
 
-          <p class="ns-home-slides__caption" aria-live="off"></p>
+                <h3 class="ns-home-publication__title">
+                  {{ publication.title | escape }}
+                </h3>
 
-          <div class="ns-showcase-card__bottom">
-            <a class="ns-showcase-card__more" href="{{ '/gallery/' | relative_url }}">
-              View Gallery <span aria-hidden="true">→</span>
-            </a>
+                {% if publication.journal and publication.journal != "" %}
+                <p class="ns-home-publication__journal">
+                  {{ publication.journal | escape }}
+                </p>
+                {% endif %}
 
-            <div class="ns-home-slides__controls" hidden>
-              <span class="ns-home-slides__counter" aria-label="Image number">01 / 01</span>
-              <button
-                class="ns-home-slides__button"
-                type="button"
-                data-slide-action="previous"
-                aria-label="Previous Gallery image"
-                aria-controls="home-gallery-slides"
-              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
-              <button
-                class="ns-home-slides__button"
-                type="button"
-                data-slide-action="toggle"
-                aria-label="Pause Gallery slideshow"
-                aria-controls="home-gallery-slides"
-              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg></button>
-              <button
-                class="ns-home-slides__button"
-                type="button"
-                data-slide-action="next"
-                aria-label="Next Gallery image"
-                aria-controls="home-gallery-slides"
-              ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
-            </div>
-          </div>
-        </section>
+              </a>
+
+              {% assign home_publication_count = home_publication_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <p class="ns-home-publications__caption">Latest published work</p>
+
+        <div class="ns-showcase-card__bottom">
+          <a class="ns-showcase-card__more" href="{{ '/publications/' | relative_url }}">
+            View Publications <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
       <noscript>
-        <p class="ns-showcase__noscript">Enable JavaScript to play the slideshows, or use the Research and Gallery links.</p>
+        <p class="ns-showcase__noscript">
+          Enable JavaScript to play the Research and Gallery slideshows, or use the Research, Gallery, and Publications links.
+        </p>
       </noscript>
+
     </div>
   </section>
 

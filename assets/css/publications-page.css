@@ -435,6 +435,78 @@ body {
 .publication-list {
   width: 100%;
 }
+/* ==========================================================
+   PUBLICATION YEAR GROUP
+   ========================================================== */
+
+.publication-year-group {
+  display: grid;
+
+  grid-template-columns:
+    110px
+    minmax(0, 1fr);
+
+  gap: 26px;
+
+  width: 100%;
+
+  align-items: start;
+}
+
+
+/* 연도 그룹 사이 간격 */
+
+.publication-year-group + .publication-year-group {
+  margin-top: 38px;
+}
+
+
+/* ==========================================================
+   YEAR
+   ========================================================== */
+
+.publication-year-label {
+  padding-top: 5px;
+}
+
+
+.publication-year-label span {
+  display: block;
+
+  color: #223650;
+
+  font-size: clamp(27px, 1.7vw, 36px);
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.10em;
+}
+
+
+/* 연도 아래 짧은 선 */
+
+.publication-year-line {
+  width: 72px;
+  height: 2px;
+
+  margin-top: 14px;
+
+  background: #96a5b7;
+}
+
+
+/* ==========================================================
+   PAPERS INSIDE YEAR
+   ========================================================== */
+
+.publication-year-items {
+  min-width: 0;
+
+  border-top:
+    1px solid #dce3ea;
+}
 
 
 
@@ -457,9 +529,9 @@ body {
   width: 100%;
 
   padding:
-    6px
+    5px
     0
-    8px;
+    5px;
 
   box-sizing: border-box;
 
@@ -544,11 +616,11 @@ body {
 
   color: #20344f;
 
-  font-size: clamp(14px, 1.05vw, 22px);
+  font-size: clamp(14px, 1.05vw, 18px);
 
   font-weight: 600;
 
-  line-height: 1.38;
+  line-height: 1.10;
 }
 
 
@@ -915,6 +987,24 @@ body {
 
 @media (max-width: 900px) {
 
+  .publication-year-group {
+    grid-template-columns:
+      90px
+      minmax(0, 1fr);
+
+    gap: 18px;
+  }
+
+
+  .publication-year-label span {
+    font-size: 26px;
+  }
+
+
+  .publication-year-line {
+    width: 60px;
+  }
+
   .publications-header {
     height: 135px;
   }
@@ -967,6 +1057,41 @@ body {
 
 @media (max-width: 650px) {
 
+  /* YEAR */
+
+  .publication-year-group {
+    grid-template-columns:
+      64px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+
+  .publication-year-group + .publication-year-group {
+    margin-top: 26px;
+  }
+
+
+  .publication-year-label {
+    padding-top: 4px;
+  }
+
+
+  .publication-year-label span {
+    font-size: 18px;
+
+    letter-spacing: 0.05em;
+  }
+
+
+  .publication-year-line {
+    width: 43px;
+    height: 2px;
+
+    margin-top: 9px;
+  }
+  
   .publications-header {
     height: 190px;
   }

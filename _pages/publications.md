@@ -75,75 +75,148 @@ classes: wide
       </div>
 
       <div class="publication-list">
-        {% for paper in site.data.publications %}
-        {% if paper.group == group_key %}
 
-        {% comment %}
-          게재 여부와 주소를 모두 확인합니다.
-          준비/투고 중이거나 주소가 없는 항목에는 링크를 만들지 않습니다.
-          외부 주소는 http 또는 https 주소만 사용합니다.
-        {% endcomment %}
-        {% assign paper_url = paper.url | default: "" | strip %}
-        {% assign https_prefix = paper_url | slice: 0, 8 %}
-        {% assign http_prefix = paper_url | slice: 0, 7 %}
-        {% assign has_paper_link = false %}
-        {% if paper.published == true and paper_url != "" %}
-          {% if https_prefix == "https://" or http_prefix == "http://" %}
-            {% assign has_paper_link = true %}
-          {% endif %}
-        {% endif %}
+        {% assign group_papers = site.data.publications | where: "group", group_key %}
+        {% assign year_groups = group_papers | group_by: "year" | sort: "name" | reverse %}
 
-        <article id="publication-{{ paper.number }}"
-                 class="publication-item{% unless paper.published %} publication-item-status{% endunless %}">
+        {% for year_group in year_groups %}
 
-          <div class="publication-number">
-            {% if has_paper_link %}
-            <a class="publication-number-link" href="{{ paper_url | escape }}"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Publication {{ paper.number }}: {{ paper.title | escape }} (opens in a new tab)"
-               title="Open publication in a new tab">
-              <span>{{ paper.number }}</span>
-              <div class="publication-number-line" aria-hidden="true"></div>
-            </a>
-            {% else %}
-            <span>{{ paper.number }}</span>
-            <div class="publication-number-line" aria-hidden="true"></div>
-            {% endif %}
+        <div class="publication-year-group">
+
+          <!-- YEAR -->
+          <div class="publication-year-label">
+            <span>{{ year_group.name }}</span>
+            <div class="publication-year-line" aria-hidden="true"></div>
           </div>
 
-          <div class="publication-information">
-            <div class="publication-title-row">
-              <h3 class="publication-title">
+          <!-- PAPERS IN THIS YEAR -->
+          <div class="publication-year-items">
+
+            {% for paper in year_group.items %}
+
+            {% comment %}
+              게재 여부와 주소를 모두 확인합니다.
+              준비/투고 중이거나 주소가 없는 항목에는 링크를 만들지 않습니다.
+              외부 주소는 http 또는 https 주소만 사용합니다.
+            {% endcomment %}
+
+            {% assign paper_url = paper.url | default: "" | strip %}
+            {% assign https_prefix = paper_url | slice: 0, 8 %}
+            {% assign http_prefix = paper_url | slice: 0, 7 %}
+            {% assign has_paper_link = false %}
+
+            {% if paper.published == true and paper_url != "" %}
+              {% if https_prefix == "https://" or http_prefix == "http://" %}
+                {% assign has_paper_link = true %}
+              {% endif %}
+            {% endif %}
+
+            <article id="publication-{{ paper.number }}"
+                     class="publication-item{% unless paper.published %} publication-item-status{% endunless %}">
+
+              <div class="publication-number">
+
                 {% if has_paper_link %}
-                <a href="{{ paper_url | escape }}" target="_blank" rel="noopener noreferrer"
-                   aria-label="{{ paper.title | escape }} (opens in a new tab)"
-                   title="Open publication in a new tab">{{ paper.title | escape }}</a>
+
+                <a class="publication-number-link"
+                   href="{{ paper_url | escape }}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Publication {{ paper.number }}: {{ paper.title | escape }} (opens in a new tab)"
+                   title="Open publication in a new tab">
+
+                  <span>{{ paper.number }}</span>
+                  <div class="publication-number-line" aria-hidden="true"></div>
+
+                </a>
+
                 {% else %}
-                {{ paper.title | escape }}
-                {% endif %}
-              </h3>
 
-              {% unless paper.published %}
-                {% if paper.status and paper.status != "" %}
-                <span class="publication-status-pill">{{ paper.status | escape }}</span>
-                {% endif %}
-              {% endunless %}
-            </div>
+                <span>{{ paper.number }}</span>
+                <div class="publication-number-line" aria-hidden="true"></div>
 
-            {% if paper.published %}
-              {% if paper.authors_html and paper.authors_html != "" %}
-              <div class="publication-authors">{{ paper.authors_html }}</div>
-              {% endif %}
-              {% if paper.journal and paper.journal != "" %}
-              <div class="publication-journal">{{ paper.journal | escape }}</div>
-              {% endif %}
-            {% endif %}
+                {% endif %}
+
+              </div>
+
+
+              <div class="publication-information">
+
+                <div class="publication-title-row">
+
+                  <h3 class="publication-title">
+
+                    {% if has_paper_link %}
+
+                    <a href="{{ paper_url | escape }}"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="{{ paper.title | escape }} (opens in a new tab)"
+                       title="Open publication in a new tab">
+
+                      {{ paper.title | escape }}
+
+                    </a>
+
+                    {% else %}
+
+                    {{ paper.title | escape }}
+
+                    {% endif %}
+
+                  </h3>
+
+
+                  {% unless paper.published %}
+
+                    {% if paper.status and paper.status != "" %}
+
+                    <span class="publication-status-pill">
+                      {{ paper.status | escape }}
+                    </span>
+
+                    {% endif %}
+
+                  {% endunless %}
+
+                </div>
+
+
+                {% if paper.published %}
+
+                  {% if paper.authors_html and paper.authors_html != "" %}
+
+                  <div class="publication-authors">
+                    {{ paper.authors_html }}
+                  </div>
+
+                  {% endif %}
+
+
+                  {% if paper.journal and paper.journal != "" %}
+
+                  <div class="publication-journal">
+                    {{ paper.journal | escape }}
+                  </div>
+
+                  {% endif %}
+
+                {% endif %}
+
+              </div>
+
+            </article>
+
+            {% endfor %}
+
           </div>
 
-        </article>
-        {% endif %}
+        </div>
+
         {% endfor %}
+
       </div>
+
 
     </section>
     {% endfor %}

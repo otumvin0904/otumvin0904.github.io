@@ -123,7 +123,7 @@ body:has(.ns-home--fullwidth) {
 }
 
 /* ==========================================================
-   5. RESEARCH / GALLERY SLIDESHOWS
+   5. RESEARCH / PUBLICATIONS / GALLERY SHOWCASE
    상단 이미지의 청회색 및 하단 주소 바의 남색과 구분되는 회베이지 단색입니다.
    그라데이션이나 영역 전체의 투명도는 사용하지 않습니다.
    이미지 파일 내부의 색상과 흰 배경은 그대로 유지합니다.
@@ -139,8 +139,8 @@ body:has(.ns-home--fullwidth) {
   --home-control-border: #7C8085;
   --home-control-hover: #E3DED5;
   --home-focus: #365C83;
-  --home-slides-max-width: 1320px;
-  --home-slides-ratio: 16 / 10;
+  --home-slides-max-width: 1520px;
+  --home-slides-ratio: 16 / 12;
   --home-slides-padding-y: 44px;
 
   background: var(--home-lower-bg);
@@ -177,8 +177,8 @@ body:has(.ns-home--fullwidth) {
 
 .ns-showcase .ns-showcase__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(26px, 4vw, 60px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 2.8vw, 46px);
   align-items: start;
   width: 100%;
   max-width: var(--home-slides-max-width);
@@ -235,6 +235,114 @@ body:has(.ns-home--fullwidth) {
 .ns-showcase .ns-showcase-card--research .ns-home-slides__viewport {
   background: var(--home-slide-bg);
   border-color: var(--home-lower-line);
+}
+
+
+/* ==========================================================
+   PUBLICATIONS CARD
+   _data/publications.yml에서 최신 게재 논문 3편을 표시합니다.
+   Research / Gallery 이미지 영역과 같은 높이를 사용합니다.
+   ========================================================== */
+.ns-showcase .ns-home-publications {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  aspect-ratio: var(--home-slides-ratio);
+  margin: 0;
+  padding: clamp(15px, 1.35vw, 22px);
+  overflow: hidden;
+  border: 1px solid var(--home-lower-line);
+  border-radius: 3px;
+  background: transparent;
+}
+
+.ns-showcase a.ns-home-publication,
+.ns-showcase a.ns-home-publication:visited {
+  display: block;
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 clamp(9px, .85vw, 13px);
+  border: 0 !important;
+  border-bottom: 1px solid var(--home-lower-line) !important;
+  color: var(--home-lower-text) !important;
+  background: transparent;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.ns-showcase a.ns-home-publication + a.ns-home-publication {
+  padding-top: clamp(9px, .85vw, 13px);
+}
+
+.ns-showcase a.ns-home-publication:last-child {
+  padding-bottom: 0;
+  border-bottom: 0 !important;
+}
+
+.ns-showcase .ns-home-publication__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 5px;
+  color: var(--home-lower-muted);
+  font-size: clamp(8px, .54vw, 10px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.ns-showcase .ns-home-publication__number,
+.ns-showcase .ns-home-publication__year {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.ns-showcase .ns-home-publication__title {
+  display: -webkit-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 0 !important;
+  color: var(--home-lower-text);
+  font-size: clamp(12px, .86vw, 15px);
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: 0;
+  text-transform: none;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ns-showcase .ns-home-publication__journal {
+  display: -webkit-box;
+  margin: 5px 0 0 !important;
+  padding: 0;
+  overflow: hidden;
+  color: var(--home-lower-muted);
+  font-size: clamp(9px, .62vw, 11px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.35;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.ns-showcase a.ns-home-publication:hover .ns-home-publication__title {
+  color: #526983;
+}
+
+.ns-showcase .ns-home-publications__caption {
+  min-height: 2.9em;
+  margin: 13px 0 10px !important;
+  padding: 0;
+  color: var(--home-lower-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
 }
 
 .ns-showcase .ns-home-slides__image-link {
@@ -452,7 +560,22 @@ body:has(.ns-home--fullwidth) {
   background-image: none;
 }
 
-/* 화면 폭 760px 이하에서는 Research / Gallery를 한 열로 배치. */
+/* 중간 화면에서는 2열, 휴대전화에서는 1열로 배치합니다. */
+@media (max-width: 1100px) {
+  .ns-showcase .ns-showcase__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px;
+    max-width: 920px;
+  }
+
+  .ns-showcase .ns-showcase-card--gallery {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 441px;
+  }
+}
+
 @media (max-width: 760px) {
   .ns-home.ns-home--slides > .ns-showcase {
     padding: 30px 22px 30px;
@@ -464,6 +587,12 @@ body:has(.ns-home--fullwidth) {
     max-width: 620px;
   }
 
+  .ns-showcase .ns-showcase-card--gallery {
+    grid-column: auto;
+    justify-self: stretch;
+    max-width: none;
+  }
+
   .ns-showcase .ns-showcase-card__heading {
     margin-bottom: 16px;
     padding-bottom: 12px;
@@ -471,6 +600,14 @@ body:has(.ns-home--fullwidth) {
 
   .ns-showcase .ns-showcase-card__heading h2 {
     font-size: 23px;
+  }
+
+  .ns-showcase .ns-home-publication__title {
+    font-size: 14px;
+  }
+
+  .ns-showcase .ns-home-publication__journal {
+    font-size: 10px;
   }
 }
 

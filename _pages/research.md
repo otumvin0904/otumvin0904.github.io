@@ -337,10 +337,6 @@ classes: wide
           APPLICATIONS
         </h2>
 
-        <p>
-          FROM FUNDAMENTAL SCIENCE TO REAL-WORLD IMPACT
-        </p>
-
         <div class="section-line"></div>
 
       </div>
